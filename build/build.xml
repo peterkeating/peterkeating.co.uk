@@ -1,0 +1,26 @@
+<project name="peterkeating.co.uk" basedir="../" default="default">
+
+	<property environment="env."/>
+	<property name="tools.dir" value="${basedir}/build/tools" />
+	<property name="yuicompressor.jar" value="${tools.dir}/yuicompressor-2.4.6/yuicompressor-2.4.6.jar" />
+	<property name="lessc.cmd" value="${tools.dir}/lessc/lessc.cmd" />
+	<property name="css.dir" value="${basedir}/css" />
+	
+	
+	<target name="default" depends="clean, css" />
+	
+	<target name="clean">
+		<echo>cleaning</echo>
+	</target>
+	
+	<target name="css">
+		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true'>
+			<arg line='"${css.dir}/style.less" "${css.dir}/style.css"' />
+		</exec>
+		
+		<concat destfile="style.css" overwrite="yes">
+			<fileset file="${css.dir}/default.css" />
+			<fileset file="${css.dir}/style.css" />
+		</concat>
+	</target>
+</project>
