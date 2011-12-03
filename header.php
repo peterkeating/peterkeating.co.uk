@@ -19,6 +19,6 @@
 		
 	</header>
 	
-	<div role="main">
+	<div id="main">
 	
 	
