@@ -19,6 +19,10 @@
 		
 	</header>
 	
+	<div id="sub-header">
+	
+	</div>
+	
 	<div id="main">
 	
 	

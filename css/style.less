@@ -8,15 +8,39 @@ body {
 header { 
 	border-bottom: 1px solid #9d9d9d;
 	.gradient(#494949, #494949, #585858);
-	height: 120px;
+	height: 90px;
+	width: 100%;
+}
+
+#sub-header {
+	border-bottom: 1px solid #c9c9c9;
+	.gradient(#e3e3e3, #d3d3d3, #e3e3e3);
+	height: 60px; 
 	width: 100%;
 }
 
 #main {
+	background-color: #fff;
+	border: 1px solid #ececec;
 	margin: 0 auto;
-	width: 960px;
+	margin-top: 10px;
+	max-width: 980px;
+	padding: 20px 20px 20px 20px;
+	.rounded(9px);
+}
+
+@media only screen and (max-width: 1000px)  {
+	#main {
+		margin-top: 0;
+		.rounded(0px);
+	}
 }
 
 article {
-	h1 { color: #5a5a5a; font-size: 2.4em;}
+	h1 { 
+		color: #5a5a5a; 
+		font-size: 2.4em; 
+		margin: 0; 
+		padding: 0
+	}
 }
