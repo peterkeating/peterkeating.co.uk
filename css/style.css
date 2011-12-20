@@ -63,3 +63,7 @@ article h1 {
   margin: 0;
   padding: 0;
 }
+article .published-on {
+  font-size: 0.9em;
+  font-weight: bold;
+}
