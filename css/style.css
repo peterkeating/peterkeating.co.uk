@@ -95,6 +95,9 @@ article a:hover {
   color: #5a5a5a;
   text-decoration: none;
 }
+article a:visited {
+  color: #5a5a5a;
+}
 article .published-on {
   font-size: 0.9em;
   font-weight: bold;
