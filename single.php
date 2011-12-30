@@ -12,13 +12,13 @@
 	<?php endwhile ?>
 
 	<nav class="top">
-		<div class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?></div>
-		<div class="nav-next"><?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?></div>
+		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
+		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
 	</nav>
 
 	<nav class="bottom">
-		<div class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?></div>
-		<div class="nav-next"><?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?></div>
+		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
+		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
 	</nav>	
 	
 	

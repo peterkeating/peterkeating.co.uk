@@ -340,7 +340,7 @@ header h1 {
 #main nav {
   position: absolute;
 }
-#main nav div {
+#main nav a {
   display: inline;
   font-size: 0.8em;
   padding: 0 10px 0 0;
