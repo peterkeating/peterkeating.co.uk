@@ -11,9 +11,15 @@
 	
 	<?php endwhile ?>
 
-	<nav>
+	<nav class="top">
 		<div class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?></div>
 		<div class="nav-next"><?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?></div>
 	</nav>
+
+	<nav class="bottom">
+		<div class="nav-previous"><?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?></div>
+		<div class="nav-next"><?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?></div>
+	</nav>	
+	
 	
 <?php get_footer(); ?>

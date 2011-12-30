@@ -339,13 +339,19 @@ header h1 {
 }
 #main nav {
   position: absolute;
-  top: 10px;
-  right: 10px;
 }
 #main nav div {
   display: inline;
   font-size: 0.8em;
   padding: 0 10px 0 0;
+}
+#main nav.bottom {
+  bottom: 10px;
+  left: 20px;
+}
+#main nav.top {
+  right: 20px;
+  top: 10px;
 }
 @media only screen and (max-width: 1000px) {
   #main {
