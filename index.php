@@ -4,7 +4,7 @@
 		<?php while ( have_posts() ) : the_post() ?>
 			<h1><?php the_title(); ?></h1>
 			
-			<div class="published-on">Publised on <em><?php the_time('d/m/Y H:i:s') ?></em></div>
+			<div class="published-on"><?php the_time('F j, Y') ?></div>
 			
 			<?php the_excerpt(); ?>
 			
