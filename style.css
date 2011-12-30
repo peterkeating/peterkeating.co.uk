@@ -347,6 +347,9 @@ header h1 {
     background-clip: padding-box;
   }
 }
+article {
+  margin-bottom: 40px;
+}
 article h1 {
   color: #5a5a5a;
   font-family: 'Boogaloo', Arial;
