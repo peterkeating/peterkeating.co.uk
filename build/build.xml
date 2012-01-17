@@ -49,7 +49,7 @@
 		any bottleneck that can be caused by too many css / js requests on load.
 	-->	
 	<target name="css">
-		<concat destfile="${css.dir}/style.css" overwrite="yes">
+		<concat destfile="${basedir}/style.css" overwrite="yes">
 			<fileset file="${css.src.dir}/theme-info.css" />
 			<fileset file="${css.src.dir}/normalize.css" />
 			<fileset file="${css.dir}/site.css" />
