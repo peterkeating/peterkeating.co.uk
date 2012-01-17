@@ -1,26 +1,48 @@
 <project name="peterkeating.co.uk" basedir="../" default="default">
 
 	<property environment="env."/>
+
+	<!-- tools used to assist the build process. -->
 	<property name="tools.dir" value="${basedir}/build/tools" />
 	<property name="yuicompressor.jar" value="${tools.dir}/yuicompressor-2.4.6/yuicompressor-2.4.6.jar" />
 	<property name="lessc.cmd" value="${tools.dir}/lessc/lessc.cmd" />
+
+	<!-- directory where all the script src is located. -->
+	<property name="scripts.dir" value="${basedir}/scripts" />
+
+	<!-- css information -->
 	<property name="css.dir" value="${basedir}/css" />
+	<property name="css.src.dir" value="${scripts.dir}/css" />
+	<property name="less.src.dir" value="${scripts.dir}/less" />
 	
-	
-	<target name="default" depends="clean, css" />
+	<target name="default" depends="clean, prepare, less, css" />
 	
 	<target name="clean">
 		<echo>cleaning</echo>
+
+		<delete dir="${css.dir}" />
+	</target>
+
+	<target name="prepare">
+		<mkdir dir="${css.dir}" />
+	</target>
+
+	<!-- converts any .less files into .css files. -->
+	<target name="less">
+		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true'>
+			<arg line='"${less.src.dir}/style.less" "${css.dir}/site.css"' />
+		</exec>
 	</target>
 	
+	<!-- 
+		joins all the required css files into a single css file that can be loaded individually to save
+		any bottleneck that can be caused by too many css / js requests on load.
+	-->	
 	<target name="css">
-		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true'>
-			<arg line='"${css.dir}/style.less" "${css.dir}/style.css"' />
-		</exec>
-		
-		<concat destfile="style.css" overwrite="yes">
-			<fileset file="${css.dir}/default.css" />
-			<fileset file="${css.dir}/style.css" />
+		<concat destfile="${css.dir}/style.css" overwrite="yes">
+			<fileset file="${css.src.dir}/theme-info.css" />
+			<fileset file="${css.src.dir}/normalize.css" />
+			<fileset file="${css.dir}/site.css" />
 		</concat>
 	</target>
 </project>
