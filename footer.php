@@ -6,7 +6,7 @@
 		</div>
 	</footer>
 	
-	<script src="<?php bloginfo( "template_url" ); ?>/js/thirdparty/jquery-1.7.0.min.js"></script>
+	<script src="<?php bloginfo( "template_url" ); ?>/js/thirdparty/jquery-1.7.1.min.js"></script>
 	<script src="<?php bloginfo( "template_url" ); ?>/js/scripts.js"></script>
 	
 </body>
