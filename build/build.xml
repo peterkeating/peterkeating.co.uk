@@ -3,7 +3,7 @@
 	<property environment="env." />
 
 	<!-- folder that the theme files will be deployed into. -->
-	<property name="deploy.dir" value="${basedir}\deploy" />
+	<property name="deploy.dir" value="${basedir}\peterkeating.co.uk" />
 
 	<!-- src information -->
 	<property name="src.dir" value="${basedir}\src" />
