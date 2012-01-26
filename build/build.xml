@@ -1,4 +1,4 @@
-<project name="peterkeating.co.uk" basedir="../" default="default">
+<project name="peterkeating.co.uk" basedir="../" default="-default">
 
 	<property environment="env." />
 
@@ -26,23 +26,28 @@
 	<property name="js.src.dir" value="${scripts.dir}\js" />
 	<property name="js.libs.src.dir" value="${js.src.dir}\libs" />
 
+	<!-- release information -->
+	<property name="release.dir" value="../" />
+
 	<!-- specifies the order of the build process -->
-	<target name="default" depends="clean, prepare, src, less, css, js" />
+	<target name="default" depends="-clean, -prepare, -src, -less, -css, -js" />
+
+	<target name="release" depends="-clean, -prepare, -src, -less, -css, -js, -release" />
 	
 	<!-- deletes any folders that would have been created from a previous build. -->
-	<target name="clean">
+	<target name="-clean">
 		<delete dir="${deploy.dir}" />
 	</target>
 
 	<!-- creates any directories that are required for the build process. -->
-	<target name="prepare">
+	<target name="-prepare">
 		<mkdir dir="${deploy.dir}" />
 		<mkdir dir="${css.dir}" />
 		<mkdir dir="${js.dir}" />
 	</target>
 
 	<!-- copies the src files into the deploy folder. -->
-	<target name="src">
+	<target name="-src">
 		<copy todir="${deploy.dir}">
 			<fileset dir="${src.dir}">
 				<include name="**\**" />
@@ -51,7 +56,7 @@
 	</target>
 
 	<!-- converts any .less files into .css files. -->
-	<target name="less">
+	<target name="-less">
 		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true'>
 			<arg line='"${less.src.dir}\style.less" "${css.dir}\site.css"' />
 		</exec>
@@ -61,7 +66,7 @@
 		joins all the required css files into a single css file that can be loaded individually to save
 		any bottleneck that can be caused by too many css / js requests on load.
 	-->	
-	<target name="css">
+	<target name="-css">
 		<concat destfile="${deploy.dir}\style.css" overwrite="yes">
 			<fileset file="${css.src.dir}\theme-info.css" />
 			<fileset file="${css.src.dir}\normalize.css" />
@@ -78,7 +83,7 @@
 			- concats all site specific scripts into script.js
 			- moves modenizr to the js folder
 	-->
-	<target name="js">
+	<target name="-js">
 		<!-- modenizr is not included in the plugins as it is loaded in the <head> tag. -->
 		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.0.6.min.js" />
 
@@ -93,5 +98,12 @@
 			party libraries where all the scripts are concat into a single js file. 
 		-->
 		<copy todir="${js.dir}" file="${js.src.dir}\scripts.js" />
+	</target>
+
+	<!-- copies the created theme into the theme directory. -->
+	<target name="-release">
+		<copy todir="${release.dir}">
+			<fileset dir="${deploy.dir}" />
+		</copy>
 	</target>
 </project>
