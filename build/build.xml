@@ -20,6 +20,10 @@
 	<property name="images.dir" value="${basedir}\images" />
 	<property name="images.deploy.dir" value="${deploy.dir}\images" />
 
+	<!-- font information -->
+	<property name="fonts.dir" value="${basedir}\fonts" />
+	<property name="fonts.deploy.dir" value="${deploy.dir}\fonts" />	
+
 	<!-- css information -->
 	<property name="css.dir" value="${deploy.dir}\css" />
 	<property name="css.src.dir" value="${scripts.dir}\css" />
@@ -34,9 +38,9 @@
 	<property name="release.dir" value="../" />
 
 	<!-- specifies the order of the build process -->
-	<target name="default" depends="-clean, -prepare, -src, -images, -less, -css, -js" />
+	<target name="default" depends="-clean, -prepare, -src, -images, -fonts, -less, -css, -js" />
 
-	<target name="release" depends="-clean, -prepare, -src, -images, -less, -css, -js, -release" />
+	<target name="release" depends="-clean, -prepare, -src, -images, -fonts, -less, -css, -js, -release" />
 	
 	<!-- deletes any folders that would have been created from a previous build. -->
 	<target name="-clean">
@@ -47,6 +51,7 @@
 	<target name="-prepare">
 		<mkdir dir="${deploy.dir}" />
 		<mkdir dir="${images.deploy.dir}" />
+		<mkdir dir="${fonts.deploy.dir}" />
 		<mkdir dir="${css.dir}" />
 		<mkdir dir="${js.dir}" />
 	</target>
@@ -64,6 +69,15 @@
 	<target name="-images">
 		<copy todir="${images.deploy.dir}">
 			<fileset dir="${images.dir}">
+				<include name="**/**" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- copies the fonts into the deploy directory -->
+	<target name="-fonts">
+		<copy todir="${fonts.deploy.dir}">
+			<fileset dir="${fonts.dir}">
 				<include name="**/**" />
 			</fileset>
 		</copy>

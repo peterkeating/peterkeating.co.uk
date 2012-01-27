@@ -6,7 +6,9 @@
 		
 		<div class="published-on"><?php the_time('F j, Y') ?></div>
 		
-		<?php the_excerpt(); ?>
+		<div class="post">
+			<?php the_excerpt(); ?>
+		</div>
 		
 		<a href="<?php the_permalink(); ?>">Continue reading</a>
 	</article>
