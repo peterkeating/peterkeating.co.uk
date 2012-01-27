@@ -16,6 +16,10 @@
 	<!-- directory where all the script src is located. -->
 	<property name="scripts.dir" value="${basedir}\scripts" />
 
+	<!-- images information -->
+	<property name="images.dir" value="${basedir}\images" />
+	<property name="images.deploy.dir" value="${deploy.dir}\images" />
+
 	<!-- css information -->
 	<property name="css.dir" value="${deploy.dir}\css" />
 	<property name="css.src.dir" value="${scripts.dir}\css" />
@@ -30,9 +34,9 @@
 	<property name="release.dir" value="../" />
 
 	<!-- specifies the order of the build process -->
-	<target name="default" depends="-clean, -prepare, -src, -less, -css, -js" />
+	<target name="default" depends="-clean, -prepare, -src, -images, -less, -css, -js" />
 
-	<target name="release" depends="-clean, -prepare, -src, -less, -css, -js, -release" />
+	<target name="release" depends="-clean, -prepare, -src, -images, -less, -css, -js, -release" />
 	
 	<!-- deletes any folders that would have been created from a previous build. -->
 	<target name="-clean">
@@ -42,6 +46,7 @@
 	<!-- creates any directories that are required for the build process. -->
 	<target name="-prepare">
 		<mkdir dir="${deploy.dir}" />
+		<mkdir dir="${images.deploy.dir}" />
 		<mkdir dir="${css.dir}" />
 		<mkdir dir="${js.dir}" />
 	</target>
@@ -51,6 +56,15 @@
 		<copy todir="${deploy.dir}">
 			<fileset dir="${src.dir}">
 				<include name="**\**" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- copies the images into the deploy directory. -->
+	<target name="-images">
+		<copy todir="${images.deploy.dir}">
+			<fileset dir="${images.dir}">
+				<include name="**/**" />
 			</fileset>
 		</copy>
 	</target>
