@@ -22,30 +22,20 @@ header {
 	height: 90px;
 	width: 100%;
 	
-	div {
-		margin: 0 auto;
-		max-width: 980px;
-		padding: 20px 20px 20px 20px;
-	}
-
 	h1 {
 		color: #fff;
+		font-size: 2.4em;
 		font-family: 'Boogaloo', Arial;
-		margin: 0 auto;
-		padding: 0;
+		margin: 0;
+		padding: 20px 20px 20px 70px;
 	}
 }
 
-#sub-header {
+nav {
 	border-bottom: 1px solid #c9c9c9;
 	.gradient(#e3e3e3, #d3d3d3, #e3e3e3);
 	height: 60px; 
-	width: 100%;
-	
-	div {
-		margin: 0 auto;
-		max-width: 980px;
-	}
+	padding-left: 50px;
 	
 	img {
 		max-height: 50px;
@@ -64,7 +54,11 @@ header {
 	.rounded(9px);
 	
 	nav {
+		background: none;
+		border: 0;
+		height: auto;
 		position: absolute;
+		width: auto;
 		
 		a {
 			display: inline;
@@ -84,13 +78,6 @@ header {
 	}
 }
 
-@media only screen and (max-width: 1000px)  {
-	#main {
-		margin-top: 0;
-		.rounded(0px);
-	}
-}
-
 a {
 	color: #5a5a5a;
 
@@ -105,7 +92,7 @@ a {
 }
 
 article {
-	margin-bottom: 40px;
+	margin: 0 20px 40px 20px;
 	position: relative;
 	
 	.post-details {

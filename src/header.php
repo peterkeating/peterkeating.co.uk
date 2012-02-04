@@ -17,18 +17,15 @@
 
 <body>
 	<header>
-		<div class="content">
-			<h1>Words from Peter Keating</h1>
-		</div>
+		<h1>Words from Peter Keating</h1>
 	</header>
 	
-	<div id="sub-header">
-		<div class="content">
-			<a href="/"><img src="<?php bloginfo( "template_url" ); ?>/images/home.png" /></a>
-			<a href="http://twitter.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/twitter.png" /></a>
-			<a href="https://github.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/github.png" /></a>
-		</div>
-	</div>
+	<nav>
+		<a href="/"><img src="<?php bloginfo( "template_url" ); ?>/images/home.png" /></a>
+		<a href="http://twitter.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/twitter.png" /></a>
+		<a href="https://github.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/github.png" /></a>
+	</nav>
+
 	
 	<div id="main">
 	
