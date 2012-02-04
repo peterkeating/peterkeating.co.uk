@@ -1,16 +1,17 @@
 <?php get_header(); ?>
 		
 	<?php while ( have_posts() ) : the_post() ?>
-	<article>
-		<h1><?php the_title(); ?></h1>
-		
-		<div class="published-on"><?php the_time('F j, Y') ?></div>
-		
-		<div class="post">
-			<?php the_excerpt(); ?>
+	<article class="clearfix">
+		<div class="post-details">
+			<h1><?php the_title(); ?></h1>
+			<div class="published-on"><?php the_time('F j, Y') ?></div>
 		</div>
 		
-		<a href="<?php the_permalink(); ?>">Continue reading</a>
+		<div class="post">
+			<?php the_content(); ?>
+		</div>
+
+		<div class="clear"></div>
 	</article>
 	<?php endwhile; ?>
 		

@@ -58,8 +58,7 @@ header {
 	background-color: #fff;
 	border: 1px solid #ececec;
 	margin: 0 auto;
-	margin-top: 10px;
-	max-width: 980px;
+	margin: 30px;
 	padding: 20px 20px 20px 20px;
 	position: relative;
 	.rounded(9px);
@@ -106,22 +105,39 @@ a {
 }
 
 article {
-	
 	margin-bottom: 40px;
+	position: relative;
 	
-	h1 { 
-		color: #5a5a5a; 
-		font-family: 'LeagueGothic', Arial;
-		font-size: 3.4em; 
-		font-weight: normal;
-		margin: 0; 
-		padding: 0
+	.post-details {
+		float: left;
+		width: 300px;
+
+		h1 { 	
+			color: #5a5a5a; 
+			font-family: 'LeagueGothic', Arial;
+			font-size: 3.4em; 
+			font-weight: normal;
+			margin: 0; 
+			padding: 0
+		}
+		
+		.published-on {
+			font-size: 0.9em;
+			font-weight: bold;
+			font-style: italic;
+		}
 	}
-	
-	.published-on {
-		font-size: 0.9em;
-		font-weight: bold;
-		font-style: italic;
+
+	.post {
+		float: left;
+		width: 100%;
+
+		img.alignright {float:right; margin:0 0 1em 1em}
+		img.alignleft {float:left; margin:0 1em 1em 0}
+		img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+		.alignright {float:right; }
+		.alignleft {float:left; }
+		.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	}
 }
 
@@ -131,7 +147,6 @@ footer {
 	
 	.content {
 		margin: 0 auto;
-		max-width: 980px;
 		position: relative;
 		
 		#to-the-top {
@@ -144,10 +159,10 @@ footer {
 			height: 70px;
 			line-height: 70px;
 			position: absolute;
-			right: -50px;
+			right: 0px;
 			.rounded(35px);
 			text-align: center;
-			top: -35px;
+			top: -70px;
 			width: 70px;
 		}
 	}

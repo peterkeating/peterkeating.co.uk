@@ -1,4 +1,4 @@
-<project name="peterkeating.co.uk" basedir="../" default="-default">
+<project name="peterkeating.co.uk" basedir="../" default="default">
 
 	<property environment="env." />
 
