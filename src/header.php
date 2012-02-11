@@ -25,7 +25,7 @@
 		<a href="http://twitter.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter.png" /></a>
 		<a href="https://github.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-github.png" /></a>
 		<a href="http://www.linkedin.com/profile/view?id=32423747" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-linkedin.png" /></a>
-		<a href="mailto:peter@moov2.com" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-email.png" /></a>
+		<!--<a href="mailto:peter@moov2.com" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-email.png" /></a>-->
  	</nav>
 
 	
