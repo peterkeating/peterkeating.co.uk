@@ -17,7 +17,8 @@
 
 <body>
 	<header>
-		<h1>Words from Peter Keating</h1>
+		<h1 class="long-title">Peter Keating, Developer</h1>
+		<h1 class="short-title">Peter Keating</h1>
 	</header>
 	
 	<nav>

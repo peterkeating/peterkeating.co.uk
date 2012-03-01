@@ -30,7 +30,24 @@ header {
 		margin: 0;
 		padding: 20px 20px 20px 57px;
 	}
+
+	.short-title {
+		display: none;
+	}
 }
+
+@media all and (max-width: 1000px) {
+	header {
+		.long-title {
+			display: none;
+		}
+		
+		.short-title {
+			display: block;
+		}
+	}
+}
+
 
 nav {
 	border-bottom: 1px solid #c9c9c9;
@@ -159,5 +176,12 @@ footer {
 			top: -70px;
 			width: 70px;
 		}
+	}
+}
+
+@media all and (max-width: 1000px) {
+	#main {
+		margin-top: 0px;
+		.rounded(0px);
 	}
 }
