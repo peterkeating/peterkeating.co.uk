@@ -35,7 +35,7 @@
 	<property name="js.libs.src.dir" value="${js.src.dir}\libs" />
 
 	<!-- release information -->
-	<property name="release.dir" value="..\website\wp-content\themes" />
+	<property name="release.dir" value="..\website\wp-content\themes\peterkeating.co.uk" />
 
 	<!-- specifies the order of the build process -->
 	<target name="default" depends="-clean, -prepare, -src, -images, -fonts, -less, -css, -js" />
