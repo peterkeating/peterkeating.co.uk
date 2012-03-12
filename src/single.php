@@ -6,6 +6,8 @@
 			<h1><?php the_title(); ?></h1>
 		
 			<div class="published-on">Posted on <?php the_time('F j, Y') ?> at <?php the_time('g:i a') ?>.</div>
+
+			<div><?php the_tags('',', ',''); ?></div>
 		</div>
 		
 		<div class="post">
