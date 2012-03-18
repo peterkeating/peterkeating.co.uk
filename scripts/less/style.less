@@ -11,6 +11,8 @@
     font-style: normal;
 }
 
+@blue: #0593bb;
+
 a {
 	color: #397af4;
 
@@ -33,16 +35,20 @@ body {
 
 header { 
 	border-bottom: 1px solid #9d9d9d;
-	.gradient(#494949, #494949, #585858);
-	height: 90px;
-	width: 100%;
+	.gradient(@blue, @blue, @blue);
+	height: 215px;
+	overflow: hidden;
+	position: relative;
 	
 	h1 {
+		display: table-cell;
 		color: #fff;
-		font-size: 2.4em;
-		font-family: 'Helvetica Neue', Helvetica, Arial;
+		font-size: 4.5em;
+		font-weight: 550;
+		height: 215px;
 		margin: 0;
-		padding: 20px 20px 20px 57px;
+		padding-left: 30px;
+		vertical-align: middle;
 	}
 
 	.short-title {
@@ -50,18 +56,14 @@ header {
 	}
 }
 
-@media all and (max-width: 420px) {
+@media all and (max-width: 500px) {
 	header {
-		h1 {
-			padding: 20px;
-		}
-
 		.long-title {
 			display: none;
 		}
 		
 		.short-title {
-			display: block;
+			display: table-cell;
 		}
 	}
 }
