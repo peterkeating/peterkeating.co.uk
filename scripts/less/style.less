@@ -36,7 +36,7 @@ header {
 		font-weight: 550;
 		height: 215px;
 		margin: 0;
-		padding-left: 57px;
+		padding: 0 0 0 57px;
 		vertical-align: middle;
 	}
 
@@ -89,8 +89,8 @@ nav {
 	background-color: #f2f2f2;
 	margin: 0 auto;
 	margin-bottom: 30px;
-	margin-top: 30px; 
-	padding: 20px 20px 20px 20px;
+	margin-top: 15px; 
+	padding: 45px 20px 20px 20px;
 	position: relative;
 	.rounded(9px);
 	max-width: 1000px;
@@ -99,31 +99,42 @@ nav {
 		background: none;
 		border: 0;
 		height: auto;
+		margin: 0;
+		padding: 0;
 		position: absolute;
-		width: auto;
+		width: 110px;
 		
 		a {
-			display: inline;
+			background-color: @blue;
+			color: #fcfcfc;
+			.drop-shadow(0, 2px, 4px, 0.2);
 			font-size: 0.8em;
-			padding: 0 10px 0 0;
+			font-weight: bold;
+			padding: 10px;
+			.rounded(3px);
+			text-decoration: none;
+
+			&:hover {
+                .drop-shadow(0, 0, 0, 0);
+            }
 		}
 	}
 	
 	nav.bottom {
-		bottom: 10px;
-		left: 20px;
+		bottom: 5px;
+		left: 5px;
 	}
 	
 	nav.top {
-		right: 20px;
-		top: 10px;
+		right: 5px;
+		top: 5px;
 	}
 }
 
 article {
-	margin: 0 20px 40px 20px;
-	position: relative;
-	
+	margin: 0;
+	overflow: hidden;
+
 	.post-details {
 		float: left;
 
@@ -191,12 +202,5 @@ footer {
 			top: -70px;
 			width: 70px;
 		}
-	}
-}
-
-@media all and (max-width: 1000px) {
-	#main {
-		margin-top: 0px;
-		.rounded(0px);
 	}
 }
