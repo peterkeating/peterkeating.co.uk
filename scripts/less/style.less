@@ -90,7 +90,7 @@ nav {
 	margin: 0 auto;
 	margin-bottom: 30px;
 	margin-top: 15px; 
-	padding: 45px 20px 20px 20px;
+	padding: 45px 20px 45px 20px;
 	position: relative;
 	.rounded(9px);
 	max-width: 1000px;
@@ -179,16 +179,17 @@ article {
 }
 
 footer {
-	margin-bottom: 50px;
-	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	max-width: 960px;
 	
 	.content {
 		margin: 0 auto;
 		position: relative;
 		
 		#to-the-top {
-			background-color: #5a5a5a;
-			border: 1px solid #5a5a5a;
+			background-color: @blue;
+			border: 1px solid @blue;
 			color: #fff;
 			cursor: pointer;
 			display: none;
@@ -196,10 +197,10 @@ footer {
 			height: 70px;
 			line-height: 70px;
 			position: absolute;
-			right: 0px;
+			right: 10px;
 			.rounded(35px);
 			text-align: center;
-			top: -70px;
+			top: -45px;
 			width: 70px;
 		}
 	}
