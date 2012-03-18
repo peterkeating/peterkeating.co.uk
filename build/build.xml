@@ -72,6 +72,8 @@
 				<include name="**/**" />
 			</fileset>
 		</copy>
+
+		<copy todir="${deploy.dir}" file="${basedir}/screenshot.png" />
 	</target>
 
 	<!-- copies the fonts into the deploy directory -->
