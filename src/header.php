@@ -9,7 +9,6 @@
 
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
 	<script src="<?php bloginfo( "template_url" ); ?>/js/modernizr-2.0.6.min.js"></script>
