@@ -38,9 +38,9 @@
 	<property name="release.dir" value="..\website\wp-content\themes\peterkeating.co.uk" />
 
 	<!-- specifies the order of the build process -->
-	<target name="default" depends="-clean, -prepare, -src, -images, -fonts, -less, -css, -js" />
+	<target name="default" depends="-clean, -prepare, -src, -images, -less, -css, -js" />
 
-	<target name="release" depends="-clean, -prepare, -src, -images, -fonts, -less, -css, -js, -release" />
+	<target name="release" depends="-clean, -prepare, -src, -images, -less, -css, -js, -release" />
 	
 	<!-- deletes any folders that would have been created from a previous build. -->
 	<target name="-clean">
