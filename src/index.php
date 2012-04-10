@@ -3,7 +3,7 @@
 	<?php while ( have_posts() ) : the_post() ?>
 	<article class="clearfix">
 		<div class="post-details">
-			<h1><?php the_title(); ?></h1>
+			<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			<div class="published-on"><?php the_time('F j, Y') ?></div>
 			<div class="tags"><?php the_tags('',', ',''); ?></div>
 		</div>
