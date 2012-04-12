@@ -115,7 +115,7 @@
 	-->
 	<target name="-js">
 		<!-- modenizr is not included in the plugins as it is loaded in the <head> tag. -->
-		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.0.6.min.js" />
+		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.5.3.min.js" />
 
 		<!-- concat all third party libraries into a single .js file. -->
 		<concat destfile="${js.dir}\plugins.js">

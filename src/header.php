@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 	
-	<script src="<?php bloginfo( "template_url" ); ?>/js/modernizr-2.0.6.min.js"></script>
+	<script src="<?php bloginfo( "template_url" ); ?>/js/modernizr-2.5.3.min.js"></script>
 </head>
 
 <body>
