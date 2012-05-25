@@ -15,7 +15,7 @@
         </classpath>
     </taskdef>
 
-	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg" />
+	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg, -removeintermediate" />
 
 	<!-- 
 		just compiles the less files into css 
