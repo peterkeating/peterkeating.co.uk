@@ -133,7 +133,7 @@
         <copy file="${intermediate.dir}/${css.dir}/style.min.css" tofile="${intermediate.dir}/${css.dir}/${css.sha}.css" />
 
         <replaceregexp  match="&lt;link(.+)href=['&quot;]?(.*)/${default.stylesheets.file}(?:\?.*)?['&quot;\s]?(.*/?&gt;)"
-                        replace="&lt;link\1href='\2/${css.sha}.css'\3" flags="m">
+                        replace="&lt;link\1href='\2/css/${css.sha}.css'\3" flags="m">
             <fileset dir="${intermediate.dir}" includes="${page-files}"/>
         </replaceregexp>
 
@@ -225,7 +225,7 @@
         <copy file="${intermediate.dir}/${js.dir}/scripts-concat.min.js" tofile="${intermediate.dir}/${js.dir}/${scripts.sha}.js" />
 
         <var name="matchRegex" value="&lt;!-- scripts concatenated [\d\w\s\W]*[\d\w\s\W]*&lt;!-- end ((scripts)|(concatenated and minified scripts))\s*--&gt;" />
-        <var name="replaceRegex" value="&lt;script src='${js.dir}/${scripts.sha}.js\'&gt;&lt;/script&gt;" />
+        <var name="replaceRegex" value="&lt;script src='&lt;?php bloginfo('template_url'); ?&gt;/${js.dir}/${scripts.sha}.js\'&gt;&lt;/script&gt;" />
 
         <replaceregexp match="${matchRegex}" replace="${replaceRegex}" flags="m">
             <fileset dir="${intermediate.dir}" includes="${page-files}"/>
