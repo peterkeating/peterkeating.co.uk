@@ -15,7 +15,7 @@
         </classpath>
     </taskdef>
 
-	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg, -removeintermediate" />
+	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg" />
 
 	<!-- 
 		just compiles the less files into css 
@@ -232,7 +232,7 @@
         </replaceregexp>
 
         <delete includeemptydirs="true">
-            <fileset dir="${intermediate.dir}/${js.dir}" excludes="${scripts.sha}.js" />
+            <fileset dir="${intermediate.dir}/${js.dir}" excludes="${scripts.sha}.js,libs/*" />
         </delete>
     </target>
 
