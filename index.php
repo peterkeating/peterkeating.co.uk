@@ -11,8 +11,6 @@
 		<div class="post">
 			<?php the_content(); ?>
 		</div>
-
-		<div class="clear"></div>
 	</article>
 	<?php endwhile; ?>
 		

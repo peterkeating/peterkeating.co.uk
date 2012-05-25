@@ -1,139 +1,318 @@
-<project name="peterkeating.co.uk" basedir="../" default="default">
+<?xml version="1.0"?>
+<!DOCTYPE project>
+<project name="my-website" default="build" basedir="../">
 
-	<property environment="env." />
+    <!-- load shell environment -->
+    <property environment="ENV" />
+    
+    <property file="build/config/project.properties"/>
+ 
 
-	<!-- folder that the theme files will be deployed into. -->
-	<property name="deploy.dir" value="${basedir}\peterkeating.co.uk" />
+    <!-- load in Ant-Contrib to give us access to some very useful tasks! -->
+    <taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <pathelement location="${tools.dir}/ant-contrib/ant-contrib-1.0b3.jar"/>
+        </classpath>
+    </taskdef>
 
-	<!-- src information -->
-	<property name="src.dir" value="${basedir}\src" />
+	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg" />
 
-	<!-- tools used to assist the build process. -->
-	<property name="tools.dir" value="${basedir}\build\tools" />
-	<property name="yuicompressor.jar" value="${tools.dir}\yuicompressor-2.4.6\yuicompressor-2.4.6.jar" />
-	<property name="lessc.cmd" value="${tools.dir}\lessc\lessc.cmd" />
-
-	<!-- directory where all the script src is located. -->
-	<property name="scripts.dir" value="${basedir}\scripts" />
-
-	<!-- images information -->
-	<property name="images.dir" value="${basedir}\images" />
-	<property name="images.deploy.dir" value="${deploy.dir}\images" />
-
-	<!-- font information -->
-	<property name="fonts.dir" value="${basedir}\fonts" />
-	<property name="fonts.deploy.dir" value="${deploy.dir}\fonts" />	
-
-	<!-- css information -->
-	<property name="css.dir" value="${deploy.dir}\css" />
-	<property name="css.src.dir" value="${scripts.dir}\css" />
-	<property name="less.src.dir" value="${scripts.dir}\less" />
-
-	<!-- js information -->
-	<property name="js.dir" value="${deploy.dir}\js" />
-	<property name="js.src.dir" value="${scripts.dir}\js" />
-	<property name="js.libs.src.dir" value="${js.src.dir}\libs" />
-
-	<!-- release information -->
-	<property name="release.dir" value="..\website\wp-content\themes\peterkeating.co.uk" />
-
-	<!-- specifies the order of the build process -->
-	<target name="default" depends="-clean, -prepare, -src, -images, -less, -css, -js" />
-
-	<target name="release" depends="-clean, -prepare, -src, -images, -less, -css, -js, -release" />
-	
-	<!-- deletes any folders that would have been created from a previous build. -->
-	<target name="-clean">
-		<delete dir="${deploy.dir}" />
-	</target>
-
-	<!-- creates any directories that are required for the build process. -->
-	<target name="-prepare">
-		<mkdir dir="${deploy.dir}" />
-		<mkdir dir="${images.deploy.dir}" />
-		<mkdir dir="${fonts.deploy.dir}" />
-		<mkdir dir="${css.dir}" />
-		<mkdir dir="${js.dir}" />
-	</target>
-
-	<!-- copies the src files into the deploy folder. -->
-	<target name="-src">
-		<copy todir="${deploy.dir}">
-			<fileset dir="${src.dir}">
-				<include name="**\**" />
-			</fileset>
-		</copy>
-	</target>
-
-	<!-- copies the images into the deploy directory. -->
-	<target name="-images">
-		<copy todir="${images.deploy.dir}">
-			<fileset dir="${images.dir}">
-				<include name="**/**" />
-			</fileset>
-		</copy>
-
-		<copy todir="${deploy.dir}" file="${basedir}/screenshot.png" />
-	</target>
-
-	<!-- copies the fonts into the deploy directory -->
-	<target name="-fonts">
-		<copy todir="${fonts.deploy.dir}">
-			<fileset dir="${fonts.dir}">
-				<include name="**/**" />
-			</fileset>
-		</copy>
-	</target>
-
-	<!-- converts any .less files into .css files. -->
-	<target name="-less">
-		<exec dir="${basedir}" executable="${lessc.cmd}" failifexecutionfails='true'>
-			<arg line='"${less.src.dir}\style.less" "${css.dir}\site.css"' />
-		</exec>
-	</target>
-	
 	<!-- 
-		joins all the required css files into a single css file that can be loaded individually to save
-		any bottleneck that can be caused by too many css / js requests on load.
-	-->	
-	<target name="-css">
-		<concat destfile="${deploy.dir}\style.css" overwrite="yes">
-			<fileset file="${css.src.dir}\theme-info.css" />
-			<fileset file="${css.src.dir}\normalize.css" />
-			<fileset file="${css.dir}\site.css" />
-		</concat>
-		
-		<!-- deletes the css folder as it isn't used in the theme. -->
-		<delete dir="${css.dir}" />
-	</target>
-
-	<!--
-		performs a few of jobs. 
-			- concats all the library js files into plugins.js
-			- concats all site specific scripts into script.js
-			- moves modenizr to the js folder
+		just compiles the less files into css 
 	-->
-	<target name="-js">
-		<!-- modenizr is not included in the plugins as it is loaded in the <head> tag. -->
-		<copy todir="${js.dir}" file="${js.libs.src.dir}\modernizr-2.5.3.min.js" />
+	<target name="less" depends="-less" />
 
-		<!-- concat all third party libraries into a single .js file. -->
-		<concat destfile="${js.dir}\plugins.js">
-			<fileset file="${js.libs.src.dir}\jquery-1.7.2.min.js" />
-		</concat>
-		
-		<!-- 
-			copies the custom script files to the js folder, when more custom 
-			js files are present, should be a similiar process as for the third
-			party libraries where all the scripts are concat into a single js file. 
-		-->
-		<copy todir="${js.dir}" file="${js.src.dir}\scripts.js" />
-	</target>
+	<!-- 
+		deletes the artifacts generated from the previous build, 
+		if there is one. 
+	-->
+	<target name="-clean" >
+      	<delete dir="${deploy.dir}" />
+  	</target>
 
-	<!-- copies the created theme into the theme directory. -->
-	<target name="-release">
-		<copy todir="${release.dir}">
-			<fileset dir="${deploy.dir}" />
-		</copy>
-	</target>
+  	<!--
+		creates any directories that will be required during the
+		build process.
+  	-->
+  	<target name="-prepare">
+		<mkdir dir="${deploy.dir}" />
+  	</target>
+
+
+  	<!-- converts all the .less files into css files. -->
+  	<target name="-less">
+        <for param="less.file" parallel="true" list="${included.less.stylesheets}">
+            <sequential>
+                <echo>compiling @{less.file} to @{less.file}.css</echo>
+                <exec dir="${basedir}" executable="${tool.lessc}" failifexecutionfails='true'>
+                    <arg line='"${project.dir}/${css.dir}/${less.dir}/@{less.file}" "${project.dir}/${css.dir}/@{less.file}.css"' />
+                </exec>
+            </sequential>
+        </for>
+  	</target>
+
+  	<!--
+  		Copies the web project into an intermediate location
+  		so we can modify files to speed up js, img & css loading
+  	-->
+  	<target name="-copytointermediate">
+		<copy todir="${intermediate.dir}">
+            <fileset dir="${project.dir}" excludes="${file.default.exclude}" />
+        </copy>
+  	</target>
+
+    <target name="-css" depends="-lesstocss, -removeclientless, -css.concat, -css.min, -css.cache" />
+
+    <!--
+        Modifies any .less external stylesheet imports, and converts them 
+        to be directed at the compiled .css versions of the .less files.
+    -->
+    <target name="-lesstocss">
+        <for param="less.file" parallel="true" list="${included.less.stylesheets}">
+            <sequential>
+                <replaceregexp  match="&lt;link(.+)href=['&quot;]?(.*)/less/@{less.file}(?:\?.*)?['&quot;\s]?(.*/?&gt;)"
+                                replace="&lt;link rel=&quot;stylesheet&quot; href=&quot;\2/@{less.file}.css&quot;\3" flags="m">
+                    <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+                </replaceregexp>
+            </sequential>
+        </for>
+    </target>
+
+    <!--
+        Removes the client side less javascript library.
+    -->
+    <target name="-removeclientless">
+        <replaceregexp  match="&lt;script src=&quot;.*${js.libs.dir}/${less.js.file}&quot;.*&gt;" replace=" " flags="m">
+            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+        </replaceregexp>
+    </target>
+
+    <!-- 
+        Concats all the css files into a single css file for improved
+        page load. All the css files that have been concatenated are stripped
+        from the specified page files.
+    -->
+    <target name="-css.concat">
+        <for param="css.file" parallel="true" list="${included.stylesheets}">
+            <sequential>
+                <concat destfile="${intermediate.dir}/${css.dir}/${default.stylesheets.file}" append="yes">
+                    <filelist dir="${intermediate.dir}/${css.dir}" files="@{css.file}"/>
+                </concat>
+            </sequential>
+        </for>
+
+        <foreach list="${included.stylesheets}" param="css_file" target="-css-remove-concatenated-stylesheets" />
+    </target>
+
+    <!--
+        Minifies the concatenated css file.
+    -->
+    <target name="-css.min">
+        <apply executable="java" parallel="false">
+            <fileset dir="${intermediate.dir}/${css.dir}" includes="${default.stylesheets.file}" />
+            <arg line="-jar"/>
+            <arg path="${tool.yuicompressor}"/>
+            <srcfile/>
+            <arg line="--type css"/>
+            <arg line="-o"/>
+            <mapper type="merge" to="${intermediate.dir}/${css.dir}/style.min.css"/>
+            <targetfile/>
+        </apply>
+    </target>
+
+    <!--
+        Changes the name of the name of the concatenated css file to ensure that any 
+        changes made to the stylesheet are presented to the user. The minified version
+        of the stylesheet is given a randomly generated new name and the <link> tag 
+        to the main stylesheet file is changed to point at the renamed stylesheet.
+    -->
+    <target name="-css.cache">
+        <checksum file="${intermediate.dir}/${css.dir}/style.min.css" algorithm="sha" property="css.fullsha" />
+        <propertyregex property="css.sha" input="${css.fullsha}" regexp=".{${hash.length}}" select="\0" />
+        <property name="style.css" value="${css.dir}/${css.sha}.css" />
+        <copy file="${intermediate.dir}/${css.dir}/style.min.css" tofile="${intermediate.dir}/${css.dir}/${css.sha}.css" />
+
+        <replaceregexp  match="&lt;link(.+)href=['&quot;]?(.*)/${default.stylesheets.file}(?:\?.*)?['&quot;\s]?(.*/?&gt;)"
+                        replace="&lt;link\1href='\2/${css.sha}.css'\3" flags="m">
+            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+        </replaceregexp>
+
+        <delete includeemptydirs="true">
+            <fileset dir="${intermediate.dir}/${css.dir}" excludes="${css.sha}.css" />
+        </delete>
+    </target>
+
+    <!-- 
+        Removes the stylesheets that have been included
+        into the concatenated stylesheets.
+    -->
+    <target name="-css-remove-concatenated-stylesheets">
+        <replaceregexp match="&lt;link.+href=&quot;.*${css_file}&quot;.*&gt;" replace=" " byline="true">
+            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+        </replaceregexp>
+    </target>
+
+    <target name="-js" depends="-js.concat, -js.min, -js.cache" />
+
+    <!-- 
+        Minifies the concatenateed javascript file. 
+    -->
+    <target name="-js.min">
+        <apply executable="java" parallel="false">
+            <fileset dir="${intermediate.dir}/${js.dir}" includes="${default.js.file}"/>
+            <arg line="-jar"/>
+            <arg path="${tool.yuicompressor}"/>
+            <srcfile/>
+            <arg line="--type js"/>
+            <arg line="-o"/>
+            <mapper type="merge" to="${intermediate.dir}/${js.dir}/scripts-concat.min.js"/>
+            <targetfile/>
+        </apply>
+    </target>
+
+    <!--
+        Concats all the js files that are inside the page files specified. These
+        js files are placed into a single file scripts.js file that is then copied
+        into a file with a cache buster name that is generated using the checksum.
+    -->
+    <target name="-js.concat">
+        <filelist id="file.root" dir="${intermediate.dir}" files="${page-files}" />
+
+        <apply executable="java" parallel="false" outputproperty="scripts.ordered">
+            <arg value="-cp"/>
+            <arg value="${tools.dir}/misc/" />
+            <arg value="ScriptsToConcat"/>
+            <first>
+                <filelist refid="file.root"/>
+            </first>
+        </apply>
+
+        <for param="each.file" parallel="false" list="${scripts.ordered}">
+            <sequential>
+                <!-- removes the php for getting the template directory -->
+                <propertyregex property="js.file"
+                               input="@{each.file}"
+                               regexp=".*\?php bloginfo\('template_url'\); \?>/"
+                               replace=""
+                               global="true" />
+
+                <concat destfile="${intermediate.dir}/${js.dir}/${default.js.file}" append="yes">
+                    <filelist dir="${intermediate.dir}" files="${js.file}"/>
+                </concat>
+            </sequential>
+        </for>
+
+        <!--
+        <for param="js.file" parallel="true" list="${included.js}">
+            <sequential>
+                <concat destfile="${intermediate.dir}/${js.dir}/${default.js.file}" append="yes">
+                    <filelist dir="${intermediate.dir}/${js.dir}" files="@{js.file}"/>
+                </concat>
+            </sequential>
+        </for>-->
+    </target>
+
+    <!--
+        Changes the name of the main concatenated scripts file to ensure that any 
+        the primary javascript file is never loaded from cached when a release is pushed.
+        The collection of javascript files in between the marker comments are removed and
+        replaced with the name of the new cache busting java script file.
+    -->
+    <target name="-js.cache">
+        <checksum file="${intermediate.dir}/${js.dir}/scripts-concat.min.js" algorithm="sha" property="scripts.fullsha" />
+        <propertyregex property="scripts.sha" input="${scripts.fullsha}" regexp=".{${hash.length}}" select="\0" />
+        <property name="scripts.js" value="${intermediate.dir}/${js.dir}/${scripts.sha}.js" />
+        <copy file="${intermediate.dir}/${js.dir}/scripts-concat.min.js" tofile="${intermediate.dir}/${js.dir}/${scripts.sha}.js" />
+
+        <var name="matchRegex" value="&lt;!-- scripts concatenated [\d\w\s\W]*[\d\w\s\W]*&lt;!-- end ((scripts)|(concatenated and minified scripts))\s*--&gt;" />
+        <var name="replaceRegex" value="&lt;script src='${js.dir}/${scripts.sha}.js\'&gt;&lt;/script&gt;" />
+
+        <replaceregexp match="${matchRegex}" replace="${replaceRegex}" flags="m">
+            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+        </replaceregexp>
+
+        <delete includeemptydirs="true">
+            <fileset dir="${intermediate.dir}/${js.dir}" excludes="${scripts.sha}.js" />
+        </delete>
+    </target>
+
+    <!-- 
+        publishes the intermediate project into a working website.
+    -->
+    <target name="-publish">
+        <copy todir="${publish.dir}" includeEmptyDirs="false">
+          <fileset dir="${intermediate.dir}">
+              <exclude name="*.less"/>
+              <exclude name="*.less.css"/>
+          </fileset>
+        </copy>
+    </target>
+
+    <!-- 
+        Optimises all the PNG images to reduce their file size, this
+        may take a while depending on how many images there are.
+    -->
+    <target name="-imagespng">
+         <if>
+            <equals arg1="${images.strip.metadata}" arg2="true"/>
+            <then>
+                <var name="strip-meta-tags" value="-strip all"/>
+            </then>
+            <else>
+                <var name="strip-meta-tags" value=""/>
+            </else>
+        </if>
+
+        <delete>
+            <fileset dir="${publish.dir}/${images.dir}/">
+                <include name="**/*.png"/>
+            </fileset>
+        </delete>
+
+        <apply executable="${tools.optipng}" dest="${publish.dir}/${images.dir}/" osfamily="windows">
+            <fileset dir="${intermediate.dir}/${images.dir}/" includes="**/*.png"  excludes="${images.bypass}, ${images.default.bypass}"/>
+            <arg value="-quiet"/>
+            <arg value="-o7"/>
+             <arg value="${strip-meta-tags}"/>
+            <arg value="-out"/>
+            <targetfile/>
+            <srcfile/>
+            <mapper type="identity"/>
+        </apply>
+    </target>
+
+    <!-- 
+        Optimises all the JPG images to reduce their file size. 
+    -->
+    <target name="-imagesjpg">
+         <if>
+            <equals arg1="${images.strip.metadata}" arg2="true"/>
+            <then>
+                <var name="strip-meta-tags" value="none"/>
+            </then>
+            <else>
+                <var name="strip-meta-tags" value="all"/>
+            </else>
+        </if>
+
+        <apply executable="${tools.jpegtran}" dest="${publish.dir}/${images.dir}/" osfamily="windows">
+            <fileset dir="${intermediate.dir}/${images.dir}/" includes="**/*.jpg"  excludes="${images.bypass}, ${images.default.bypass}"/>
+            <arg value="-copy"/>
+            <arg value="${strip-meta-tags}"/>
+            <arg value="-optimize"/>
+            <arg value="-outfile"/>
+            <targetfile/>
+            <srcfile/>
+            <mapper type="identity"/>
+        </apply>
+    </target>
+
+    <!--
+        removes the intermediate directory that was used to configure
+        the js, css, html & images so they are ready for a production 
+        release.
+    -->
+    <target name="-removeintermediate">
+        <delete dir="${intermediate.dir}" />
+    </target>
 </project>
