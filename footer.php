@@ -14,7 +14,7 @@
 	<!-- end scripts -->
 
 	<?php
-	if($_GET['preview'] != "true") {
+	if(!current_user_can('level_10')) {
 	?>
 	<script>
 		var _gaq=[['_setAccount','UA-22730259-1'],['_trackPageview']];
