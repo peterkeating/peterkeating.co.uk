@@ -15,7 +15,7 @@
 
 	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/less-1.3.0.min.js"></script>
 
-	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.5.3.min.js"></script>
+	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.1.min.js"></script>
 </head>
 
 <body>
