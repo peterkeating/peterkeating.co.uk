@@ -40,6 +40,24 @@
         </apply>
     </target>
 
+     <!-- 
+        performs linting on all the js.
+    -->
+    <target name="jslint">
+        <apply dir="${project.dir}/${js.dir}" executable="java" failonerror="true">
+            <fileset dir="${project.dir}/${js.dir}">
+                <exclude name="**/libs/**" />
+                <include name="*.js" />
+            </fileset>
+            <arg value="-jar" />
+            <arg path="${tool.rhino}" />
+            <arg path="${tool.jslint}" />
+            <srcfile />
+            <arg value="${tool.jslint.opts}" />
+            <arg value="${tool.jslint.global}" />
+        </apply>
+    </target>
+
 	<!-- 
 		deletes the artifacts generated from the previous build, 
 		if there is one. 
