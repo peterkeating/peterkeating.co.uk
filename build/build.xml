@@ -22,6 +22,24 @@
 	-->
 	<target name="less" depends="-less" />
 
+    <!-- 
+        performs css linting on all the css.
+    -->
+    <target name="csslint" depends="-less">
+        <apply dir="${project.dir}/${css.dir}" executable="java" failonerror="true">
+            <fileset dir="${project.dir}/${css.dir}">
+                <include name="**/*.css"/>
+                <exclude name="**/normalize.css" />
+                <exclude name="**/*.min.css"/>
+                <exclude name="${default.stylesheets.file}" />
+            </fileset>
+            <arg value="-jar" />
+            <arg path="${tool.rhino}" />
+            <arg path="${tool.csslint}" />
+            <srcfile/>
+        </apply>
+    </target>
+
 	<!-- 
 		deletes the artifacts generated from the previous build, 
 		if there is one. 
