@@ -15,7 +15,7 @@
         </classpath>
     </taskdef>
 
-	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
+	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
 
 	<!-- 
 		just compiles the less files into css 
@@ -322,11 +322,20 @@
     </target>
 
     <!--
-        removes the intermediate directory that was used to configure
+        Removes the intermediate directory that was used to configure
         the js, css, html & images so they are ready for a production 
         release.
     -->
     <target name="-removeintermediate">
         <delete dir="${intermediate.dir}" />
+    </target>
+
+    <!--
+        Replaces the dummy google analytics code with the real one.
+    -->
+    <target name="-googleanalytics">
+        <replaceregexp match="UA-XXXXX-X" replace="${googleanalytics.code}" flags="m">
+            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
+        </replaceregexp>
     </target>
 </project>
