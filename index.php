@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<!--
 		
 	<?php while ( have_posts() ) : the_post() ?>
 	<article class="clearfix">
@@ -23,5 +25,6 @@
 		<?php previous_posts_link('Newer Posts') ?>
 		<?php next_posts_link('Older Posts'); ?>
 	</nav>	
+-->
 
 <?php get_footer(); ?>

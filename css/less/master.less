@@ -1,2 +1,78 @@
 @import "elements.less";
 
+font-face {
+    font-family: 'SourceSansPro';
+    src: url('../../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SourceSansPro';
+    src: url('../../fonts/sourcesanspro-bold-webfont.eot');
+    src: url('../../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('../../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('../../fonts/sourcesanspro-bold-webfont.svg#source_sans_probold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@primary-color: #2ea2cc;
+
+/**
+* Fixes the float left bug that causes a container to not be the
+* height of its children when its children are using float left
+* in order to be displayed inline.
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+*/
+
+h1 {
+	color: @primary-color;
+	font-family: SourceSansPro, Arial;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	padding: 10px;
+
+	.heading {
+		display: inline-block;
+		text-align: center;
+		width: 65%;
+	}
+
+	hr {
+		background: @primary-color;
+		border: 0;
+		clear: both;
+		height: 1px;
+		margin: 10px 0 0 0;
+		padding: 0;
+	}
+
+	img {
+		display: inline-block;
+		vertical-align: middle;
+
+		#border > .rounded(5px);
+		#shadow > .drop(2px, 3px, 4px, 0.4;
+
+		@media all and (max-width: 320px) {
+			width: 30%;
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
