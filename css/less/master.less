@@ -22,7 +22,11 @@ font-face {
     font-style: normal;
 }
 
-@primary-color: #2ea2cc;
+@primary-color: #1e8cbe;
+@text-color: #666;
+
+@primary-font: SourceSansPro, Arial, sans-serif;
+@text-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /**
 * Fixes the float left bug that causes a container to not be the
@@ -34,15 +38,28 @@ font-face {
 .clearfix { *zoom: 1; }
 */
 
+a {
+	color: @primary-color;
+
+	&:hover {
+		background-color: @primary-color;
+		color: #fff;
+		padding: 3px;
+		text-decoration: none;
+		#shadow > .drop(1px, 2px, 2px, 0.4)
+	}
+}
+
 h1 {
 	color: @primary-color;
-	font-family: SourceSansPro, Arial;
+	font-family: @primary-font;
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
 }
 
 header {
+	margin-bottom: 15px;
 	padding: 10px;
 
 	.heading {
@@ -65,7 +82,7 @@ header {
 		vertical-align: middle;
 
 		#border > .rounded(5px);
-		#shadow > .drop(2px, 3px, 4px, 0.4;
+		#shadow > .drop(2px, 3px, 4px, 0.4);
 
 		@media all and (max-width: 320px) {
 			width: 30%;
@@ -75,4 +92,42 @@ header {
 
 img {
 	max-width: 100%;
+}
+
+.main {
+	padding: 0 10px;
+}
+
+.post-summary {
+	color: @text-color;
+	font-family: @text-font;
+	font-size: 0.95em;
+	margin-bottom: 15px;
+
+	.post-link {
+		display: inline-block;
+		margin: 5px 0;
+		padding: 3px;
+	}
+
+	.publish-date {
+		font-size: 0.9em;
+		font-weight: bold;
+		margin: 8px 0;
+	}
+
+	.snippet {
+		line-height: 1.3em;
+
+		p:first-child {
+			margin: 0;
+		}
+	}
+
+	.title {
+		color: @primary-color;
+		font-family: @primary-font;
+		font-size: 1.2em;
+		margin: 0;
+	}
 }
