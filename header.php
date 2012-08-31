@@ -16,6 +16,9 @@
 	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/less-1.3.0.min.js"></script>
 
 	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.1.min.js"></script>
+
+	<script type="text/javascript" src="//use.typekit.net/men0iqb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
