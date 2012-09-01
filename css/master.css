@@ -1,7 +1,6 @@
 a {
   color: #1e8cbf;
 }
-
 a:hover {
   background-color: #1e8cbe;
   color: #fff;
@@ -24,12 +23,10 @@ header {
   margin-bottom: 15px;
   padding: 10px;
 }
-
 header .heading {
   display: inline-block;
   padding-left: 20px;
 }
-
 @media all and (max-width: 290px) {
   header .heading {
     font-size: 1.4em;
@@ -43,7 +40,6 @@ header hr {
   margin: 10px 0 0 0;
   padding: 0;
 }
-
 header img {
   display: inline-block;
   max-width: 100px;
@@ -59,12 +55,12 @@ header img {
   -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
 }
-
 @media all and (max-width: 320px) {
   header img {
     width: 30%;
   }
 }
+
 img {
   max-width: 100%;
 }
@@ -79,27 +75,22 @@ img {
   font-size: 0.95em;
   margin-bottom: 15px;
 }
-
 .post-summary .post-link {
   display: inline-block;
   margin: 5px 0;
   padding: 3px;
 }
-
 .post-summary .publish-date {
   font-size: 0.9em;
   font-weight: bold;
   margin: 8px 0;
 }
-
 .post-summary .snippet {
   line-height: 1.3em;
 }
-
 .post-summary .snippet p:first-child {
   margin: 0;
 }
-
 .post-summary .title {
   color: #1e8cbe;
   font-family: Adelle, Arial, sans-serif;
