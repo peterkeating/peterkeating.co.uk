@@ -11,9 +11,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css" />
-	<link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/css/less/master.less" />
-
-	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/less-1.3.0.min.js"></script>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css" />
 
 	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.1.min.js"></script>
 
