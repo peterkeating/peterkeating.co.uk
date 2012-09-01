@@ -1,3 +1,5 @@
+@import "bourbon/_bourbon";
+
 a {
     color: #1e8cbf;
 
@@ -6,9 +8,7 @@ a {
         color: #fff;
         padding: 3px;
         text-decoration: none;
-        -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
-        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+        @include box-shadow(0 1px 2px 2px rgba(0, 0, 0, 0.65));
     }
 }
 
@@ -47,15 +47,9 @@ header {
         max-width: 100px;
         vertical-align: middle;
         width: 20%;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
-        -moz-background-clip: padding;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
-        box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+
+        @include border-radius(5px);
+        @include box-shadow(0 2px 3px 4px rgba(0, 0, 0, 0.4));
 
         @media all and (max-width: 320px) {
             width: 30%;
@@ -69,7 +63,7 @@ img {
 
 .main {
     padding: 0 10px;
-}
+} 
 
 .post-summary {
     color: #666666;
