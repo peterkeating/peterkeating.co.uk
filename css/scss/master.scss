@@ -1,4 +1,5 @@
 @import "bourbon/_bourbon";
+@import "mixins/_custom";
 
 a {
     color: #1e8cbf;
@@ -49,7 +50,7 @@ header {
         width: 20%;
 
         @include border-radius(5px);
-        @include box-shadow(0 2px 3px 4px rgba(0, 0, 0, 0.4));
+        @include drop-shadow(2px, 3px, 4px, 0.4);
 
         @media all and (max-width: 320px) {
             width: 30%;

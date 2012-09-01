@@ -46,8 +46,9 @@ header img {
   width: 20%;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 2px 3px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 2px 3px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 @media all and (max-width: 320px) {
   header img {
