@@ -12,6 +12,11 @@ a:hover {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 
+body {
+  background-color: #efefef;
+  font-size: 100%;
+}
+
 h1 {
   color: #1e8cbe;
   font-family: Adelle, Arial, sans-serif;
@@ -28,18 +33,10 @@ header .heading {
   display: inline-block;
   padding-left: 20px;
 }
-@media all and (max-width: 290px) {
+@media all and (max-width: 320px) {
   header .heading {
     font-size: 1.4em;
   }
-}
-header hr {
-  background: #1e8cbe;
-  border: 0;
-  clear: both;
-  height: 1px;
-  margin: 10px 0 0 0;
-  padding: 0;
 }
 header img {
   display: inline-block;
@@ -68,8 +65,27 @@ img {
 }
 
 .page {
+  background-color: white;
   margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
   max-width: 900px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+@media all and (max-width: 320px) {
+  .page {
+    padding: 10px;
+  }
+}
+@media all and (max-width: 768px) {
+  .page {
+    margin-bottom: 0;
+    margin-top: 0;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+  }
 }
 
 .post-summary {
