@@ -1,3 +1,4 @@
+/* Maximum width of the main content of the page. */
 a {
   color: #1e8cbf;
 }
@@ -6,8 +7,9 @@ a:hover {
   color: #fff;
   padding: 3px;
   text-decoration: none;
-  -webkit-box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.65);
-  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 
 h1 {
@@ -61,7 +63,13 @@ img {
 }
 
 .main {
+  margin: 0 auto;
   padding: 0 10px;
+}
+
+.page {
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 .post-summary {
