@@ -15,13 +15,12 @@ header {
 
 .page {
   background-color: white;
+  border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 20px;
   margin-top: 20px;
   padding: 20px;
   max-width: 900px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
 }
 @media all and (max-width: 320px) {
   .page {
@@ -30,10 +29,9 @@ header {
 }
 @media all and (max-width: 768px) {
   .page {
+    border-radius: 0;
     margin-bottom: 0;
     margin-top: 0;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
   }
 }
 
@@ -47,12 +45,11 @@ header .heading {
   }
 }
 header img {
+  border-radius: 5px;
   display: inline-block;
   max-width: 100px;
   vertical-align: middle;
   width: 20%;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);

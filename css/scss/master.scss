@@ -68,23 +68,21 @@ header {
 
 .page {
     background-color: white;
+    border-radius: 5px;
     margin: 0 auto;
     margin-bottom: 20px;
     margin-top: 20px;
     padding: 20px;
     max-width: $max-width;
 
-    @include border-radius(5px);
-
     @media all and (max-width: 320px) {
         padding: 10px;
     }
 
     @media all and (max-width: 768px) {
+        border-radius: 0;
         margin-bottom: 0;
         margin-top: 0;
-
-        @include border-radius(0px);
     }
 }
 
@@ -105,12 +103,12 @@ header {
     }
 
     img {
+        border-radius: 5px;
         display: inline-block;
         max-width: 100px;
         vertical-align: middle;
         width: 20%;
 
-        @include border-radius(5px);
         @include drop-shadow(2px, 3px, 4px, 0.4);
 
         @media all and (max-width: 320px) {
