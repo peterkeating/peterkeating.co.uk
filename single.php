@@ -15,11 +15,6 @@
 	
 	<?php endwhile ?>
 
-	<nav class="top">
-		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
-		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
-	</nav>
-
 	<nav class="bottom">
 		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
 		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
