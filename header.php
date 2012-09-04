@@ -36,15 +36,6 @@
 				</nav>
 			</div>
 		</header>
-		
-		<!--
-		<nav>
-			<a href="/"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-home-white.png" /></a>
-			<a href="http://twitter.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter-white.png" /></a>
-			<a href="https://github.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-github-white.png" /></a>
-			<a href="http://www.linkedin.com/profile/view?id=32423747" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-linkedin-white.png" /></a>
-	 	</nav>
-		-->
 
 		<div class="main">
 	
