@@ -93,6 +93,19 @@ header {
 // ========================================================================== 
 
 header {
+    // have to revert from the default otherwise some really
+    // odd results occur.
+    a {
+        background: none;
+        text-decoration: none;
+
+        &:hover {
+            background: none;
+            padding: 0;
+            @include drop-shadow(0, 0, 0, 0);
+        }
+    }
+
     .heading {
         display: inline-block;
         padding-left: 20px;        

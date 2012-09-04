@@ -35,6 +35,17 @@ header {
   }
 }
 
+header a {
+  background: none;
+  text-decoration: none;
+}
+header a:hover {
+  background: none;
+  padding: 0;
+  -webkit-box-shadow: 0 0 0 black;
+  -moz-box-shadow: 0 0 0 black;
+  box-shadow: 0 0 0 black;
+}
 header .heading {
   display: inline-block;
   padding-left: 20px;

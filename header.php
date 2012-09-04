@@ -22,7 +22,9 @@
 <body>
 	<div class="page">
 		<header>
-			<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" />
+			<a href="/">
+				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" />
+			</a>
 
 			<h1 class="heading">P Keating</h1>
 		</header>
