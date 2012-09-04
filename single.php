@@ -5,9 +5,7 @@
 		<div class="post-details">
 			<h1 class="post-title"><?php the_title(); ?></h1>
 		
-			<div class="published-on">Posted on <?php the_time('F j, Y') ?>.</div>
-
-			<div class="tags">Tagged as: <?php the_tags('',', ',''); ?></div>
+			<div class="published-on tags"><span class="date"><?php the_time('F j, Y') ?></span> in <?php the_tags('',', ',''); ?></div>
 		</div>
 		
 		<div class="post">

@@ -35,6 +35,9 @@ header {
   }
 }
 
+header a {
+  text-decoration: none;
+}
 header .heading {
   display: inline-block;
   padding-left: 20px;
@@ -99,7 +102,15 @@ img {
 .post-details div, .post-details .post-title {
   margin-bottom: 6px;
 }
-.post-details .published-on {
+.post-details .post-title {
+  margin-bottom: 15px;
+  font-size: 2.5em;
+}
+.post-details .published-on a, .post-details .tags a {
+  font-style: italic;
+}
+.post-details .published-on .date, .post-details .tags .date {
+  font-style: italic;
   font-weight: bold;
 }
 
