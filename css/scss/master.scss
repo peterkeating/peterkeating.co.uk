@@ -299,29 +299,31 @@ img {
 
     .post {
         margin-bottom: 7px;
-        //padding-left: 20px;
 
-        a {
+        .post-title {
             color: $text-color;
-            display: block;
             float: left;
             font-weight: 500;
-            margin-left: 20px;
             margin-top: 3px;
             text-decoration: none;
+            width: 80%;
         }
 
         .day {
-            background-color: $primary-color;
-            border-radius: 15px;
-            color: white;
-            font-size: 0.8em;
-            font-weight: bold;
             float: left;
-            height: 30px;
-            line-height: 30px;
-            text-align: center;
-            width: 30px;
+            margin-right: 20px;
+
+            .element {
+                background-color: $primary-color;
+                border-radius: 15px;
+                color: white;
+                font-size: 0.8em;
+                font-weight: bold;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                width: 30px;
+            }
         }
     }
 

@@ -27,10 +27,12 @@ $active = '';
 
  		<div class="post clearfix">
  			<div class="day">
- 				<?php the_time('j') ?>
+ 				<div class="element">
+ 					<?php the_time('j') ?>
+ 				</div>
  			</div> 
 
- 			<a href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+ 			<div class="post-title"><?php the_title() ?></div>
  		</div>
  	<?php endwhile; ?>
 </div>

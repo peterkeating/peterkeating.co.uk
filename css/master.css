@@ -186,22 +186,24 @@ img {
 .archive .post {
   margin-bottom: 7px;
 }
-.archive .post a {
+.archive .post .post-title {
   color: #666666;
-  display: block;
   float: left;
   font-weight: 500;
-  margin-left: 20px;
   margin-top: 3px;
   text-decoration: none;
+  width: 80%;
 }
 .archive .post .day {
+  float: left;
+  margin-right: 20px;
+}
+.archive .post .day .element {
   background-color: #0a8ce3;
   border-radius: 15px;
   color: white;
   font-size: 0.8em;
   font-weight: bold;
-  float: left;
   height: 30px;
   line-height: 30px;
   text-align: center;
