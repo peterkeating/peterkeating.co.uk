@@ -26,7 +26,15 @@
 				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" />
 			</a>
 
-			<h1 class="heading">P Keating</h1>
+			<div class="header-text">
+				<h1 class="heading">P Keating</h1>
+
+				<nav class="page-navigation">
+					<a href="/">Home</a>
+					<a href="/index.php/about/">About</a>
+					<a href="/index.php/archive/">Archive</a>
+				</nav>
+			</div>
 		</header>
 		
 		<!--

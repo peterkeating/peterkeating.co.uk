@@ -102,10 +102,13 @@ header {
         text-decoration: none;
     }
 
-    .heading {
+    .header-text {
         display: inline-block;
-        padding-left: 20px;        
+        height: 100%;
+        padding-left: 20px;    
+    }
 
+    .heading {    
         @media all and (max-width: 320px) {
             font-size: 1.4em;
         }
@@ -116,12 +119,21 @@ header {
         display: inline-block;
         max-width: 100px;
         vertical-align: middle;
-        width: 20%;
 
         @include drop-shadow(2px, 3px, 4px, 0.4);
 
         @media all and (max-width: 320px) {
             width: 30%;
+        }
+    }
+
+    .page-navigation {
+        display: inline-block;
+        font-size: 0.9em;
+
+        a {
+            color: #9b9a9a;
+            padding-right: 10px;
         }
     }
 }
