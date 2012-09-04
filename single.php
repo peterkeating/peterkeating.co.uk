@@ -3,11 +3,11 @@
 	<?php while ( have_posts() ) : the_post() ?>
 	<article class="clearfix">
 		<div class="post-details">
-			<h1><?php the_title(); ?></h1>
+			<h1 class="post-title"><?php the_title(); ?></h1>
 		
-			<div class="published-on">Posted on <?php the_time('F j, Y') ?> at <?php the_time('g:i a') ?>.</div>
+			<div class="published-on">Posted on <?php the_time('F j, Y') ?>.</div>
 
-			<div><?php the_tags('',', ',''); ?></div>
+			<div class="tags">Tagged as: <?php the_tags('',', ',''); ?></div>
 		</div>
 		
 		<div class="post">

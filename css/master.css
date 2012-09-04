@@ -79,6 +79,34 @@ img {
   max-width: 100%;
 }
 
+.post {
+  color: #666666;
+  line-height: 1.45em;
+}
+
+.post-details {
+  color: #666666;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.95em;
+}
+.post-details div, .post-details .post-title {
+  margin-bottom: 6px;
+}
+.post-details .published-on {
+  font-weight: bold;
+}
+
+.gist {
+  border: 1px solid #dadada;
+  color: #373737;
+  font-size: 0.75em;
+  line-height: 1.1em;
+  padding: 5px 15px;
+}
+.gist .gist-meta {
+  display: none;
+}
+
 .post-summary {
   color: #666666;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

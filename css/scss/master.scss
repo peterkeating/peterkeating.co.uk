@@ -147,6 +147,47 @@ img {
 
 
 // ==========================================================================
+// Styles for displaying a single post.
+// ========================================================================== 
+.post {
+    color: #666666;
+    line-height: 1.45em;
+}
+
+.post-details {
+    color: #666666;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.95em;
+
+    div, .post-title {
+        margin-bottom: 6px;
+    }
+
+    .published-on {
+        font-weight: bold;
+    }
+}
+
+
+
+// ==========================================================================
+// Styles for displaying a code samples in a post.
+// ========================================================================== 
+.gist {
+    border: 1px solid #dadada;
+    color: #373737;
+    font-size: 0.75em;
+    line-height: 1.1em;
+    padding: 5px 15px;
+
+    .gist-meta {
+        display: none;
+    }
+}
+
+
+
+// ==========================================================================
 // Post summary that is displayed on the main page.
 // ========================================================================== 
 .post-summary {
