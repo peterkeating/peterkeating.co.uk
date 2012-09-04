@@ -29,7 +29,7 @@
 			<div class="header-text">
 				<h1 class="heading">P Keating</h1>
 
-				<nav class="page-navigation">
+				<nav class="page-navigation small-medium-text">
 					<a href="/">Home</a>
 					<a href="/index.php/about/">About</a>
 					<a href="/index.php/archive/">Archive</a>

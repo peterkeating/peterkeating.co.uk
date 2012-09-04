@@ -15,7 +15,7 @@ $active = '';
 ?>
 
 <div class="archive">
-	<h1 class="title">Archive</h1>
+	<h1 class="title very-large-text">Archive</h1>
 
  	<?php while ( have_posts() ) : the_post(); ?>
  	<?php 
@@ -27,7 +27,7 @@ $active = '';
 
  		<div class="post clearfix">
  			<div class="day">
- 				<div class="element">
+ 				<div class="element small">
  					<?php the_time('j') ?>
  				</div>
  			</div> 

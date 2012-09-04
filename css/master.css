@@ -64,7 +64,6 @@ header img {
 }
 header .page-navigation {
   display: inline-block;
-  font-size: 0.9em;
 }
 header .page-navigation a {
   color: #9b9a9a;
@@ -90,13 +89,28 @@ img {
   max-width: 100%;
 }
 
+.small {
+  font-size: 0.8em;
+}
+
+.small-medium-text {
+  font-size: 0.9em;
+}
+
+.medium-large-text {
+  font-size: 1.2em;
+}
+
+.very-large-text {
+  font-size: 2.5em;
+}
+
 .post {
   color: #666666;
   line-height: 1.45em;
 }
 .post .quote {
   border-left: 8px solid #0a8ce3;
-  font-size: 1.3em;
   font-style: italic;
   padding: 5px;
   padding-left: 10px;
@@ -105,14 +119,12 @@ img {
 .post-details {
   color: #666666;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.95em;
 }
 .post-details div, .post-details .post-title {
   margin-bottom: 6px;
 }
 .post-details .post-title {
   margin-bottom: 15px;
-  font-size: 2.5em;
 }
 .post-details .published-on a, .post-details .tags a {
   font-style: italic;
@@ -138,7 +150,6 @@ img {
 .post-summary {
   color: #666666;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 0.95em;
   margin-bottom: 15px;
 }
 .post-summary .post-link {
@@ -157,7 +168,6 @@ img {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 .post-summary .publish-date {
-  font-size: 0.9em;
   font-weight: bold;
   margin: 8px 0;
 }
@@ -171,7 +181,6 @@ img {
 .post-summary .title {
   color: #0a8ce3;
   font-family: Adelle, Arial, sans-serif;
-  font-size: 1.2em;
   font-weight: bold;
   margin: 0;
 }
@@ -202,7 +211,6 @@ img {
   background-color: #0a8ce3;
   border-radius: 15px;
   color: white;
-  font-size: 0.8em;
   font-weight: bold;
   height: 30px;
   line-height: 30px;
@@ -211,5 +219,4 @@ img {
 }
 .archive .title {
   margin-bottom: 15px;
-  font-size: 2.5em;
 }
