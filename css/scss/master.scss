@@ -50,6 +50,9 @@ $max-width: 900px;
 // blue.
 $primary-color: #0a8ce3;
 
+// grey.
+$text-color: #666;
+
 
 
 // ==========================================================================
@@ -172,7 +175,7 @@ img {
 // ========================================================================== 
 
 .post {
-    color: #666666;
+    color: $text-color;
     line-height: 1.45em;
 
     .quote {
@@ -185,7 +188,7 @@ img {
 }
 
 .post-details {
-    color: #666666;
+    color: $text-color;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.95em;
 
@@ -237,7 +240,7 @@ img {
 // ========================================================================== 
 
 .post-summary {
-    color: #666666;
+    color: $text-color;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 0.95em;
     margin-bottom: 15px;
@@ -278,5 +281,52 @@ img {
         font-size: 1.2em;
         font-weight: bold;
         margin: 0;
+    }
+}
+
+// ==========================================================================
+// Archive section displaying all posts broken up by month.
+// ========================================================================== 
+
+.archive {
+    .month-year {
+        color: $text-color;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 15px;
+    }
+
+    .post {
+        margin-bottom: 7px;
+        //padding-left: 20px;
+
+        a {
+            color: $text-color;
+            display: block;
+            float: left;
+            font-weight: 500;
+            margin-left: 20px;
+            margin-top: 3px;
+            text-decoration: none;
+        }
+
+        .day {
+            background-color: $primary-color;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.8em;
+            font-weight: bold;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            width: 30px;
+        }
+    }
+
+    .title {
+        margin-bottom: 15px;
+        font-size: 2.5em;        
     }
 }

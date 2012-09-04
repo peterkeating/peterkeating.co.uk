@@ -175,3 +175,39 @@ img {
   font-weight: bold;
   margin: 0;
 }
+
+.archive .month-year {
+  color: #666666;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.archive .post {
+  margin-bottom: 7px;
+}
+.archive .post a {
+  color: #666666;
+  display: block;
+  float: left;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 3px;
+  text-decoration: none;
+}
+.archive .post .day {
+  background-color: #0a8ce3;
+  border-radius: 15px;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+}
+.archive .title {
+  margin-bottom: 15px;
+  font-size: 2.5em;
+}
