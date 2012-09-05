@@ -6,11 +6,22 @@ body {
 header {
   margin-bottom: 15px;
   padding: 10px;
+  position: relative;
+}
+@media all and (max-width: 420px) {
+  header {
+    padding: 0;
+  }
 }
 
 .main {
   margin: 0 auto;
   padding: 0 10px;
+}
+@media all and (max-width: 420px) {
+  .main {
+    padding: 0;
+  }
 }
 
 .page {
@@ -22,7 +33,7 @@ header {
   padding: 20px;
   max-width: 900px;
 }
-@media all and (max-width: 320px) {
+@media all and (max-width: 420px) {
   .page {
     padding: 10px;
   }
@@ -39,7 +50,7 @@ header a {
   text-decoration: none;
 }
 header .header-text {
-  display: inline-block;
+  float: left;
   height: 100%;
   padding-left: 20px;
 }
@@ -48,9 +59,9 @@ header .header-text {
     font-size: 1.4em;
   }
 }
-header img {
+header .logo {
   border-radius: 5px;
-  display: inline-block;
+  float: left;
   max-width: 100px;
   vertical-align: middle;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
@@ -58,7 +69,7 @@ header img {
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
 @media all and (max-width: 320px) {
-  header img {
+  header .logo {
     width: 30%;
   }
 }
@@ -68,6 +79,34 @@ header .page-navigation {
 header .page-navigation a {
   color: #9b9a9a;
   padding-right: 10px;
+}
+@media all and (max-width: 280px) {
+  header .page-navigation a:first-child {
+    display: none;
+  }
+}
+header .social-navigation {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+}
+header .social-navigation img {
+  max-width: 55px;
+  padding-left: 5px;
+}
+@media all and (max-width: 420px) {
+  header .social-navigation {
+    margin-top: 8px;
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+  header .social-navigation img {
+    max-width: 30px;
+  }
+  header .social-navigation img:first-child {
+    padding-left: 0;
+  }
 }
 
 a {

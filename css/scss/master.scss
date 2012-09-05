@@ -67,11 +67,20 @@ body {
 header {
     margin-bottom: 15px;
     padding: 10px;
+    position: relative;
+
+    @media all and (max-width: 420px) {
+        padding: 0;
+    }
 }
 
 .main {
     margin: 0 auto;
     padding: 0 10px;
+
+    @media all and (max-width: 420px) {
+        padding: 0;
+    }
 } 
 
 .page {
@@ -83,7 +92,7 @@ header {
     padding: 20px;
     max-width: $max-width;
 
-    @media all and (max-width: 320px) {
+    @media all and (max-width: 420px) {
         padding: 10px;
     }
 
@@ -106,7 +115,7 @@ header {
     }
 
     .header-text {
-        display: inline-block;
+        float: left;
         height: 100%;
         padding-left: 20px;    
     }
@@ -117,9 +126,9 @@ header {
         }
     }
 
-    img {
+    .logo {
         border-radius: 5px;
-        display: inline-block;
+        float: left;
         max-width: 100px;
         vertical-align: middle;
 
@@ -136,6 +145,40 @@ header {
         a {
             color: #9b9a9a;
             padding-right: 10px;
+
+            // hides the Home navigation item to give a bit more room.
+            // the logo still acts as a link to the home page.
+            @media all and (max-width: 280px) {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .social-navigation {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+
+        img {
+            max-width: 55px;
+            padding-left: 5px;
+        }
+
+        @media all and (max-width: 420px) {
+            margin-top: 8px;
+            position: relative;
+            right: 0;
+            top: 0;
+
+            img {
+                max-width: 30px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
         }
     }
 }

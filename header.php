@@ -21,10 +21,10 @@
 
 <body>
 	<div class="page">
-		<header>
-			<a href="/">
-				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" />
-			</a>
+		<header class="clearfix">
+			<!--<a href="/">-->
+				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="logo" />
+			<!--</a>-->
 
 			<div class="header-text">
 				<h1 class="heading">P Keating</h1>
@@ -33,6 +33,16 @@
 					<a href="/">Home</a>
 					<a href="/index.php/about/">About</a>
 					<a href="/index.php/archive/">Archive</a>
+				</nav>
+
+				<nav class="social-navigation">
+					<a href="http://twitter.com/peterkeating" title="View my Twitter profile.">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter.png" alt="View my Twitter profile." />
+					</a>
+
+					<a href="http://github.com/peterkeating" title="View my Github profile.">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-github.png" alt="View my Github profile." />
+					</a>
 				</nav>
 			</div>
 		</header>
