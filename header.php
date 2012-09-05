@@ -43,6 +43,10 @@
 					<a href="http://github.com/peterkeating" title="View my Github profile.">
 						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-github.png" alt="View my Github profile." />
 					</a>
+
+					<a href="http://www.endomondo.com/profile/5042109" title="View my Endomondo profile.">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-endomondo.png" alt="View my Github profile." />
+					</a>
 				</nav>
 			</div>
 		</header>

@@ -91,7 +91,8 @@ header .social-navigation {
   top: -5px;
 }
 header .social-navigation img {
-  max-width: 55px;
+  max-height: 45px;
+  max-width: 50px;
   padding-left: 5px;
 }
 @media all and (max-width: 420px) {
