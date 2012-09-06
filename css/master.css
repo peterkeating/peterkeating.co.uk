@@ -165,14 +165,30 @@ header .social-navigation img {
   margin-bottom: 6px;
 }
 .post-details .post-title {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 }
-.post-details .published-on a, .post-details .tags a {
+.post-details .publish-date, .post-details .tags {
+  float: left;
   font-style: italic;
+  line-height: 1.8;
+  margin: 8px 0;
+  margin-right: 25px;
+  padding-left: 33px;
 }
-.post-details .published-on .date, .post-details .tags .date {
-  font-style: italic;
+.post-details .publish-date {
+  background: url("../images/icon-date.png") no-repeat;
+  background-position: left top;
+  background-size: 25px 25px;
   font-weight: bold;
+}
+.post-details .tags {
+  background: url("../images/icon-tag.png") no-repeat;
+  background-position: left top;
+  background-size: 25px 25px;
+}
+.post-details .tags a {
+  color: #666666;
+  font-weight: normal;
 }
 
 .post-summary {
@@ -193,9 +209,19 @@ header .social-navigation img {
   -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
   box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
-.post-summary .publish-date {
-  font-weight: bold;
+.post-summary .publish-date, .post-summary .tags {
+  float: left;
+  font-style: italic;
+  line-height: 1.8;
   margin: 8px 0;
+  margin-right: 25px;
+  padding-left: 27px;
+}
+.post-summary .publish-date {
+  background: url("../images/icon-date.png") no-repeat;
+  background-position: left top;
+  background-size: 20px 20px;
+  font-weight: bold;
 }
 .post-summary .snippet {
   line-height: 1.3em;
@@ -203,6 +229,15 @@ header .social-navigation img {
 }
 .post-summary .snippet p:first-child {
   margin: 0;
+}
+.post-summary .tags {
+  background: url("../images/icon-tag.png") no-repeat;
+  background-position: left top;
+  background-size: 20px 20px;
+}
+.post-summary .tags a {
+  color: #666666;
+  font-weight: normal;
 }
 .post-summary .title {
   color: #0a8ce3;

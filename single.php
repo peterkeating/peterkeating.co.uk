@@ -5,7 +5,15 @@
 		<div class="post-details">
 			<h1 class="post-title"><?php the_title(); ?></h1>
 		
-			<div class="published-on tags small-medium-text"><span class="date"><?php the_time('F j, Y') ?></span> in <?php the_tags('',', ',''); ?></div>
+			<div class="clearfix">
+				<div class="publish-date">
+					<?php the_time('F j, Y') ?>
+				</div>
+
+				<div class="tags">
+					<?php the_tags('',', ',''); ?>
+				</div>
+			</div>
 		</div>
 		
 		<div class="post">

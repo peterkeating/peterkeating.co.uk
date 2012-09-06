@@ -319,17 +319,33 @@ header {
     }
 
     .post-title {
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
 
-    .published-on, .tags {
-        a {
-            font-style: italic;
-        }
+    .publish-date, .tags {
+        float: left;
+        font-style: italic;
+        line-height: 1.8;
+        margin: 8px 0;
+        margin-right: 25px;
+        padding-left: 33px;
+    }
 
-        .date {
-            font-style: italic;
-            font-weight: bold;
+    .publish-date {
+        background: url('../images/icon-date.png') no-repeat;
+        background-position: left top;
+        background-size: 25px 25px;
+        font-weight: bold;
+    }
+
+    .tags {
+        background: url('../images/icon-tag.png') no-repeat;
+        background-position: left top;
+        background-size: 25px 25px;
+
+        a {
+            color: $text-color;
+            font-weight: normal;
         }
     }
 }
@@ -360,9 +376,20 @@ header {
         }
     }
 
-    .publish-date {
-        font-weight: bold;
+    .publish-date, .tags {
+        float: left;
+        font-style: italic;
+        line-height: 1.8;
         margin: 8px 0;
+        margin-right: 25px;
+        padding-left: 27px;
+    }
+
+    .publish-date {
+        background: url('../images/icon-date.png') no-repeat;
+        background-position: left top;
+        background-size: 20px 20px;
+        font-weight: bold;
     }
 
     .snippet {
@@ -371,6 +398,17 @@ header {
 
         p:first-child {
             margin: 0;
+        }
+    }
+
+    .tags {
+        background: url('../images/icon-tag.png') no-repeat;
+        background-position: left top;
+        background-size: 20px 20px;
+
+        a {
+            color: $text-color;
+            font-weight: normal;
         }
     }
 
