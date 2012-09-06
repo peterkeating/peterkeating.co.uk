@@ -14,6 +14,8 @@ header {
 }
 
 html {
+  color: #666666;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
 }
 
@@ -150,7 +152,6 @@ header .social-navigation img {
 }
 
 .post {
-  color: #666666;
   line-height: 1.45em;
 }
 .post .quote {
@@ -160,10 +161,6 @@ header .social-navigation img {
   padding-left: 10px;
 }
 
-.post-details {
-  color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
 .post-details div, .post-details .post-title {
   margin-bottom: 6px;
 }
@@ -179,8 +176,6 @@ header .social-navigation img {
 }
 
 .post-summary {
-  color: #666666;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 15px;
 }
 .post-summary .post-link {
@@ -217,7 +212,6 @@ header .social-navigation img {
 }
 
 .archive .month-year {
-  color: #666666;
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 15px;
@@ -226,7 +220,6 @@ header .social-navigation img {
   margin-bottom: 7px;
 }
 .archive .post .post-title {
-  color: #666666;
   float: left;
   font-weight: 500;
   margin-top: 3px;
