@@ -7,8 +7,8 @@
 		<h3 class="title"><?php the_title(); ?></h3>
 		
 		<div class="clearfix">
-			<div class="publish-date small-medium-text"><?php the_time('F j, Y') ?></div>
-			<div class="tags small-medium-text"><?php the_tags('',', ',''); ?></div>
+			<div class="publish-date small-medium-text date-icon"><?php the_time('F j, Y') ?></div>
+			<div class="tags small-medium-text tag-icon"><?php the_tags('',', ',''); ?></div>
 		</div>
 
 		<div class="snippet"><?php the_excerpt(); ?></div>

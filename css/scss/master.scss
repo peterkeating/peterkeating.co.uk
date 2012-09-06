@@ -8,6 +8,7 @@
 // MAIN - Different sections of a page.
 // SHARED - Elements used throughout the theme.
 // FONTSIZES - Various font sizes to help with abstraction.
+// ICONS - Icons used in the theme.
 // HEADER - Page header styles.
 // CODE - Code snippets.
 // POST - An individual post or page.
@@ -47,7 +48,7 @@
 //      and try to commit your changes without introducing any new warnings.
 //
 //      Known warnings:
-//          None :)
+//          - Multiple h1 due to media queries.
 //
 // FONTS
 //      Currently the fonts are handled using typekit (https://typekit.com/).
@@ -198,6 +199,23 @@ img {
 }
 
 
+// ==========================================================================
+// $ICONS
+// Icons used throughout the site.
+// ========================================================================== 
+
+.date-icon, .tag-icon {
+    background-position: left top;
+}
+
+.date-icon {
+    background: url('../images/icon-date.png') no-repeat;
+}
+
+.tag-icon {
+    background: url('../images/icon-tag.png') no-repeat;
+}
+
 
 // ==========================================================================
 // $HEADER
@@ -262,7 +280,7 @@ header {
             padding-left: 5px;
         }
 
-        @media all and (max-width: 420px) {
+        @media all and (max-width: 540px) {
             margin-top: 8px;
             position: relative;
             right: 0;
@@ -336,15 +354,11 @@ header {
     }
 
     .publish-date {
-        background: url('../images/icon-date.png') no-repeat;
-        background-position: left top;
         background-size: 25px 25px;
         font-weight: bold;
     }
 
     .tags {
-        background: url('../images/icon-tag.png') no-repeat;
-        background-position: left top;
         background-size: 25px 25px;
 
         a {
@@ -390,8 +404,6 @@ header {
     }
 
     .publish-date {
-        background: url('../images/icon-date.png') no-repeat;
-        background-position: left top;
         background-size: 20px 20px;
         font-weight: bold;
     }
@@ -406,8 +418,6 @@ header {
     }
 
     .tags {
-        background: url('../images/icon-tag.png') no-repeat;
-        background-position: left top;
         background-size: 20px 20px;
 
         a {

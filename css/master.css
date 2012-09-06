@@ -79,6 +79,18 @@ img {
   font-size: 0.9em;
 }
 
+.date-icon, .tag-icon {
+  background-position: left top;
+}
+
+.date-icon {
+  background: url("../images/icon-date.png") no-repeat;
+}
+
+.tag-icon {
+  background: url("../images/icon-tag.png") no-repeat;
+}
+
 header a {
   text-decoration: none;
 }
@@ -128,7 +140,7 @@ header .social-navigation img {
   max-width: 50px;
   padding-left: 5px;
 }
-@media all and (max-width: 420px) {
+@media all and (max-width: 540px) {
   header .social-navigation {
     margin-top: 8px;
     position: relative;
@@ -181,14 +193,10 @@ header .social-navigation img {
   padding-left: 33px;
 }
 .post-details .publish-date {
-  background: url("../images/icon-date.png") no-repeat;
-  background-position: left top;
   background-size: 25px 25px;
   font-weight: bold;
 }
 .post-details .tags {
-  background: url("../images/icon-tag.png") no-repeat;
-  background-position: left top;
   background-size: 25px 25px;
 }
 .post-details .tags a {
@@ -223,8 +231,6 @@ header .social-navigation img {
   padding-left: 27px;
 }
 .post-summary .publish-date {
-  background: url("../images/icon-date.png") no-repeat;
-  background-position: left top;
   background-size: 20px 20px;
   font-weight: bold;
 }
@@ -236,8 +242,6 @@ header .social-navigation img {
   margin: 0;
 }
 .post-summary .tags {
-  background: url("../images/icon-tag.png") no-repeat;
-  background-position: left top;
   background-size: 20px 20px;
 }
 .post-summary .tags a {

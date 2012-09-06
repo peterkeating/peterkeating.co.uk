@@ -6,11 +6,11 @@
 			<h1 class="post-title"><?php the_title(); ?></h1>
 		
 			<div class="clearfix">
-				<div class="publish-date">
+				<div class="publish-date date-icon">
 					<?php the_time('F j, Y') ?>
 				</div>
 
-				<div class="tags">
+				<div class="tags tag-icon">
 					<?php the_tags('',', ',''); ?>
 				</div>
 			</div>
