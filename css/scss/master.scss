@@ -86,6 +86,9 @@ $primary-color: #0a8ce3;
 // grey.
 $text-color: #666;
 
+// lighter grey
+$lighter-text-color: #9b9a9a;
+
 // font to use for the headings.
 $heading-font: Adelle, Arial, sans-serif;
 
@@ -231,7 +234,7 @@ header {
         display: inline-block;
 
         a {
-            color: #9b9a9a;
+            color: $lighter-text-color;
             padding-right: 10px;
 
             // hides the Home navigation item to give a bit more room.
@@ -350,7 +353,7 @@ header {
 
         &:hover {
             background-color: $primary-color;
-            color: #fff;
+            color: white;
             padding: 3px;
             text-decoration: none;
             @include drop-shadow(2px, 3px, 4px, 0.4);

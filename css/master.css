@@ -186,7 +186,7 @@ header .social-navigation img {
 }
 .post-summary .post-link:hover {
   background-color: #0a8ce3;
-  color: #fff;
+  color: white;
   padding: 3px;
   text-decoration: none;
   -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
