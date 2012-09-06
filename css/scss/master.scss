@@ -205,7 +205,7 @@ a {
 h1 {
     color: $primary-color;
     font-family: Adelle, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 2.5em;
     margin: 0;
     padding: 0;
 }
@@ -219,20 +219,8 @@ img {
 // Styles that dictate font sizes.
 // ========================================================================== 
 
-.small {
-    font-size: 0.8em;
-}
-
 .small-medium-text {
     font-size: 0.9em;
-}
-
-.medium-large-text {
-    font-size: 1.2em;
-}
-
-.very-large-text {
-    font-size: 2.5em;
 }
 
 // ==========================================================================
@@ -350,7 +338,6 @@ img {
 .archive {
     .month-year {
         color: $text-color;
-        font-size: 1.8em;
         font-weight: bold;
         margin-bottom: 10px;
         margin-top: 15px;
@@ -376,6 +363,7 @@ img {
                 background-color: $primary-color;
                 border-radius: 15px;
                 color: white;
+                display: block;
                 font-weight: bold;
                 height: 30px;
                 line-height: 30px;

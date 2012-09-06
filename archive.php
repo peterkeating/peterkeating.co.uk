@@ -15,21 +15,21 @@ $active = '';
 ?>
 
 <div class="archive">
-	<h1 class="title very-large-text">Archive</h1>
+	<h1 class="title">Archive</h1>
 
  	<?php while ( have_posts() ) : the_post(); ?>
  	<?php 
  		if ($active != substr($post->post_date, 0, 7)) { 
  			$active = substr($post->post_date, 0, 7);
  		?>
- 			<div class="month-year"><?php the_time('F Y') ?></div>
+ 			<h2 class="month-year"><?php the_time('F Y') ?></h2>
  		<?php } ?>
 
  		<div class="post clearfix">
  			<div class="day">
- 				<div class="element small">
+ 				<small class="element">
  					<?php the_time('j') ?>
- 				</div>
+ 				</small>
  			</div> 
 
  			<div class="post-title"><?php the_title() ?></div>

@@ -4,7 +4,7 @@
 
 <article class="clearfix">
 	<div class="post-details">
-		<h1 class="post-title medium-large-text"><?php the_title(); ?></h1>
+		<h1 class="post-title"><?php the_title(); ?></h1>
 
 		<div class="post">
 			<?php the_content(); ?>
