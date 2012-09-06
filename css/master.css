@@ -1,6 +1,5 @@
 body {
   background-color: #efefef;
-  font-size: 100%;
 }
 
 header {
@@ -12,6 +11,10 @@ header {
   header {
     padding: 0;
   }
+}
+
+html {
+  font-size: 100%;
 }
 
 .main {

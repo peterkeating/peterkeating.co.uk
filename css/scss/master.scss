@@ -61,7 +61,6 @@ $text-color: #666;
 
 body {
     background-color: #efefef;
-    font-size: 100%;
 }
 
 header {
@@ -72,6 +71,10 @@ header {
     @media all and (max-width: 420px) {
         padding: 0;
     }
+}
+
+html {
+    font-size: 100%;
 }
 
 .main {
