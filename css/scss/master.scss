@@ -48,7 +48,7 @@
 //      and try to commit your changes without introducing any new warnings.
 //
 //      Known warnings:
-//          - Multiple h1 due to media queries.
+//          None :)
 //
 // FONTS
 //      Currently the fonts are handled using typekit (https://typekit.com/).
@@ -305,7 +305,7 @@ header {
     color: #373737;
     font-family: $code-font;
     font-size: 0.75em;
-    line-height: 1.2em;
+    line-height: 1.2;
     padding: 5px 15px;
 
     .gist-meta {
@@ -409,7 +409,7 @@ header {
     }
 
     .snippet {
-        line-height: 1.3em;
+        line-height: 1.6;
         margin-bottom: 10px;
 
         p:first-child {
@@ -465,14 +465,14 @@ header {
 
             .element {
                 background-color: $primary-color;
-                border-radius: 15px;
+                border-radius: 1.3em;
                 color: white;
                 display: block;
                 font-weight: bold;
-                height: 30px;
-                line-height: 30px;
+                height: 2.6em;
+                line-height: 2.6;
                 text-align: center;
-                width: 30px;
+                width: 2.6em;
             }
         }
     }

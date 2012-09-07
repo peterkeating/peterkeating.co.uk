@@ -156,7 +156,7 @@ header .social-navigation img {
   color: #373737;
   font-family: monospace, sans-serif;
   font-size: 0.75em;
-  line-height: 1.2em;
+  line-height: 1.2;
   padding: 5px 15px;
 }
 .gist .gist-meta {
@@ -235,7 +235,7 @@ header .social-navigation img {
   font-weight: bold;
 }
 .post-summary .snippet {
-  line-height: 1.3em;
+  line-height: 1.6;
   margin-bottom: 10px;
 }
 .post-summary .snippet p:first-child {
@@ -276,14 +276,14 @@ header .social-navigation img {
 }
 .archive .post .day .element {
   background-color: #0a8ce3;
-  border-radius: 15px;
+  border-radius: 1.3em;
   color: white;
   display: block;
   font-weight: bold;
-  height: 30px;
-  line-height: 30px;
+  height: 2.6em;
+  line-height: 2.6;
   text-align: center;
-  width: 30px;
+  width: 2.6em;
 }
 .archive .title {
   margin-bottom: 15px;
