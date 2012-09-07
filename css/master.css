@@ -103,6 +103,19 @@ header .header-text {
     font-size: 1.4em;
   }
 }
+header .short {
+  display: none;
+}
+@media all and (max-width: 380px) {
+  header .short {
+    display: block;
+  }
+}
+@media all and (max-width: 380px) {
+  header .long {
+    display: none;
+  }
+}
 header .logo {
   border-radius: 5px;
   float: left;
@@ -139,7 +152,7 @@ header .social-navigation img {
   max-width: 50px;
   padding-left: 5px;
 }
-@media all and (max-width: 540px) {
+@media all and (max-width: 600px) {
   header .social-navigation {
     margin-top: 0.6em;
     position: relative;

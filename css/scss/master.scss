@@ -241,6 +241,23 @@ header {
         }
     }
 
+    // used in the header text to either show
+    // the long or short version of the text
+    // depending on the screen size.
+    .short {
+        display: none;
+
+        @media all and (max-width: 380px) {
+            display: block;
+        }    
+    }
+
+    .long {
+        @media all and (max-width: 380px) {
+            display: none;
+        }        
+    }
+
     .logo {
         border-radius: 5px;
         float: left;
@@ -282,7 +299,7 @@ header {
             padding-left: 5px;
         }
 
-        @media all and (max-width: 540px) {
+        @media all and (max-width: 600px) {
             margin-top: 0.6em;
             position: relative;
             right: 0;

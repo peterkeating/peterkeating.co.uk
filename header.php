@@ -27,7 +27,8 @@
 			<!--</a>-->
 
 			<div class="header-text">
-				<h1 class="heading">P Keating</h1>
+				<h1 class="heading short">P Keating</h1>
+				<h1 class="heading long">Peter Keating</h1>
 
 				<nav class="page-navigation small-medium-text">
 					<a href="/">Home</a>
