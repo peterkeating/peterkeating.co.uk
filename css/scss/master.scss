@@ -40,6 +40,8 @@
 //      (http://csswizardry.com/2011/12/measuring-and-sizing-uis-2011-style/).
 //  -   No need to use a unit on the end of line-height. 
 //      (http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)
+//  -   Never go four levels deep when nesting 
+//      (http://thesassway.com/beginner/the-inception-rule).
 // 
 // CSSLINT
 //      Also the build script that can be found in the build directory is
@@ -292,6 +294,7 @@ header {
         }
     }
 }
+
 
 
 // ==========================================================================
