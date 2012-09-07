@@ -4,7 +4,7 @@
 <?php while ( have_posts () ) : the_post() ?>
 
 	<div class="post-summary">
-		<h3 class="title"><?php the_title(); ?></h3>
+		<h2 class="title"><?php the_title(); ?></h2>
 		
 		<div class="clearfix">
 			<div class="publish-date small-medium-text date-icon"><?php the_time('F j, Y') ?></div>

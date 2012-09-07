@@ -65,11 +65,6 @@ h1 {
   margin: 0;
   padding: 0;
 }
-@media all and (max-width: 420px) {
-  h1 {
-    font-size: 1.8em;
-  }
-}
 
 img {
   max-width: 100%;
@@ -183,6 +178,11 @@ header .social-navigation img {
 }
 .post-details .post-title {
   margin-bottom: 8px;
+}
+@media all and (max-width: 420px) {
+  .post-details .post-title {
+    font-size: 1.5em;
+  }
 }
 .post-details .publish-date, .post-details .tags {
   float: left;
