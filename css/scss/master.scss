@@ -452,8 +452,13 @@ header {
     .title {
         color: $primary-color;
         font-family: $heading-font;
+        font-size: 1.8em;
         font-weight: bold;
         margin: 0;
+
+        @media all and (max-width: 420px) {
+            font-size: 1.3em;
+        }
     }
 }
 

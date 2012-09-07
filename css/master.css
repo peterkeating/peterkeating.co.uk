@@ -268,8 +268,14 @@ header .social-navigation img {
 .post-summary .title {
   color: #0a8ce3;
   font-family: "ff-tisa-web-pro", Arial, sans-serif;
+  font-size: 1.8em;
   font-weight: bold;
   margin: 0;
+}
+@media all and (max-width: 420px) {
+  .post-summary .title {
+    font-size: 1.3em;
+  }
 }
 
 .archive .month-year {
