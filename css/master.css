@@ -221,6 +221,13 @@ header .social-navigation img {
   font-weight: normal;
 }
 
+.post-navigation .next {
+  float: right;
+}
+.post-navigation .previous {
+  float: left;
+}
+
 .post-summary {
   margin-bottom: 1em;
 }

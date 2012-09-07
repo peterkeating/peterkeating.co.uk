@@ -23,9 +23,14 @@
 	
 	<?php endwhile ?>
 
-	<nav class="bottom">
-		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
-		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
+	<nav class="post-navigation clearfix">
+		<div class="previous">
+			<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
+		</div>
+
+		<div class="next">
+			<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
+		</div>
 	</nav>	
 	
 	
