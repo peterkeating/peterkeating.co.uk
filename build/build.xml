@@ -235,11 +235,11 @@
     -->
     <target name="-publish">
         <copy todir="${publish.dir}" includeEmptyDirs="false">
-          <fileset dir="${intermediate.dir}">
-              <exclude name="*.less"/>
-              <exclude name="*.less.css"/>
-          </fileset>
+            <fileset dir="${intermediate.dir}" />
         </copy>
+
+        <!-- removes the sass cache from the distrubatable. -->
+        <delete dir="${publish.dir}/.sass-cache" />
     </target>
 
     <!-- 
