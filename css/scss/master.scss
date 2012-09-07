@@ -81,7 +81,7 @@
 // ========================================================================== 
 
 // Maximum width of the main content of the page.
-$max-width: 900px;
+$max-width: 1100px;
 
 // blue.
 $primary-color: #0a8ce3;
@@ -207,7 +207,7 @@ img {
 // ========================================================================== 
 
 .date-icon, .tag-icon {
-    background-position: left top;
+    background-position: center left;
 }
 
 .date-icon {
@@ -402,9 +402,33 @@ header {
 .post-summary {
     margin-bottom: 1em;
 
+    // holds the post title, summary and narrow post data.
+    .post-keyinfo {
+        margin-left: 240px;
+
+        @media all and (max-width: 800px) {
+            margin-left: 0;
+        }
+    }
+
+    // displays the post summary when the screen size is
+    // too small for the wide view.
+    .narrow-post {
+        display: none;
+
+        .publish-date, .tags {
+            float: left;
+            font-style: italic;
+        }
+
+        @media all and (max-width: 800px) {
+            display: block;
+        }
+    }
+
     .post-link {
         color: $primary-color;
-        display: inline-block;
+        display: none;
         margin-left: -0.2em;
         padding: 0.2em;
 
@@ -415,11 +439,13 @@ header {
             text-decoration: none;
             @include drop-shadow(2px, 3px, 4px, 0.4);
         }
+
+        @media all and (max-width: 800px) {
+            display: block;
+        }
     }
 
     .publish-date, .tags {
-        float: left;
-        font-style: italic;
         line-height: 1.8;
         margin: 0.6em 0;
         margin-right: 1.7em;
@@ -459,6 +485,26 @@ header {
         @media all and (max-width: 420px) {
             font-size: 1.3em;
         }
+    }
+
+    // displays the post summary when the screen size
+    // is large enough to fit it.
+    .wide-post {
+        float: left;
+        max-width: 240px;
+
+        .post-link {
+            display: block;
+        }
+
+        .publish-date {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        @media all and (max-width: 800px) {
+            display: none;
+        }        
     }
 }
 
