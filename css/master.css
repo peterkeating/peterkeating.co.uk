@@ -307,6 +307,9 @@ header .social-navigation img {
     font-size: 1.3em;
   }
 }
+.post-summary .title a {
+  text-decoration: none;
+}
 .post-summary .wide-post {
   float: left;
   max-width: 240px;

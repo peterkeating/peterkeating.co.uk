@@ -494,6 +494,10 @@ header {
         @media all and (max-width: 420px) {
             font-size: 1.3em;
         }
+
+        a {
+            text-decoration: none; 
+        }
     }
 
     // displays the post summary when the screen size

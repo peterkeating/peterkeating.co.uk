@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="post-keyinfo">
-			<h2 class="title"><?php the_title(); ?></h2>
+			<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			
 			<div class="narrow-post clearfix">
 				<div class="publish-date small-medium-text date-icon"><?php the_time('F j, Y') ?></div>
