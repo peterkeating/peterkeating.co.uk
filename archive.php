@@ -32,7 +32,7 @@ $active = '';
  				</small>
  			</div> 
 
- 			<div class="post-title"><?php the_title() ?></div>
+ 			<div class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></div>
  		</div>
  	<?php endwhile; ?>
 </div>
