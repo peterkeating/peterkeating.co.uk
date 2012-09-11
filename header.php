@@ -11,26 +11,47 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css" />
-	<link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/css/less/master.less" />
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css" />
 
-	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/less-1.3.0.min.js"></script>
+	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.2.min.js"></script>
 
-	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.1.min.js"></script>
+	<script type="text/javascript" src="//use.typekit.net/men0iqb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
-	<header>
-		<h1 class="long-title">Peter Keating, Blog</h1>
-		<h1 class="short-title">Peter Keating</h1>
-	</header>
-	
-	<nav>
-		<a href="/"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-home-white.png" /></a>
-		<a href="http://twitter.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter-white.png" /></a>
-		<a href="https://github.com/peterkeating/" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-github-white.png" /></a>
-		<a href="http://www.linkedin.com/profile/view?id=32423747" target="_new"><img src="<?php bloginfo( "template_url" ); ?>/images/icon-linkedin-white.png" /></a>
- 	</nav>
+	<div class="page">
+		<header class="clearfix">
+			<a href="/">
+				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="logo" />
+			</a>
 
-	<div id="main">
+			<div class="header-text">
+				<h1 class="heading short">P Keating</h1>
+				<h1 class="heading long">Peter Keating</h1>
+
+				<nav class="page-navigation small-medium-text">
+					<a href="/">Home</a>
+					<a href="/index.php/about/">About</a>
+					<a href="/index.php/archive/">Archive</a>
+				</nav>
+
+				<nav class="social-navigation">
+					<a href="http://twitter.com/peterkeating" title="View my Twitter profile." target="_blank">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter.png" alt="View my Twitter profile." />
+					</a>
+
+					<a href="http://github.com/peterkeating" title="View my Github profile." target="_blank">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-github.png" alt="View my Github profile." />
+					</a>
+
+					<a href="http://www.endomondo.com/profile/5042109" title="View my Endomondo profile." target="_blank">
+						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-endomondo.png" alt="View my Github profile." />
+					</a>
+				</nav>
+			</div>
+		</header>
+
+		<div class="main">
 	
 	

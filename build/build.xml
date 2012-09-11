@@ -15,17 +15,12 @@
         </classpath>
     </taskdef>
 
-	<target name="build" depends="-clean, -prepare, -less, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
-
-	<!-- 
-		just compiles the less files into css 
-	-->
-	<target name="less" depends="-less" />
+	<target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
 
     <!-- 
         performs css linting on all the css.
     -->
-    <target name="csslint" depends="-less">
+    <target name="csslint">
         <apply dir="${project.dir}/${css.dir}" executable="java" failonerror="true">
             <fileset dir="${project.dir}/${css.dir}">
                 <include name="**/*.css"/>
@@ -74,19 +69,6 @@
 		<mkdir dir="${deploy.dir}" />
   	</target>
 
-
-  	<!-- converts all the .less files into css files. -->
-  	<target name="-less">
-        <for param="less.file" parallel="true" list="${included.less.stylesheets}">
-            <sequential>
-                <echo>compiling @{less.file} to @{less.file}.css</echo>
-                <exec dir="${basedir}" executable="${tool.lessc}" failifexecutionfails='true'>
-                    <arg line='"${project.dir}/${css.dir}/${less.dir}/@{less.file}" "${project.dir}/${css.dir}/@{less.file}.css"' />
-                </exec>
-            </sequential>
-        </for>
-  	</target>
-
   	<!--
   		Copies the web project into an intermediate location
   		so we can modify files to speed up js, img & css loading
@@ -97,31 +79,7 @@
         </copy>
   	</target>
 
-    <target name="-css" depends="-lesstocss, -removeclientless, -css.concat, -css.min, -css.cache" />
-
-    <!--
-        Modifies any .less external stylesheet imports, and converts them 
-        to be directed at the compiled .css versions of the .less files.
-    -->
-    <target name="-lesstocss">
-        <for param="less.file" parallel="true" list="${included.less.stylesheets}">
-            <sequential>
-                <replaceregexp  match="&lt;link(.+)href=['&quot;]?(.*)/less/@{less.file}(?:\?.*)?['&quot;\s]?(.*/?&gt;)"
-                                replace="&lt;link rel=&quot;stylesheet&quot; href=&quot;\2/@{less.file}.css&quot;\3" flags="m">
-                    <fileset dir="${intermediate.dir}" includes="${page-files}"/>
-                </replaceregexp>
-            </sequential>
-        </for>
-    </target>
-
-    <!--
-        Removes the client side less javascript library.
-    -->
-    <target name="-removeclientless">
-        <replaceregexp  match="&lt;script src=&quot;.*${js.libs.dir}/${less.js.file}&quot;.*&gt;" replace=" " flags="m">
-            <fileset dir="${intermediate.dir}" includes="${page-files}"/>
-        </replaceregexp>
-    </target>
+    <target name="-css" depends="-css.concat, -css.min, -css.cache" />
 
     <!-- 
         Concats all the css files into a single css file for improved
@@ -277,11 +235,11 @@
     -->
     <target name="-publish">
         <copy todir="${publish.dir}" includeEmptyDirs="false">
-          <fileset dir="${intermediate.dir}">
-              <exclude name="*.less"/>
-              <exclude name="*.less.css"/>
-          </fileset>
+            <fileset dir="${intermediate.dir}" />
         </copy>
+
+        <!-- removes the sass cache from the distrubatable. -->
+        <delete dir="${publish.dir}/.sass-cache" />
     </target>
 
     <!-- 

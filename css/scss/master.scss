@@ -1,0 +1,570 @@
+// ==========================================================================
+// CONTENTS
+// ========================================================================== 
+//
+// NOTES
+// MIXINS
+// VARIABLES     
+// MAIN - Different sections of a page.
+// SHARED - Elements used throughout the theme.
+// FONTSIZES - Various font sizes to help with abstraction.
+// ICONS - Icons used in the theme.
+// HEADER - Page header styles.
+// CODE - Code snippets.
+// POST - An individual post or page.
+// POSTSUMMARY - List of posts.
+// ARCHIVE - Archive page.
+
+
+
+// ==========================================================================
+// $NOTES
+// Worth reading before you get started.
+// ========================================================================== 
+
+// This stylesheet uses principles and conventions that can be viewed
+// here (https://github.com/necolas/idiomatic-css). Lets try and keep 
+// to these conventions as best as possible. 
+//
+// Any deviations or problems with the conventions should be discussed
+// and documentated beneath here so anyone working on the stylesheet
+// can be made aware.
+//
+// STANDARDS
+//  -   Properties within a style declaration are ordered alphabetically not in
+//      order of importance.
+//  -   Multi-line comments have to use the // due to syntax highlighting in
+//      sublime doesn't handle multi line comments very well.
+//  -   When dealing with attributes that affect the type (borders, font-size,
+//      margins & padding). See here for more details as to why 
+//      (http://csswizardry.com/2011/12/measuring-and-sizing-uis-2011-style/).
+//  -   No need to use a unit on the end of line-height. 
+//      (http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)
+//  -   Never go four levels deep when nesting 
+//      (http://thesassway.com/beginner/the-inception-rule).
+// 
+// CSSLINT
+//      Also the build script that can be found in the build directory is
+//      capable of performing linting on the CSS using CSSLint (http://csslint.net/).
+//      Please run your changes through the ant CSS lint process (ant csslint)
+//      and try to commit your changes without introducing any new warnings.
+//
+//      Known warnings:
+//          None :)
+//
+// FONTS
+//      Currently the fonts are handled using typekit (https://typekit.com/).
+//      Available fonts:
+//          - ff-tisa-web-pro
+//   
+// Happy CSS'ing :)
+
+
+
+// ==========================================================================
+// $MIXINS
+// Mixins used throughout the stylesheet.
+// ========================================================================== 
+
+// Large set of useful mixins.
+// http://thoughtbot.com/bourbon/
+@import "bourbon/_bourbon";
+
+// Contains mixins that unfortunately weren't available in bourbon.
+@import "mixins/_custom";
+
+
+
+// ==========================================================================
+// $VARIABLES
+// Variables used throughout the stylesheet.
+// ========================================================================== 
+
+// Maximum width of the main content of the page.
+$max-width: 1100px;
+
+// blue.
+$primary-color: #0a8ce3;
+
+// grey.
+$text-color: #666;
+
+// lighter grey
+$lighter-text-color: #9b9a9a;
+
+// font to use for the headings.
+$heading-font: "ff-tisa-web-pro", Arial, sans-serif;
+
+// font to use for code snippets.
+$code-font: monospace, sans-serif;
+
+// font used everywhere else in the theme.
+$default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+
+// ==========================================================================
+// $MAIN
+// The main sections for the webpage.
+// ========================================================================== 
+
+body {
+    background-color: #efefef;
+}
+
+header {
+    margin-bottom: 1em;
+    padding: 0.7em;
+    position: relative;
+
+    @media all and (max-width: 420px) {
+        padding: 0;
+    }
+}
+
+html {
+    color: $text-color;
+    font-family: $default-font;
+    font-size: 100%;
+}
+
+.main {
+    margin: 0 auto;
+    padding: 0 0.7em;
+
+    @media all and (max-width: 420px) {
+        padding: 0;
+    }
+} 
+
+.page {
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 1.3em;
+    margin-top: 1.3em;
+    padding: 1.3em;
+    max-width: $max-width;
+
+    @media all and (max-width: 420px) {
+        padding: 0.7em;
+    }
+
+    @media all and (max-width: 768px) {
+        border-radius: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+
+
+// ==========================================================================
+// $SHARED
+// General styles for elements used across the theme.
+// ========================================================================== 
+
+a {
+    color: $primary-color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+h1 {
+    color: $primary-color;
+    font-family: $heading-font;
+    font-size: 2.2em;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: $heading-font;
+}
+
+img {
+    max-width: 100%; 
+}
+
+
+
+// ==========================================================================
+// $FONTSIZES
+// Styles that dictate font sizes.
+// ========================================================================== 
+
+.small-medium-text {
+    font-size: 0.9em;
+}
+
+
+// ==========================================================================
+// $ICONS
+// Icons used throughout the site.
+// ========================================================================== 
+
+.date-icon, .tag-icon {
+    background-position: center left;
+}
+
+.date-icon {
+    background: url('../images/icon-date.png') no-repeat;
+}
+
+.tag-icon {
+    background: url('../images/icon-tag.png') no-repeat;
+}
+
+
+// ==========================================================================
+// $HEADER
+// Styles for the header.
+// ========================================================================== 
+
+header {
+    a {
+        text-decoration: none;
+    }
+
+    .header-text {
+        float: left;
+        height: 100%;
+        padding-left: 1.3em;    
+    }
+
+    .heading {    
+        @media all and (max-width: 320px) {
+            font-size: 1.4em;
+        }
+    }
+
+    // used in the header text to either show
+    // the long or short version of the text
+    // depending on the screen size.
+    .short {
+        display: none;
+
+        @media all and (max-width: 380px) {
+            display: block;
+        }    
+    }
+
+    .long {
+        @media all and (max-width: 380px) {
+            display: none;
+        }        
+    }
+
+    .logo {
+        border-radius: 5px;
+        float: left;
+        max-width: 100px;
+        vertical-align: middle;
+
+        @include drop-shadow(2px, 3px, 4px, 0.4);
+
+        @media all and (max-width: 320px) {
+            width: 30%;
+        }
+    }
+
+    .page-navigation {
+        display: inline-block;
+
+        a {
+            color: $lighter-text-color;
+            padding-right: 0.7em;
+
+            // hides the Home navigation item to give a bit more room.
+            // the logo still acts as a link to the home page.
+            @media all and (max-width: 280px) {
+                &:first-child {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .social-navigation {
+        position: absolute;
+        right: -5px;
+        top: -5px;
+
+        img {
+            max-height: 45px;
+            max-width: 50px;
+            padding-left: 5px;
+        }
+
+        @media all and (max-width: 600px) {
+            margin-top: 0.6em;
+            position: relative;
+            right: 0;
+            top: 0;
+
+            img {
+                max-width: 30px;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+
+// ==========================================================================
+// $CODE
+// Styles for displaying a code samples in a post.
+// ========================================================================== 
+
+.gist {
+    background-color: #f5f5f5;
+    border-left: 0.6em solid $primary-color;
+    color: #373737;
+    font-family: $code-font;
+    font-size: 0.75em;
+    line-height: 1.2;
+    padding: 0.3em 1em;
+
+    .gist-meta {
+        display: none;
+    }
+}
+
+
+
+// ==========================================================================
+// $POST
+// Styles for displaying a single post.
+// ========================================================================== 
+
+.post {
+    line-height: 1.45em;
+
+    .quote {
+        border-left: 0.6em solid $primary-color;
+        font-style: italic;
+        padding: 0.3em;
+        padding-left: 0.7em;
+    }
+}
+
+.post-details {
+    div, .post-title {
+        margin-bottom: 0.4em;
+    }
+
+    .post-title {
+        margin-bottom: 0.6em;
+
+        @media all and (max-width: 420px) {
+            font-size: 1.5em;
+        }
+    }
+
+    .publish-date, .tags {
+        float: left;
+        font-style: italic;
+        line-height: 1.8;
+        margin: 0.6em 0;
+        margin-right: 1.7em;
+        padding-left: 2.2em;
+    }
+
+    .publish-date {
+        background-size: 25px 25px;
+        font-weight: bold;
+    }
+
+    .tags {
+        background-size: 25px 25px;
+
+        a {
+            color: $text-color;
+            font-weight: normal;
+        }
+    }
+}
+
+.post-navigation {
+    .next {
+        float: right;
+    }
+
+    .previous {
+        float: left;
+    }
+}
+
+
+// ==========================================================================
+// $POSTSUMMARY
+// Post summary that is displayed on the main page.
+// ========================================================================== 
+
+.post-summary {
+    margin-bottom: 1em;
+
+    // holds the post title, summary and narrow post data.
+    .post-keyinfo {
+        margin-left: 240px;
+
+        @media all and (max-width: 800px) {
+            margin-left: 0;
+        }
+    }
+
+    // displays the post summary when the screen size is
+    // too small for the wide view.
+    .narrow-post {
+        display: none;
+
+        .publish-date, .tags {
+            float: left;
+            font-style: italic;
+        }
+
+        @media all and (max-width: 800px) {
+            display: block;
+        }
+    }
+
+    .post-link {
+        color: $primary-color;
+        display: none;
+        margin-left: -0.2em;
+        padding: 0.2em;
+
+        &:hover {
+            background-color: $primary-color;
+            color: white;
+            padding: 0.2em;
+            text-decoration: none;
+            @include drop-shadow(2px, 3px, 4px, 0.4);
+        }
+
+        @media all and (max-width: 800px) {
+            display: block;
+        }
+    }
+
+    .publish-date, .tags {
+        line-height: 1.8;
+        margin: 0.6em 0;
+        margin-right: 1.7em;
+        padding-left: 1.8em;
+    }
+
+    .publish-date {
+        background-size: 20px 20px;
+        font-weight: bold;
+    }
+
+    .snippet {
+        line-height: 1.6;
+        margin-bottom: 0.7em;
+
+        p:first-child {
+            margin: 0;
+        }
+    }
+
+    .tags {
+        background-size: 20px 20px;
+
+        a {
+            color: $text-color;
+            font-weight: normal;
+        }
+    }
+
+    .title {
+        color: $primary-color;
+        font-family: $heading-font;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin: 0;
+
+        @media all and (max-width: 420px) {
+            font-size: 1.3em;
+        }
+
+        a {
+            text-decoration: none; 
+        }
+    }
+
+    // displays the post summary when the screen size
+    // is large enough to fit it.
+    .wide-post {
+        float: left;
+        max-width: 240px;
+
+        .post-link {
+            display: block;
+        }
+
+        .publish-date {
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        @media all and (max-width: 800px) {
+            display: none;
+        }        
+    }
+}
+
+
+
+// ==========================================================================
+// $ARCHIVE
+// Archive section displaying all posts broken up by month.
+// ========================================================================== 
+
+.archive {
+    .month-year {
+        font-weight: bold;
+        margin-bottom: 0.7em;
+        margin-top: 1em;
+    }
+
+    .post {
+        margin-bottom: 0.5em;
+
+        .post-title {
+            float: left;
+            font-weight: 500;
+            margin-top: 0.2em;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        .day {
+            float: left;
+            margin-right: 1.3em;
+
+            .element {
+                background-color: $primary-color;
+                border-radius: 1.3em;
+                color: white;
+                display: block;
+                font-weight: bold;
+                height: 2.6em;
+                line-height: 2.6;
+                text-align: center;
+                width: 2.6em;
+            }
+        }
+    }
+
+    .title {
+        margin-bottom: 1em;     
+    }
+}

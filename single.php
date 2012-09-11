@@ -3,11 +3,17 @@
 	<?php while ( have_posts() ) : the_post() ?>
 	<article class="clearfix">
 		<div class="post-details">
-			<h1><?php the_title(); ?></h1>
+			<h1 class="post-title"><?php the_title(); ?></h1>
 		
-			<div class="published-on">Posted on <?php the_time('F j, Y') ?> at <?php the_time('g:i a') ?>.</div>
+			<div class="clearfix">
+				<div class="publish-date date-icon">
+					<?php the_time('F j, Y') ?>
+				</div>
 
-			<div><?php the_tags('',', ',''); ?></div>
+				<div class="tags tag-icon">
+					<?php the_tags('',', ',''); ?>
+				</div>
+			</div>
 		</div>
 		
 		<div class="post">
@@ -17,14 +23,14 @@
 	
 	<?php endwhile ?>
 
-	<nav class="top">
-		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
-		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
-	</nav>
+	<nav class="post-navigation clearfix">
+		<div class="previous">
+			<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
+		</div>
 
-	<nav class="bottom">
-		<?php previous_post_link( '%link', __( 'Previous', 'peterkeating.co.uk' ) ); ?>
-		<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
+		<div class="next">
+			<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
+		</div>
 	</nav>	
 	
 	

@@ -1,13 +1,8 @@
+		</div>
 	</div>
 	
-	<footer>
-		<div class="content">
-			<div id="to-the-top">Top</div>
-		</div>
-	</footer>
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.8.0.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="<?php bloginfo('template_url'); ?>/js/libs/jquery-1.8.1.min.js"><\/script>')</script>
 
 	<!-- scripts concatenated and minified via build script -->
 	<script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
