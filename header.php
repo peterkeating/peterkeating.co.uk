@@ -22,9 +22,9 @@
 <body>
 	<div class="page">
 		<header class="clearfix">
-			<!--<a href="/">-->
+			<a href="/">
 				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="logo" />
-			<!--</a>-->
+			</a>
 
 			<div class="header-text">
 				<h1 class="heading short">P Keating</h1>
