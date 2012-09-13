@@ -14,6 +14,7 @@
 // POST - An individual post or page.
 // POSTSUMMARY - List of posts.
 // ARCHIVE - Archive page.
+// PAGE - Generic page.
 
 
 
@@ -566,5 +567,32 @@ header {
 
     .title {
         margin-bottom: 1em;     
+    }
+}
+
+
+// ==========================================================================
+// $PAGE
+// Styles for a page.
+// ========================================================================== 
+.page-content {
+
+    .alignleft {
+        float: right;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .alignright {
+        float: left;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    img {
+        border-radius: 3px;
+        max-width: 210px;
+
+        @include drop-shadow(2px, 3px, 4px, 0.4);
     }
 }

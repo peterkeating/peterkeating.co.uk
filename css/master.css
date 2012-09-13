@@ -315,7 +315,7 @@ header .social-navigation img {
   max-width: 240px;
 }
 .post-summary .wide-post .post-link {
-  display: block;
+  display: inline-block;
 }
 .post-summary .wide-post .publish-date {
   font-style: normal;
@@ -359,4 +359,22 @@ header .social-navigation img {
 }
 .archive .title {
   margin-bottom: 1em;
+}
+
+.page-content .alignleft {
+  float: right;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.page-content .alignright {
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.page-content img {
+  border-radius: 3px;
+  max-width: 210px;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
 }
