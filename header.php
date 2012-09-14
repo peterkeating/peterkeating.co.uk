@@ -32,8 +32,8 @@
 
 				<nav class="page-navigation small-medium-text">
 					<a href="/">Home</a>
-					<a href="/index.php/about/">About</a>
-					<a href="/index.php/archive/">Archive</a>
+					<a href="/about">About</a>
+					<a href="/archive">Archive</a>
 				</nav>
 
 				<nav class="social-navigation">
