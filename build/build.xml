@@ -15,8 +15,13 @@
         </classpath>
     </taskdef>
 
+    <!--
+        Removing the handling of JS from the build process as there is currently 
+        no JS functionality in the theme.
 	<target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
-
+    -->
+    <target name="build" depends="-clean, -prepare, -copytointermediate, -css, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
+    
     <!-- 
         performs css linting on all the css.
     -->
