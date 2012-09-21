@@ -20,13 +20,13 @@
 </head>
 
 <body>
-	<div class="page">
+	<div class="site-page">
 		<header class="clearfix">
 			<a href="/">
 				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="logo" />
 			</a>
 
-			<div class="header-text">
+			<div class="header-detail">
 				<h1 class="heading short">P Keating</h1>
 				<h1 class="heading long">Peter Keating</h1>
 
@@ -53,5 +53,5 @@
 		</header>
 
 		<div class="main">
-	
-	
+
+

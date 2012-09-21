@@ -1,10 +1,10 @@
 // ==========================================================================
 // CONTENTS
-// ========================================================================== 
+// ==========================================================================
 //
 // NOTES
 // MIXINS
-// VARIABLES     
+// VARIABLES
 // MAIN - Different sections of a page.
 // SHARED - Elements used throughout the theme.
 // FONTSIZES - Various font sizes to help with abstraction.
@@ -21,11 +21,11 @@
 // ==========================================================================
 // $NOTES
 // Worth reading before you get started.
-// ========================================================================== 
+// ==========================================================================
 
 // This stylesheet uses principles and conventions that can be viewed
-// here (https://github.com/necolas/idiomatic-css). Lets try and keep 
-// to these conventions as best as possible. 
+// here (https://github.com/necolas/idiomatic-css). Lets try and keep
+// to these conventions as best as possible.
 //
 // Any deviations or problems with the conventions should be discussed
 // and documentated beneath here so anyone working on the stylesheet
@@ -37,13 +37,13 @@
 //  -   Multi-line comments have to use the // due to syntax highlighting in
 //      sublime doesn't handle multi line comments very well.
 //  -   When dealing with attributes that affect the type (borders, font-size,
-//      margins & padding). See here for more details as to why 
+//      margins & padding). See here for more details as to why
 //      (http://csswizardry.com/2011/12/measuring-and-sizing-uis-2011-style/).
-//  -   No need to use a unit on the end of line-height. 
+//  -   No need to use a unit on the end of line-height.
 //      (http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/)
-//  -   Never go four levels deep when nesting 
+//  -   Never go four levels deep when nesting
 //      (http://thesassway.com/beginner/the-inception-rule).
-// 
+//
 // CSSLINT
 //      Also the build script that can be found in the build directory is
 //      capable of performing linting on the CSS using CSSLint (http://csslint.net/).
@@ -57,7 +57,7 @@
 //      Currently the fonts are handled using typekit (https://typekit.com/).
 //      Available fonts:
 //          - ff-tisa-web-pro
-//   
+//
 // Happy CSS'ing :)
 
 
@@ -65,7 +65,7 @@
 // ==========================================================================
 // $MIXINS
 // Mixins used throughout the stylesheet.
-// ========================================================================== 
+// ==========================================================================
 
 // Large set of useful mixins.
 // http://thoughtbot.com/bourbon/
@@ -79,7 +79,7 @@
 // ==========================================================================
 // $VARIABLES
 // Variables used throughout the stylesheet.
-// ========================================================================== 
+// ==========================================================================
 
 // Maximum width of the main content of the page.
 $max-width: 1100px;
@@ -107,7 +107,7 @@ $default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 // ==========================================================================
 // $MAIN
 // The main sections for the webpage.
-// ========================================================================== 
+// ==========================================================================
 
 body {
     background-color: #efefef;
@@ -136,9 +136,9 @@ html {
     @media all and (max-width: 420px) {
         padding: 0;
     }
-} 
+}
 
-.page {
+.site-page {
     background-color: white;
     border-radius: 5px;
     margin: 0 auto;
@@ -163,7 +163,7 @@ html {
 // ==========================================================================
 // $SHARED
 // General styles for elements used across the theme.
-// ========================================================================== 
+// ==========================================================================
 
 a {
     color: $primary-color;
@@ -187,7 +187,7 @@ h2 {
 }
 
 img {
-    max-width: 100%; 
+    max-width: 100%;
 }
 
 
@@ -195,7 +195,7 @@ img {
 // ==========================================================================
 // $FONTSIZES
 // Styles that dictate font sizes.
-// ========================================================================== 
+// ==========================================================================
 
 .small-medium-text {
     font-size: 0.9em;
@@ -205,7 +205,7 @@ img {
 // ==========================================================================
 // $ICONS
 // Icons used throughout the site.
-// ========================================================================== 
+// ==========================================================================
 
 .date-icon, .tag-icon {
     background-position: center left;
@@ -223,20 +223,20 @@ img {
 // ==========================================================================
 // $HEADER
 // Styles for the header.
-// ========================================================================== 
+// ==========================================================================
 
 header {
     a {
         text-decoration: none;
     }
 
-    .header-text {
+    .header-detail {
         float: left;
         height: 100%;
-        padding-left: 1.3em;    
+        padding-left: 1.3em;
     }
 
-    .heading {    
+    .heading {
         @media all and (max-width: 320px) {
             font-size: 1.4em;
         }
@@ -250,13 +250,13 @@ header {
 
         @media all and (max-width: 380px) {
             display: block;
-        }    
+        }
     }
 
     .long {
         @media all and (max-width: 380px) {
             display: none;
-        }        
+        }
     }
 
     .logo {
@@ -322,7 +322,7 @@ header {
 // ==========================================================================
 // $CODE
 // Styles for displaying a code samples in a post.
-// ========================================================================== 
+// ==========================================================================
 
 .gist {
     background-color: #f5f5f5;
@@ -343,7 +343,7 @@ header {
 // ==========================================================================
 // $POST
 // Styles for displaying a single post.
-// ========================================================================== 
+// ==========================================================================
 
 .post {
     line-height: 1.45em;
@@ -407,7 +407,7 @@ header {
 // ==========================================================================
 // $POSTSUMMARY
 // Post summary that is displayed on the main page.
-// ========================================================================== 
+// ==========================================================================
 
 .post-summary {
     margin-bottom: 1em;
@@ -497,7 +497,7 @@ header {
         }
 
         a {
-            text-decoration: none; 
+            text-decoration: none;
         }
     }
 
@@ -518,7 +518,7 @@ header {
 
         @media all and (max-width: 800px) {
             display: none;
-        }        
+        }
     }
 }
 
@@ -527,7 +527,7 @@ header {
 // ==========================================================================
 // $ARCHIVE
 // Archive section displaying all posts broken up by month.
-// ========================================================================== 
+// ==========================================================================
 
 .archive {
     .month-year {
@@ -566,7 +566,7 @@ header {
     }
 
     .title {
-        margin-bottom: 1em;     
+        margin-bottom: 1em;
     }
 }
 
@@ -574,7 +574,7 @@ header {
 // ==========================================================================
 // $PAGE
 // Styles for a page.
-// ========================================================================== 
+// ==========================================================================
 .page-content {
 
     .alignleft {

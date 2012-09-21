@@ -29,7 +29,7 @@ html {
   }
 }
 
-.page {
+.site-page {
   background-color: white;
   border-radius: 5px;
   margin: 0 auto;
@@ -39,12 +39,12 @@ html {
   max-width: 1100px;
 }
 @media all and (max-width: 420px) {
-  .page {
+  .site-page {
     padding: 0.7em;
   }
 }
 @media all and (max-width: 768px) {
-  .page {
+  .site-page {
     border-radius: 0;
     margin-bottom: 0;
     margin-top: 0;
@@ -93,7 +93,7 @@ img {
 header a {
   text-decoration: none;
 }
-header .header-text {
+header .header-detail {
   float: left;
   height: 100%;
   padding-left: 1.3em;

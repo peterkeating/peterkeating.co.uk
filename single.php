@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post() ?>
-	<article class="clearfix">
+	<div class="single-post clearfix">
 		<div class="post-details">
 			<h1 class="post-title"><?php the_title(); ?></h1>
-		
+
 			<div class="clearfix">
 				<div class="publish-date date-icon">
 					<?php the_time('F j, Y') ?>
@@ -15,12 +15,12 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="post">
 			<?php the_content(); ?>
 		</div>
-	</article>
-	
+	</div>
+
 	<?php endwhile ?>
 
 	<nav class="post-navigation clearfix">
@@ -31,7 +31,7 @@
 		<div class="next">
 			<?php next_post_link( '%link', __( 'Next', 'peterkeating.co.uk' ) ); ?>
 		</div>
-	</nav>	
-	
-	
+	</nav>
+
+
 <?php get_footer(); ?>
