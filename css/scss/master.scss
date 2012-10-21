@@ -173,7 +173,6 @@ a {
     }
 }
 
-
 h1 {
     color: $primary-color;
     font-family: $heading-font;
@@ -188,6 +187,12 @@ h2 {
 
 img {
     max-width: 100%;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
