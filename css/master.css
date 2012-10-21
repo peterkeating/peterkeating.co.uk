@@ -139,6 +139,9 @@ header .social-navigation {
   .gist .gist-meta {
     display: none; }
 
+code {
+  color: #0a8ce3; }
+
 .post {
   line-height: 1.45em; }
   .post .quote {
