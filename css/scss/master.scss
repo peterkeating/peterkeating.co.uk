@@ -615,3 +615,8 @@ code {
 // ==========================================================================
 
 @import "mixins/_prism";
+
+.code-sample {
+    border-left: .6em solid #0a8ce3;
+    font-size: 0.85em;
+}

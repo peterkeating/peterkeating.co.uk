@@ -375,3 +375,7 @@ pre[class*="language-"] {
 
 .token.entity {
   cursor: help; }
+
+.code-sample {
+  border-left: .6em solid #0a8ce3;
+  font-size: 0.85em; }
