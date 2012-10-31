@@ -4,9 +4,9 @@
 
     <!-- load shell environment -->
     <property environment="ENV" />
-    
+
     <property file="build/config/project.properties"/>
- 
+
 
     <!-- load in Ant-Contrib to give us access to some very useful tasks! -->
     <taskdef resource="net/sf/antcontrib/antlib.xml">
@@ -15,14 +15,9 @@
         </classpath>
     </taskdef>
 
+    <target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
+
     <!--
-        Removing the handling of JS from the build process as there is currently 
-        no JS functionality in the theme.
-	<target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
-    -->
-    <target name="build" depends="-clean, -prepare, -copytointermediate, -css, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
-    
-    <!-- 
         performs css linting on all the css.
     -->
     <target name="csslint">
@@ -40,7 +35,7 @@
         </apply>
     </target>
 
-     <!-- 
+     <!--
         performs linting on all the js.
     -->
     <target name="jslint">
@@ -58,9 +53,9 @@
         </apply>
     </target>
 
-	<!-- 
-		deletes the artifacts generated from the previous build, 
-		if there is one. 
+	<!--
+		deletes the artifacts generated from the previous build,
+		if there is one.
 	-->
 	<target name="-clean" >
       	<delete dir="${deploy.dir}" />
@@ -86,7 +81,7 @@
 
     <target name="-css" depends="-css.concat, -css.min, -css.cache" />
 
-    <!-- 
+    <!--
         Concats all the css files into a single css file for improved
         page load. All the css files that have been concatenated are stripped
         from the specified page files.
@@ -120,9 +115,9 @@
     </target>
 
     <!--
-        Changes the name of the name of the concatenated css file to ensure that any 
+        Changes the name of the name of the concatenated css file to ensure that any
         changes made to the stylesheet are presented to the user. The minified version
-        of the stylesheet is given a randomly generated new name and the <link> tag 
+        of the stylesheet is given a randomly generated new name and the <link> tag
         to the main stylesheet file is changed to point at the renamed stylesheet.
     -->
     <target name="-css.cache">
@@ -141,7 +136,7 @@
         </delete>
     </target>
 
-    <!-- 
+    <!--
         Removes the stylesheets that have been included
         into the concatenated stylesheets.
     -->
@@ -153,8 +148,8 @@
 
     <target name="-js" depends="-js.concat, -js.min, -js.cache" />
 
-    <!-- 
-        Minifies the concatenateed javascript file. 
+    <!--
+        Minifies the concatenateed javascript file.
     -->
     <target name="-js.min">
         <apply executable="java" parallel="false">
@@ -212,7 +207,7 @@
     </target>
 
     <!--
-        Changes the name of the main concatenated scripts file to ensure that any 
+        Changes the name of the main concatenated scripts file to ensure that any
         the primary javascript file is never loaded from cached when a release is pushed.
         The collection of javascript files in between the marker comments are removed and
         replaced with the name of the new cache busting java script file.
@@ -235,7 +230,7 @@
         </delete>
     </target>
 
-    <!-- 
+    <!--
         publishes the intermediate project into a working website.
     -->
     <target name="-publish">
@@ -247,7 +242,7 @@
         <delete dir="${publish.dir}/.sass-cache" />
     </target>
 
-    <!-- 
+    <!--
         Optimises all the PNG images to reduce their file size, this
         may take a while depending on how many images there are.
     -->
@@ -280,8 +275,8 @@
         </apply>
     </target>
 
-    <!-- 
-        Optimises all the JPG images to reduce their file size. 
+    <!--
+        Optimises all the JPG images to reduce their file size.
     -->
     <target name="-imagesjpg">
          <if>
@@ -307,7 +302,7 @@
     </target>
 
     <!--
-        Optimises all the images with losslessly compression. 
+        Optimises all the images with losslessly compression.
     -->
     <target name="-imageslosslessly">
         <java  jar="${tool.smushit}"
@@ -322,7 +317,7 @@
 
     <!--
         Removes the intermediate directory that was used to configure
-        the js, css, html & images so they are ready for a production 
+        the js, css, html & images so they are ready for a production
         release.
     -->
     <target name="-removeintermediate">
