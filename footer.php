@@ -1,6 +1,6 @@
 		</div>
 	</div>
-	
+
 	<!--
 		Temporarily removed the loading of JQuery and any of the sites JavaScript because currently
 		it doesn't have any requirement for JS functionality.
@@ -10,7 +10,7 @@
 	-->
 
 	<!-- scripts concatenated and minified via build script -->
-	<!--<script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>-->
+	<script src="<?php bloginfo('template_url'); ?>/js/libs/prism.js"></script>
 	<!-- end scripts -->
 
 	<?php

@@ -15,6 +15,7 @@
 // POSTSUMMARY - List of posts.
 // ARCHIVE - Archive page.
 // PAGE - Generic page.
+// PRISM - Code highlighting in a post.
 
 
 
@@ -605,3 +606,12 @@ code {
         @include drop-shadow(2px, 3px, 4px, 0.4);
     }
 }
+
+
+
+// ==========================================================================
+// $PRISM
+// Code highlighting in a post.
+// ==========================================================================
+
+@import "mixins/_prism";
