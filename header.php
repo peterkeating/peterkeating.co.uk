@@ -36,19 +36,25 @@
 					<a href="/archive">Archive</a>
 				</nav>
 
-				<nav class="social-navigation">
-					<a href="http://twitter.com/peterkeating" title="View my Twitter profile." target="_blank">
-						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-twitter.png" alt="View my Twitter profile." />
-					</a>
+				<ul class="social-navigation">
+					<li>
+						<a href="http://twitter.com/peterkeating" title="View my Twitter profile." target="_blank">
+							<div class="social-media-icon icon-twitter"></div>
+						</a>
+					</li>
 
-					<a href="http://github.com/peterkeating" title="View my Github profile." target="_blank">
-						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-github.png" alt="View my Github profile." />
-					</a>
+					<li>
+						<a href="http://github.com/peterkeating" title="View my Github profile." target="_blank">
+							<div class="social-media-icon icon-github"></div>
+						</a>
+					</li>
 
-					<a href="http://www.endomondo.com/profile/5042109" title="View my Endomondo profile." target="_blank">
-						<img src="<?php bloginfo( "template_url" ); ?>/images/icon-endomondo.png" alt="View my Github profile." />
-					</a>
-				</nav>
+					<li>
+						<a href="http://www.endomondo.com/profile/5042109" title="View my Endomondo profile." target="_blank">
+							<div class="social-media-icon icon-endomondo"></div>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</header>
 

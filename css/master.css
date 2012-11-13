@@ -1,3 +1,16 @@
+/**
+ * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf, header .social-navigation {
+  zoom: 1; }
+  .cf:before, header .social-navigation:before, .cf:after, header .social-navigation:after {
+    content: " ";
+    display: table; }
+  .cf:after, header .social-navigation:after {
+    clear: both; }
+
 body {
   background-color: #efefef; }
 
@@ -73,6 +86,28 @@ img {
 .tag-icon {
   background: url("../images/icon-tag.png") no-repeat; }
 
+.social-media-icon {
+  background: url("../images/icon-sprite.png") no-repeat; }
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 196dpi) {
+  .social-media-icon {
+    background: url("../images/icon-sprite@x2.png") no-repeat;
+    background-size: 111px 102px; } }
+.icon-endomondo {
+  width: 50px;
+  height: 50px;
+  background-position: -55px 0px; }
+
+.icon-github {
+  width: 50px;
+  height: 50px;
+  background-position: 0px 0px; }
+
+.icon-twitter {
+  width: 50px;
+  height: 41px;
+  background-position: 0px -55px; }
+
 header a {
   text-decoration: none; }
 header .header-detail {
@@ -110,6 +145,9 @@ header .page-navigation {
       header .page-navigation a:first-child {
         display: none; } }
 header .social-navigation {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   position: absolute;
   right: -5px;
   top: -5px; }
@@ -117,6 +155,11 @@ header .social-navigation {
     max-height: 45px;
     max-width: 50px;
     padding-left: 5px; }
+  header .social-navigation li {
+    float: left;
+    margin-right: 10px; }
+    header .social-navigation li:last-child {
+      margin-right: 0; }
   @media all and (max-width: 600px) {
     header .social-navigation {
       margin-top: 0.6em;

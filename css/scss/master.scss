@@ -5,6 +5,7 @@
 // NOTES
 // MIXINS
 // VARIABLES
+// CLEARFIX
 // MAIN - Different sections of a page.
 // SHARED - Elements used throughout the theme.
 // FONTSIZES - Various font sizes to help with abstraction.
@@ -102,6 +103,30 @@ $code-font: monospace, sans-serif;
 
 // font used everywhere else in the theme.
 $default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+// ==========================================================================
+// $CLEARFIX
+//
+// ==========================================================================
+/**
+ * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ */
+.cf{
+    zoom:1;
+
+    &:before,
+    &:after{
+        content:" ";
+        display:table;
+    }
+
+    &:after{
+        clear:both;
+    }
+}
 
 
 
@@ -225,6 +250,40 @@ img {
     background: url('../images/icon-tag.png') no-repeat;
 }
 
+.social-media-icon {
+    background: url('../images/icon-sprite.png') no-repeat;
+}
+
+// when the screen resolution allows for a better quality image to be displayed
+// (basically on iDevices) then lets serve an image that is a much better density.
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 196dpi)
+{
+    .social-media-icon {
+        background: url('../images/icon-sprite@x2.png') no-repeat;
+        background-size: 111px 102px;
+    }
+}
+
+.icon-endomondo {
+    width: 50px;
+    height: 50px;
+    background-position: -55px -0px;
+}
+
+.icon-github {
+    width: 50px;
+    height: 50px;
+    background-position: -0px -0px;
+}
+
+.icon-twitter {
+    width: 50px;
+    height: 41px;
+    background-position: -0px -55px;
+}
+
+
 
 // ==========================================================================
 // $HEADER
@@ -296,6 +355,11 @@ header {
     }
 
     .social-navigation {
+        @extend .cf;
+
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
         position: absolute;
         right: -5px;
         top: -5px;
@@ -304,6 +368,15 @@ header {
             max-height: 45px;
             max-width: 50px;
             padding-left: 5px;
+        }
+
+        li {
+            float: left;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
 
         @media all and (max-width: 600px) {
