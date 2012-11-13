@@ -187,6 +187,9 @@ code {
 
 .post {
   line-height: 1.45em; }
+  @media all and (max-width: 420px) {
+    .post {
+      font-size: 1.2em; } }
   .post .quote {
     border-left: 0.6em solid #0a8ce3;
     font-style: italic;
@@ -265,6 +268,9 @@ code {
     margin-bottom: 0.7em; }
     .post-summary .snippet p:first-child {
       margin: 0; }
+    @media all and (max-width: 420px) {
+      .post-summary .snippet {
+        font-size: 1.2em; } }
   .post-summary .tags {
     background-size: 20px 20px; }
     .post-summary .tags a {

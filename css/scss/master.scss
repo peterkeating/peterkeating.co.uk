@@ -431,6 +431,11 @@ code {
 .post {
     line-height: 1.45em;
 
+    // increase the font size for mobile to make things easier to read.
+    @media all and (max-width: 420px) {
+        font-size: 1.2em;
+    }
+
     .quote {
         border-left: 0.6em solid $primary-color;
         font-style: italic;
@@ -556,6 +561,11 @@ code {
 
         p:first-child {
             margin: 0;
+        }
+
+        // increase the font size for mobile to make things easier to read.
+        @media all and (max-width: 420px) {
+            font-size: 1.2em;
         }
     }
 
