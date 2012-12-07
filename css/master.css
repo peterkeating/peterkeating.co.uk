@@ -23,7 +23,7 @@ header {
       padding: 0; } }
 
 html {
-  color: #666666;
+  color: #4c4c4c;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%; }
 
@@ -218,7 +218,7 @@ code {
 .post-details .tags {
   background-size: 25px 25px; }
   .post-details .tags a {
-    color: #666666;
+    color: #4c4c4c;
     font-weight: normal; }
 
 .post-navigation .next {
@@ -276,7 +276,7 @@ code {
   .post-summary .tags {
     background-size: 20px 20px; }
     .post-summary .tags a {
-      color: #666666;
+      color: #4c4c4c;
       font-weight: normal; }
   .post-summary .title {
     color: #0a8ce3;
