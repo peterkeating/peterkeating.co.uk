@@ -431,6 +431,14 @@ code {
 .post {
     line-height: 1.45em;
 
+    // as the max-width is being set below, the text should stay central to avoid
+    // any huge areas of white space.
+    margin: 0 auto;
+
+    // set a max-width because the lines felt too long and were difficult for the
+    // user to read.
+    max-width: 800px;
+
     // increase the font size for mobile to make things easier to read.
     @media all and (max-width: 420px) {
         font-size: 1.2em;

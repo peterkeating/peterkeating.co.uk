@@ -186,7 +186,9 @@ code {
   color: #0a8ce3; }
 
 .post {
-  line-height: 1.45em; }
+  line-height: 1.45em;
+  margin: 0 auto;
+  max-width: 800px; }
   @media all and (max-width: 420px) {
     .post {
       font-size: 1.2em; } }
