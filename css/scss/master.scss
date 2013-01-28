@@ -47,15 +47,6 @@
 //  -   Never go four levels deep when nesting
 //      (http://thesassway.com/beginner/the-inception-rule).
 //
-// CSSLINT
-//      Also the build script that can be found in the build directory is
-//      capable of performing linting on the CSS using CSSLint (http://csslint.net/).
-//      Please run your changes through the ant CSS lint process (ant csslint)
-//      and try to commit your changes without introducing any new warnings.
-//
-//      Known warnings:
-//          None :)
-//
 // FONTS
 //      Currently the fonts are handled using typekit (https://typekit.com/).
 //      Available fonts:
