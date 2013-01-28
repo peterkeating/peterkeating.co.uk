@@ -10,7 +10,6 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/master.css" />
 
 	<script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.2.min.js"></script>

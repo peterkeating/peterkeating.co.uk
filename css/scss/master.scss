@@ -3,6 +3,7 @@
 // ==========================================================================
 //
 // NOTES
+// RESET............. Uses normalize.css to bring consistency to all browsers.
 // MIXINS
 // VARIABLES
 // CLEARFIX
@@ -63,6 +64,13 @@
 // Happy CSS'ing :)
 
 
+/**
+* =============================================================================
+* $RESET
+* =============================================================================
+*/
+
+@import "partials/generic/normalize";
 
 // ==========================================================================
 // $MIXINS
@@ -114,7 +122,7 @@ $default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf{
+.cf {
     zoom:1;
 
     &:before,
