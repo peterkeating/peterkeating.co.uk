@@ -452,6 +452,12 @@ table {
   border-spacing: 0; }
 
 /**
+* ==============================================================================
+* $VARIABLES
+* Variables used throughout the stylesheet.
+* ==============================================================================
+*/
+/**
  * Micro clearfix, as per: nicolasgallagher.com/micro-clearfix-hack
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
