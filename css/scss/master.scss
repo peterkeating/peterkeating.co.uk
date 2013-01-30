@@ -2,10 +2,10 @@
 // CONTENTS
 // ==========================================================================
 //
-// NOTES
+// NOTES............. Worth reading before getting started.
 // RESET............. Uses normalize.css to bring consistency to all browsers.
-// MIXINS
-// VARIABLES
+// VARIABLES......... Properties that are used multiple times in the stylesheet.
+// MIXINS............ Provides useful mixins that can be used throughout the stylesheet.
 // CLEARFIX
 // MAIN - Different sections of a page.
 // SHARED - Elements used throughout the theme.
@@ -60,25 +60,12 @@
 * $RESET
 * =============================================================================
 */
-
 @import "partials/generic/normalize";
-
-// ==========================================================================
-// $MIXINS
-// Mixins used throughout the stylesheet.
-// ==========================================================================
-
-// Large set of useful mixins.
-// http://thoughtbot.com/bourbon/
-@import "bourbon/_bourbon";
-
-// Contains mixins that unfortunately weren't available in bourbon.
-@import "mixins/_custom";
 
 @import "_vars";
 
+@import "partials/generic/mixins";
 @import "partials/generic/clearfix";
-
 
 
 // ==========================================================================
