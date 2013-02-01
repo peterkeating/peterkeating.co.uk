@@ -77,120 +77,12 @@
 
 @import "partials/ui/foundations";
 @import "partials/ui/icons";
+@import "partials/ui/header";
 
 
 
 
-// ==========================================================================
-// $HEADER
-// Styles for the header.
-// ==========================================================================
 
-header {
-    a {
-        text-decoration: none;
-    }
-
-    .header-detail {
-        float: left;
-        height: 100%;
-        padding-left: 1.3em;
-    }
-
-    .heading {
-        @media all and (max-width: 320px) {
-            font-size: 1.4em;
-        }
-    }
-
-    // used in the header text to either show
-    // the long or short version of the text
-    // depending on the screen size.
-    .short {
-        display: none;
-
-        @media all and (max-width: 380px) {
-            display: block;
-        }
-    }
-
-    .long {
-        @media all and (max-width: 380px) {
-            display: none;
-        }
-    }
-
-    .logo {
-        border-radius: 5px;
-        float: left;
-        max-width: 100px;
-        vertical-align: middle;
-
-        @include drop-shadow(2px, 3px, 4px, 0.4);
-
-        @media all and (max-width: 320px) {
-            width: 30%;
-        }
-    }
-
-    .page-navigation {
-        display: inline-block;
-
-        a {
-            color: $lighter-text-color;
-            padding-right: 0.7em;
-
-            // hides the Home navigation item to give a bit more room.
-            // the logo still acts as a link to the home page.
-            @media all and (max-width: 280px) {
-                &:first-child {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    .social-navigation {
-        @extend .cf;
-
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: -5px;
-        top: -5px;
-
-        img {
-            max-height: 45px;
-            max-width: 50px;
-            padding-left: 5px;
-        }
-
-        li {
-            float: left;
-            margin-right: 10px;
-
-            &:last-child {
-                margin-right: 0;
-            }
-        }
-
-        @media all and (max-width: 600px) {
-            margin-top: 0.6em;
-            position: relative;
-            right: 0;
-            top: 0;
-
-            img {
-                max-width: 30px;
-
-                &:first-child {
-                    padding-left: 0;
-                }
-            }
-        }
-    }
-}
 
 
 
