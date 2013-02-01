@@ -15,13 +15,12 @@
 * FOUNDATIONS....... Contains styles related to the main structural containers
 *                    of the web page.
 * ICONS............. Icons used in the theme.
-* HEADER - Page header styles.
-* CODE - Code snippets.
+* HEADER............ Page header styles.
+* CODE.............. CSS used to display code snippets.
 * POST - An individual post or page.
 * POSTSUMMARY - List of posts.
 * ARCHIVE - Archive page.
 * PAGE - Generic page.
-* PRISM - Code highlighting in a post.
 */
 
 /**
@@ -78,36 +77,8 @@
 @import "partials/ui/foundations";
 @import "partials/ui/icons";
 @import "partials/ui/header";
+@import "partials/ui/code";
 
-
-
-
-
-
-
-
-// ==========================================================================
-// $CODE
-// Styles for displaying a code samples in a post.
-// ==========================================================================
-
-.gist {
-    background-color: #f5f5f5;
-    border-left: 0.6em solid $primary-color;
-    color: #373737;
-    font-family: $code-font;
-    font-size: 0.75em;
-    line-height: 1.2;
-    padding: 0.3em 1em;
-
-    .gist-meta {
-        display: none;
-    }
-}
-
-code {
-    color: $primary-color;
-}
 
 
 
@@ -384,18 +355,4 @@ code {
 
         @include drop-shadow(2px, 3px, 4px, 0.4);
     }
-}
-
-
-
-// ==========================================================================
-// $PRISM
-// Code highlighting in a post.
-// ==========================================================================
-
-@import "mixins/_prism";
-
-.code-sample {
-    border-left: .6em solid #0a8ce3;
-    font-size: 0.85em;
 }

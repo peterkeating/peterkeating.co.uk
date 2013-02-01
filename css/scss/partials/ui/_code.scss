@@ -1,0 +1,29 @@
+// ==========================================================================
+// $CODE
+// Styles for displaying a code samples in a post.
+// ==========================================================================
+
+code {
+    color: $primary-color;
+}
+
+.code-sample {
+    border-left: .6em solid #0a8ce3;
+    font-size: 0.85em;
+}
+
+.gist {
+    background-color: #f5f5f5;
+    border-left: 0.6em solid $primary-color;
+    color: #373737;
+    font-family: $code-font;
+    font-size: 0.75em;
+    line-height: 1.2;
+    padding: 0.3em 1em;
+
+    .gist-meta {
+        display: none;
+    }
+}
+
+@import "../vendor/prism";
