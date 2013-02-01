@@ -14,7 +14,7 @@
 * TEXT.............. Font sizes and styling.
 * FOUNDATIONS....... Contains styles related to the main structural containers
 *                    of the web page.
-* ICONS - Icons used in the theme.
+* ICONS............. Icons used in the theme.
 * HEADER - Page header styles.
 * CODE - Code snippets.
 * POST - An individual post or page.
@@ -628,6 +628,11 @@ html {
       margin-bottom: 0;
       margin-top: 0; } }
 
+/**
+* ==============================================================================
+* $ICONS
+* ==============================================================================
+*/
 .date-icon, .tag-icon {
   background-position: center left; }
 
