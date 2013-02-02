@@ -26,10 +26,10 @@
 			</a>
 
 			<div class="header-detail">
-				<h1 class="heading shortened-name">P Keating</h1>
-				<h1 class="heading full-name">Peter Keating</h1>
+				<h1 class="site-title shortened-name">P Keating</h1>
+				<h1 class="site-title full-name">Peter Keating</h1>
 
-				<nav class="page-navigation small-medium-text">
+				<nav class="page-navigation">
 					<a href="/">Home</a>
 					<a href="/about">About</a>
 					<a href="/archive">Archive</a>

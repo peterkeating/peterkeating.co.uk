@@ -5,6 +5,8 @@
 */
 
 .page-navigation {
+    @extend .small-medium-text;
+
     display: inline-block;
 
     a {

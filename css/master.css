@@ -581,7 +581,7 @@ h1 {
 h2 {
   font-family: "ff-tisa-web-pro", Arial, sans-serif; }
 
-.small-medium-text {
+.small-medium-text, .page-navigation {
   font-size: 0.9em; }
 
 /**
@@ -682,7 +682,7 @@ html {
     height: 100%;
     padding-left: 1.3em; }
   @media all and (max-width: 320px) {
-    .header .heading {
+    .header .site-title {
       font-size: 1.4em; } }
   .header .shortened-name {
     display: none; }
