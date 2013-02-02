@@ -5,9 +5,13 @@
 */
 
 .post-summary {
+    @extend .cf;
+
     margin-bottom: 1em;
 
-    // holds the post title, summary and narrow post data.
+    /**
+    * Holds the post title, summary and narrow post data.
+    */
     .post-keyinfo {
         margin-left: 240px;
 
@@ -19,6 +23,9 @@
     // displays the post summary when the screen size is
     // too small for the wide view.
     .narrow-post {
+        @extend .cf;
+        @extend .small-medium-text;
+
         display: none;
 
         .publish-date, .tags {
@@ -50,19 +57,19 @@
         }
     }
 
-    .publish-date, .tags {
+    .post-publish-date, .post-tags {
         line-height: 1.8;
         margin: 0.6em 0;
         margin-right: 1.7em;
         padding-left: 1.8em;
     }
 
-    .publish-date {
+    .post-publish-date {
         background-size: 20px 20px;
         font-weight: bold;
     }
 
-    .snippet {
+    .post-snippet {
         line-height: 1.6;
         margin-bottom: 0.7em;
 
@@ -76,7 +83,7 @@
         }
     }
 
-    .tags {
+    .post-tags {
         background-size: 20px 20px;
 
         a {
@@ -85,7 +92,7 @@
         }
     }
 
-    .title {
+    .post-title {
         color: $primary-color;
         font-family: $heading-font;
         font-size: 1.8em;
@@ -101,9 +108,12 @@
         }
     }
 
-    // displays the post summary when the screen size
-    // is large enough to fit it.
+    /**
+    * Displays the post summary when the screen size is large enough to fit it.
+    */
     .wide-post {
+        @extend .cf;
+
         float: left;
         max-width: 240px;
 
@@ -111,7 +121,7 @@
             display: inline-block;
         }
 
-        .publish-date {
+        .post-publish-date {
             font-style: normal;
             font-weight: bold;
         }

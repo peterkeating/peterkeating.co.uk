@@ -535,12 +535,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .header, .social-navigation {
+.cf, .header, .social-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post {
   zoom: 1; }
-  .cf:before, .header:before, .social-navigation:before, .cf:after, .header:after, .social-navigation:after {
+  .cf:before, .header:before, .social-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .cf:after, .header:after, .social-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after {
     content: " ";
     display: table; }
-  .cf:after, .header:after, .social-navigation:after {
+  .cf:after, .header:after, .social-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after {
     clear: both; }
 
 /**
@@ -581,7 +581,7 @@ h1 {
 h2 {
   font-family: "ff-tisa-web-pro", Arial, sans-serif; }
 
-.small-medium-text, .page-navigation {
+.small-medium-text, .page-navigation, .post-summary .narrow-post {
   font-size: 0.9em; }
 
 /**
@@ -919,7 +919,13 @@ pre[class*="language-"] {
 * ==============================================================================
 */
 .post-summary {
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  /**
+  * Holds the post title, summary and narrow post data.
+  */
+  /**
+  * Displays the post summary when the screen size is large enough to fit it.
+  */ }
   .post-summary .post-keyinfo {
     margin-left: 240px; }
     @media all and (max-width: 800px) {
@@ -949,44 +955,44 @@ pre[class*="language-"] {
     @media all and (max-width: 800px) {
       .post-summary .post-link {
         display: block; } }
-  .post-summary .publish-date, .post-summary .tags {
+  .post-summary .post-publish-date, .post-summary .post-tags {
     line-height: 1.8;
     margin: 0.6em 0;
     margin-right: 1.7em;
     padding-left: 1.8em; }
-  .post-summary .publish-date {
+  .post-summary .post-publish-date {
     background-size: 20px 20px;
     font-weight: bold; }
-  .post-summary .snippet {
+  .post-summary .post-snippet {
     line-height: 1.6;
     margin-bottom: 0.7em; }
-    .post-summary .snippet p:first-child {
+    .post-summary .post-snippet p:first-child {
       margin: 0; }
     @media all and (max-width: 420px) {
-      .post-summary .snippet {
+      .post-summary .post-snippet {
         font-size: 1.2em; } }
-  .post-summary .tags {
+  .post-summary .post-tags {
     background-size: 20px 20px; }
-    .post-summary .tags a {
+    .post-summary .post-tags a {
       color: #4c4c4c;
       font-weight: normal; }
-  .post-summary .title {
+  .post-summary .post-title {
     color: #0a8ce3;
     font-family: "ff-tisa-web-pro", Arial, sans-serif;
     font-size: 1.8em;
     font-weight: bold;
     margin: 0; }
     @media all and (max-width: 420px) {
-      .post-summary .title {
+      .post-summary .post-title {
         font-size: 1.3em; } }
-    .post-summary .title a {
+    .post-summary .post-title a {
       text-decoration: none; }
   .post-summary .wide-post {
     float: left;
     max-width: 240px; }
     .post-summary .wide-post .post-link {
       display: inline-block; }
-    .post-summary .wide-post .publish-date {
+    .post-summary .wide-post .post-publish-date {
       font-style: normal;
       font-weight: bold; }
     @media all and (max-width: 800px) {
