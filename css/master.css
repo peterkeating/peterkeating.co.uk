@@ -535,12 +535,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .header, .social-navigation, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post {
+.cf, .header, .social-navigation, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
   zoom: 1; }
-  .cf:before, .header:before, .social-navigation:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after {
+  .cf:before, .header:before, .social-navigation:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     content: " ";
     display: table; }
-  .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after {
+  .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     clear: both; }
 
 /**
