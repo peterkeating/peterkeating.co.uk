@@ -4,6 +4,10 @@
 * ==============================================================================
 */
 
+.single-post {
+    @extend .cf;
+}
+
 .post {
     line-height: 1.45em;
 
@@ -39,6 +43,10 @@
         margin-bottom: 0.4em;
     }
 
+    .post-meta {
+        @extend .cf;
+    }
+
     .post-title {
         margin-bottom: 0.6em;
 
@@ -72,11 +80,13 @@
 }
 
 .post-navigation {
-    .next {
+    @extend .cf;
+
+    .next-post {
         float: right;
     }
 
-    .previous {
+    .previous-post {
         float: left;
     }
 }
