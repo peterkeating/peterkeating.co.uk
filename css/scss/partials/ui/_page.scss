@@ -1,0 +1,26 @@
+/*
+* =============================================================================
+* $PAGE
+* ==============================================================================
+*/
+
+.page-content {
+    .alignleft {
+        float: right;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .alignright {
+        float: left;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+
+    img {
+        border-radius: 3px;
+        max-width: 210px;
+
+        @include drop-shadow(2px, 3px, 4px, 0.4);
+    }
+}
