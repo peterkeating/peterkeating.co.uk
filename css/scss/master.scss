@@ -16,11 +16,13 @@
 *                    of the web page.
 * ICONS............. Icons used in the theme.
 * HEADER............ Page header styles.
+* NAV............... Site page navigation.
+* SOCIALNAV......... Social navigation displayed in the header.
 * CODE.............. CSS used to display code snippets.
 * POST.............. An individual post.
 * POSTSUMMARY....... Post displayed in a list of posts.
 * ARCHIVE........... Archive page.
-* PAGE.............. Generic page styles.
+* PAGE.............. Generic page styles
 */
 
 /**
@@ -77,6 +79,8 @@
 @import "partials/ui/foundations";
 @import "partials/ui/icons";
 @import "partials/ui/header";
+@import "partials/ui/nav";
+@import "partials/ui/socialnav";
 @import "partials/ui/code";
 @import "partials/ui/post";
 @import "partials/ui/postsummary";
