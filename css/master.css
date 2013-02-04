@@ -594,11 +594,7 @@ body {
 
 .header {
   margin-bottom: 1em;
-  padding: 0.7em;
   position: relative; }
-  @media all and (max-width: 420px) {
-    .header {
-      padding: 0; } }
 
 html {
   color: #4c4c4c;
@@ -606,8 +602,7 @@ html {
   font-size: 100%; }
 
 .main {
-  margin: 0 auto;
-  padding: 0 0.7em; }
+  margin: 0 auto; }
   @media all and (max-width: 420px) {
     .main {
       padding: 0; } }

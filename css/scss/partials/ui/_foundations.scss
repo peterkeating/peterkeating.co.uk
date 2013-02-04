@@ -10,12 +10,7 @@ body {
 
 .header {
     margin-bottom: 1em;
-    padding: 0.7em;
     position: relative;
-
-    @media all and (max-width: 420px) {
-        padding: 0;
-    }
 }
 
 html {
@@ -26,7 +21,6 @@ html {
 
 .main {
     margin: 0 auto;
-    padding: 0 0.7em;
 
     @media all and (max-width: 420px) {
         padding: 0;
