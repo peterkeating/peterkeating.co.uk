@@ -7,19 +7,8 @@
 .site-nav {
     @extend .small-medium-text;
 
-    > li {
-        margin-right: $spacing-unit;
-
-        /**
-         * No need for padding on the last item of the nav list.
-         */
-        &:last-child {
-            margin-right: 0;
-        }
-
-        a {
-            color: $light-grey;
-            text-decoration: none;
-        }
+    > li > a {
+        color: $light-grey;
+        text-decoration: none;
     }
 }

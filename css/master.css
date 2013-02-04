@@ -545,12 +545,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .site-header, .social-navigation, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
+.cf, .site-header, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
   zoom: 1; }
-  .cf:before, .site-header:before, .social-navigation:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .site-header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:before, .site-header:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     content: " ";
     display: table; }
-  .cf:after, .site-header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     clear: both; }
 
 /**
@@ -586,7 +586,13 @@ a {
   margin: 0;
   padding: 0; }
   .nav > li {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 0.5em;
+    /**
+     * No need for padding on the last item of the nav list.
+     */ }
+    .nav > li:last-child {
+      margin-right: 0; }
 
 /**
 * =============================================================================
@@ -727,48 +733,41 @@ html {
 * $SITENAV
 * =============================================================================
 */
-.site-nav > li {
-  margin-right: 1em;
-  /**
-   * No need for padding on the last item of the nav list.
-   */ }
-  .site-nav > li:last-child {
-    margin-right: 0; }
-  .site-nav > li a {
-    color: #9b9a9a;
-    text-decoration: none; }
+.site-nav > li > a {
+  color: #9b9a9a;
+  text-decoration: none; }
 
 /**
 * ==============================================================================
 * $SOCIALNAV
 * ==============================================================================
 */
-.social-navigation {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.social-nav {
+  /**
+   * Social nav items are placed in the top right corner.
+   */
   position: absolute;
   right: -5px;
-  top: -5px; }
-  .social-navigation img {
-    max-height: 45px;
-    max-width: 50px;
-    padding-left: 5px; }
-  .social-navigation li {
-    float: left;
-    margin-right: 10px; }
-    .social-navigation li:last-child {
-      margin-right: 0; }
+  top: -5px;
+  /**
+   * No longer enough room for the social navigation items to fit in the top
+   * right corner without them overlapping the site title & site navigation.
+   */ }
+  .social-nav > li {
+    /**
+     * Ensures that the social nav items are aligned correctly.
+     */
+    float: left; }
   @media all and (max-width: 600px) {
-    .social-navigation {
-      margin-top: 0.6em;
+    .social-nav {
+      margin-top: 0.5em;
+      /**
+       * Resets the positioning so the social nav items come below the site
+       * navigation.
+       */
       position: relative;
       right: 0;
-      top: 0; }
-      .social-navigation img {
-        max-width: 30px; }
-        .social-navigation img:first-child {
-          padding-left: 0; } }
+      top: 0; } }
 
 /*
 * ==============================================================================

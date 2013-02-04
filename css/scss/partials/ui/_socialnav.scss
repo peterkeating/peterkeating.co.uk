@@ -4,43 +4,36 @@
 * ==============================================================================
 */
 
-.social-navigation {
-    @extend .cf;
+.social-nav {
 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    /**
+     * Social nav items are placed in the top right corner.
+     */
     position: absolute;
     right: -5px;
     top: -5px;
 
-    img {
-        max-height: 45px;
-        max-width: 50px;
-        padding-left: 5px;
-    }
+    > li {
 
-    li {
+        /**
+         * Ensures that the social nav items are aligned correctly.
+         */
         float: left;
-        margin-right: 10px;
-
-        &:last-child {
-            margin-right: 0;
-        }
     }
 
+    /**
+     * No longer enough room for the social navigation items to fit in the top
+     * right corner without them overlapping the site title & site navigation.
+     */
     @media all and (max-width: 600px) {
-        margin-top: 0.6em;
+        margin-top: $spacing-unit / 2;
+
+        /**
+         * Resets the positioning so the social nav items come below the site
+         * navigation.
+         */
         position: relative;
         right: 0;
         top: 0;
-
-        img {
-            max-width: 30px;
-
-            &:first-child {
-                padding-left: 0;
-            }
-        }
     }
 }

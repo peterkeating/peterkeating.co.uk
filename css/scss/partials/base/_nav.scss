@@ -11,5 +11,13 @@
 
     > li {
         display: inline-block;
+        margin-right: $spacing-unit / 2;
+
+        /**
+         * No need for padding on the last item of the nav list.
+         */
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }

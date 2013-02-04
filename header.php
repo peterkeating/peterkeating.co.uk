@@ -35,7 +35,7 @@
 					<li><a href="/archive" class="site-nav-item">Archive</a></li>
 				</ul>
 
-				<ul class="social-navigation">
+				<ul class="nav social-nav">
 					<li>
 						<a href="http://twitter.com/peterkeating" title="View my Twitter profile." target="_blank">
 							<div class="social-media-icon icon-twitter"></div>
