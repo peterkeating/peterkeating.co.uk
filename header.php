@@ -20,7 +20,7 @@
 
 <body>
 	<div class="site-page">
-		<div class="header">
+		<div class="site-header">
 			<a href="/">
 				<img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="logo" />
 			</a>
@@ -29,11 +29,11 @@
 				<h1 class="site-title shortened-name">P Keating</h1>
 				<h1 class="site-title full-name">Peter Keating</h1>
 
-				<nav class="page-navigation">
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/archive">Archive</a>
-				</nav>
+				<ul class="nav site-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/about" class="site-nav-item">About</a></li>
+					<li><a href="/archive" class="site-nav-item">Archive</a></li>
+				</ul>
 
 				<ul class="social-navigation">
 					<li>

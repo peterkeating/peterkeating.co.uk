@@ -11,12 +11,13 @@
 *                    with floats.
 * IMAGES............ Everything to do with images.
 * LINKS............. Anchor tags and custom hyperlinks to other pages.
+* NAV............... Base navigation object used for all navigational elements.
 * TEXT.............. Font sizes and styling.
 * FOUNDATIONS....... Contains styles related to the main structural containers
 *                    of the web page.
 * ICONS............. Icons used in the theme.
 * HEADER............ Page header styles.
-* NAV............... Site page navigation.
+* SITENAV........... Navigation for the pages on the site.
 * SOCIALNAV......... Social navigation displayed in the header.
 * CODE.............. CSS used to display code snippets.
 * POST.............. An individual post.
@@ -518,6 +519,9 @@ table {
 * ==============================================================================
 */
 /**
+ * Background color for the page.
+ */
+/**
  * Default spacing unit to give to elements that require spacing.
  */
 /**
@@ -541,12 +545,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .header, .social-navigation, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
+.cf, .site-header, .social-navigation, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
   zoom: 1; }
-  .cf:before, .header:before, .social-navigation:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:before, .site-header:before, .social-navigation:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .site-header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     content: " ";
     display: table; }
-  .cf:after, .header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:after, .site-header:after, .social-navigation:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
     clear: both; }
 
 /**
@@ -573,6 +577,18 @@ a {
     text-decoration: none; }
 
 /**
+ * =============================================================================
+ * $NAV
+ * =============================================================================
+ */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nav > li {
+    display: inline-block; }
+
+/**
 * =============================================================================
 * $TEXT
 * =============================================================================
@@ -587,7 +603,7 @@ h1 {
 h2 {
   font-family: "ff-tisa-web-pro", Arial, sans-serif; }
 
-.small-medium-text, .page-navigation, .post-summary .narrow-post {
+.small-medium-text, .site-nav, .post-summary .narrow-post {
   font-size: 0.9em; }
 
 /**
@@ -598,7 +614,7 @@ h2 {
 body {
   background-color: #efefef; }
 
-.header {
+.site-header {
   margin-bottom: 1em;
   /**
    * Social navigation inside the header is positioned absolutely in the top
@@ -670,33 +686,31 @@ html {
   background-position: 0px -55px; }
 
 /*
-* ==============================================================================
-* $HEADER
-* ==============================================================================
-*/
-.header {
+ * =============================================================================
+ * $HEADER
+ * =============================================================================
+ */
+.site-header {
   /**
   * Used in the header text to either show the long or short version of the text
   * depending on the screen size.
   */ }
-  .header a {
-    text-decoration: none; }
-  .header .header-detail {
+  .site-header .header-detail {
     float: left;
     height: 100%;
     padding-left: 1.3em; }
   @media all and (max-width: 320px) {
-    .header .site-title {
+    .site-header .site-title {
       font-size: 1.4em; } }
-  .header .shortened-name {
+  .site-header .shortened-name {
     display: none; }
     @media all and (max-width: 380px) {
-      .header .shortened-name {
+      .site-header .shortened-name {
         display: block; } }
   @media all and (max-width: 380px) {
-    .header .full-name {
+    .site-header .full-name {
       display: none; } }
-  .header .logo {
+  .site-header .logo {
     border-radius: 5px;
     float: left;
     max-width: 100px;
@@ -705,22 +719,24 @@ html {
     -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6); }
     @media all and (max-width: 320px) {
-      .header .logo {
+      .site-header .logo {
         width: 30%; } }
 
 /**
 * =============================================================================
-* $NAV
+* $SITENAV
 * =============================================================================
 */
-.page-navigation {
-  display: inline-block; }
-  .page-navigation a {
+.site-nav > li {
+  margin-right: 1em;
+  /**
+   * No need for padding on the last item of the nav list.
+   */ }
+  .site-nav > li:last-child {
+    margin-right: 0; }
+  .site-nav > li a {
     color: #9b9a9a;
-    padding-right: 0.7em; }
-    @media all and (max-width: 280px) {
-      .page-navigation a:first-child {
-        display: none; } }
+    text-decoration: none; }
 
 /**
 * ==============================================================================

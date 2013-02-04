@@ -5,10 +5,11 @@
  */
 
 body {
-    background-color: $grey-light;
+    background-color: $site-background-color;
 }
 
-.header {
+.site-header {
+    @extend .cf;
     margin-bottom: $spacing-unit;
 
     /**

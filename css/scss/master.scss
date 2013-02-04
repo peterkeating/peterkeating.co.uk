@@ -11,12 +11,13 @@
 *                    with floats.
 * IMAGES............ Everything to do with images.
 * LINKS............. Anchor tags and custom hyperlinks to other pages.
+* NAV............... Base navigation object used for all navigational elements.
 * TEXT.............. Font sizes and styling.
 * FOUNDATIONS....... Contains styles related to the main structural containers
 *                    of the web page.
 * ICONS............. Icons used in the theme.
 * HEADER............ Page header styles.
-* NAV............... Site page navigation.
+* SITENAV........... Navigation for the pages on the site.
 * SOCIALNAV......... Social navigation displayed in the header.
 * CODE.............. CSS used to display code snippets.
 * POST.............. An individual post.
@@ -74,12 +75,13 @@
 
 @import "partials/base/images";
 @import "partials/base/links";
+@import "partials/base/nav";
 @import "partials/base/text";
 
 @import "partials/ui/foundations";
 @import "partials/ui/icons";
 @import "partials/ui/header";
-@import "partials/ui/nav";
+@import "partials/ui/sitenav";
 @import "partials/ui/socialnav";
 @import "partials/ui/code";
 @import "partials/ui/post";
