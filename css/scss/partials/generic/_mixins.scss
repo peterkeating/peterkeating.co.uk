@@ -12,3 +12,10 @@
     -moz-box-shadow: $x-axis $y-axis $blur fade-out($color, $alpha);
     box-shadow: $x-axis $y-axis $blur fade-out($color, $alpha);
 }
+
+/**
+* Aligns the element in the center of its parent.
+*/
+@mixin position-horizontal-center {
+    margin: 0 auto;
+}

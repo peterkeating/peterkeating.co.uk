@@ -6,10 +6,13 @@
 */
 
 // Maximum width of the main content of the page.
-$max-width: 1100px;
+$content-width: 1100px;
 
 // blue.
 $primary-color: #0a8ce3;
+
+$greyLight: #efefef;
+$grey: #4c4c4c;
 
 // grey.
 $text-color: #4c4c4c;
@@ -25,3 +28,8 @@ $code-font: monospace, sans-serif;
 
 // font used everywhere else in the theme.
 $default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/**
+ * Default spacing unit to give to elements that require spacing.
+ */
+$spacing-unit: 1em;

@@ -518,12 +518,18 @@ table {
 * ==============================================================================
 */
 /**
+ * Default spacing unit to give to elements that require spacing.
+ */
+/**
 * ==============================================================================
 * $MIXINS
 * ==============================================================================
 */
 /**
 * Creates a drop shadow using the box-shadow property.
+*/
+/**
+* Aligns the element in the center of its parent.
 */
 /**
 * ==============================================================================
@@ -594,6 +600,11 @@ body {
 
 .header {
   margin-bottom: 1em;
+  /**
+   * Social navigation inside the header is positioned absolutely in the top
+   * right corner so need to make sure the right & top co-ordinates are based
+   * on the header and not the main page.
+   */
   position: relative; }
 
 html {
@@ -603,26 +614,24 @@ html {
 
 .main {
   margin: 0 auto; }
-  @media all and (max-width: 420px) {
-    .main {
-      padding: 0; } }
 
 .site-page {
   background-color: white;
   border-radius: 5px;
   margin: 0 auto;
-  margin-bottom: 1.3em;
-  margin-top: 1.3em;
-  padding: 1.3em;
-  max-width: 1100px; }
-  @media all and (max-width: 420px) {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 1em;
+  max-width: 1100px;
+  /**
+   * Now that the page is as small as the main content area, the background is
+   * no longer visible on the sides. To stop the top and bottom corners looking
+   * odd with a rounded corner the corners should be made square to give a more
+   * fitted feel.
+   */ }
+  @media all and (max-width: 1100px) {
     .site-page {
-      padding: 0.7em; } }
-  @media all and (max-width: 768px) {
-    .site-page {
-      border-radius: 0;
-      margin-bottom: 0;
-      margin-top: 0; } }
+      border-radius: 0; } }
 
 /**
 * ==============================================================================

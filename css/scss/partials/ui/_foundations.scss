@@ -5,44 +5,46 @@
 */
 
 body {
-    background-color: #efefef;
+    background-color: $greyLight;
 }
 
 .header {
-    margin-bottom: 1em;
+    margin-bottom: $spacing-unit;
+
+    /**
+     * Social navigation inside the header is positioned absolutely in the top
+     * right corner so need to make sure the right & top co-ordinates are based
+     * on the header and not the main page.
+     */
     position: relative;
 }
 
 html {
-    color: $text-color;
+    color: $grey;
     font-family: $default-font;
     font-size: 100%;
 }
 
 .main {
-    margin: 0 auto;
-
-    @media all and (max-width: 420px) {
-        padding: 0;
-    }
+    @include position-horizontal-center;
 }
 
 .site-page {
     background-color: white;
     border-radius: 5px;
-    margin: 0 auto;
-    margin-bottom: 1.3em;
-    margin-top: 1.3em;
-    padding: 1.3em;
-    max-width: $max-width;
+    @include position-horizontal-center;
+    margin-bottom: $spacing-unit;
+    margin-top: $spacing-unit;
+    padding: $spacing-unit;
+    max-width: $content-width;
 
-    @media all and (max-width: 420px) {
-        padding: 0.7em;
-    }
-
-    @media all and (max-width: 768px) {
+    /**
+     * Now that the page is as small as the main content area, the background is
+     * no longer visible on the sides. To stop the top and bottom corners looking
+     * odd with a rounded corner the corners should be made square to give a more
+     * fitted feel.
+     */
+    @media all and (max-width: $content-width) {
         border-radius: 0;
-        margin-bottom: 0;
-        margin-top: 0;
     }
 }
