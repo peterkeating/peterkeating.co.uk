@@ -34,19 +34,19 @@
 }
 
 .icon-endomondo {
-    width: 50px;
-    height: 50px;
+    width: $icon-size;
+    height: $icon-size;
     background-position: -55px -0px;
 }
 
 .icon-github {
-    width: 50px;
-    height: 50px;
+    width: $icon-size;
+    height: $icon-size;
     background-position: -0px -0px;
 }
 
 .icon-twitter {
-    width: 50px;
+    width: $icon-size;
     height: 41px;
     background-position: -0px -55px;
 }
