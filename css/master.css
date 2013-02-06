@@ -1084,18 +1084,18 @@ pre[class*="language-"] {
   width: 80%; }
 
 /*
-* =============================================================================
-* $PAGE
-* ==============================================================================
-*/
-.page-content .alignleft {
-  float: right;
-  margin-bottom: 20px;
-  margin-left: 20px; }
+ * =============================================================================
+ * $PAGE
+ * ==============================================================================
+ */
 .page-content .alignright {
+  float: right;
+  margin-bottom: 1em;
+  margin-left: 1em; }
+.page-content .alignleft {
   float: left;
-  margin-bottom: 20px;
-  margin-right: 20px; }
+  margin-bottom: 1em;
+  margin-right: 1em; }
 .page-content img {
   border-radius: 3px;
   max-width: 210px;

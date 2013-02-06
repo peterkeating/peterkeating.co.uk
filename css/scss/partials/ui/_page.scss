@@ -1,20 +1,20 @@
 /*
-* =============================================================================
-* $PAGE
-* ==============================================================================
-*/
+ * =============================================================================
+ * $PAGE
+ * ==============================================================================
+ */
 
 .page-content {
-    .alignleft {
+    .alignright {
         float: right;
-        margin-bottom: 20px;
-        margin-left: 20px;
+        margin-bottom: $spacing-unit;
+        margin-left: $spacing-unit;
     }
 
-    .alignright {
+    .alignleft {
         float: left;
-        margin-bottom: 20px;
-        margin-right: 20px;
+        margin-bottom: $spacing-unit;
+        margin-right: $spacing-unit;
     }
 
     img {
