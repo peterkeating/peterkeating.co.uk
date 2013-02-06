@@ -1,8 +1,8 @@
 /**
-* ==============================================================================
-* $ICONS
-* ==============================================================================
-*/
+ * =============================================================================
+ * $ICONS
+ * =============================================================================
+ */
 
 .date-icon, .tag-icon {
     background-position: center left;
@@ -20,8 +20,10 @@
     background: url('../images/icon-sprite.png') no-repeat;
 }
 
-// when the screen resolution allows for a better quality image to be displayed
-// (basically on iDevices) then lets serve an image that is a much better density.
+/**
+ * When the screen resolution allows for a better quality image to be displayed
+ * (basically on iDevices) then lets serve an image that is a much better density.
+ */
 @media (-webkit-min-device-pixel-ratio: 2),
        (min-resolution: 196dpi)
 {
