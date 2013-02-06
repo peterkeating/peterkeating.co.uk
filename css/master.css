@@ -525,6 +525,9 @@ table {
  * Default spacing unit to give to elements that require spacing.
  */
 /**
+ * Width & height of the site logo.
+ */
+/**
 * ==============================================================================
 * $MIXINS
 * ==============================================================================
@@ -620,15 +623,6 @@ h2 {
 body {
   background-color: #efefef; }
 
-.site-header {
-  margin-bottom: 1em;
-  /**
-   * Social navigation inside the header is positioned absolutely in the top
-   * right corner so need to make sure the right & top co-ordinates are based
-   * on the header and not the main page.
-   */
-  position: relative; }
-
 html {
   color: #4c4c4c;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -697,36 +691,71 @@ html {
  * =============================================================================
  */
 .site-header {
+  min-height: 120px;
+  margin-bottom: 1em;
   /**
-  * Used in the header text to either show the long or short version of the text
-  * depending on the screen size.
-  */ }
-  .site-header .header-detail {
-    float: left;
-    height: 100%;
-    padding-left: 1.3em; }
+   * Pushes the title and site navigation to the right of the site logo.
+   */
+  padding-left: 120px;
+  /**
+   * Social navigation inside the header is positioned absolutely in the top
+   * right corner so need to make sure the right & top co-ordinates are based
+   * on the header and not the main page.
+   */
+  position: relative;
+  /**
+   * Logo is being reduced, so makes sense for the the text and navigation to
+   * moved to the left to ensure a big gap doesn't arise.
+   */ }
   @media all and (max-width: 320px) {
-    .site-header .site-title {
+    .site-header {
+      padding-left: 35%; } }
+
+.site-logo {
+  border-radius: 5px;
+  max-width: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+  /**
+   * Reduce the size of the logo for mobile.
+   */ }
+  @media all and (max-width: 320px) {
+    .site-logo {
+      width: 30%; } }
+
+.site-title {
+  /**
+   * Reduce the size of the font for mobile.
+   */ }
+  @media all and (max-width: 320px) {
+    .site-title {
       font-size: 1.4em; } }
-  .site-header .shortened-name {
-    display: none; }
-    @media all and (max-width: 380px) {
-      .site-header .shortened-name {
-        display: block; } }
+
+.site-title-full {
+  /**
+   * Full site title (my name) & logo won't fit together on the small screen so
+   * the full site title is hidden and replaced by a shorter title.
+   */ }
   @media all and (max-width: 380px) {
-    .site-header .full-name {
+    .site-title-full {
       display: none; } }
-  .site-header .logo {
-    border-radius: 5px;
-    float: left;
-    max-width: 100px;
-    vertical-align: middle;
-    -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
-    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6); }
-    @media all and (max-width: 320px) {
-      .site-header .logo {
-        width: 30%; } }
+
+/**
+ * Used in the header text to either show the long or short version of the text
+ * depending on the screen size.
+ */
+.site-title-short {
+  display: none;
+  /**
+   * See .site-title-full.
+   */ }
+  @media all and (max-width: 380px) {
+    .site-title-short {
+      display: block; } }
 
 /**
 * =============================================================================

@@ -8,18 +8,6 @@ body {
     background-color: $site-background-color;
 }
 
-.site-header {
-    @extend .cf;
-    margin-bottom: $spacing-unit;
-
-    /**
-     * Social navigation inside the header is positioned absolutely in the top
-     * right corner so need to make sure the right & top co-ordinates are based
-     * on the header and not the main page.
-     */
-    position: relative;
-}
-
 html {
     color: $grey;
     font-family: $default-font;

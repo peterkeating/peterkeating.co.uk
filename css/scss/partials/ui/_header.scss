@@ -4,47 +4,81 @@
  * =============================================================================
  */
 
-.site-header {
-    .header-detail {
-        float: left;
-        height: 100%;
-        padding-left: 1.3em;
-    }
+ .site-header {
+    @extend .cf;
 
-    .site-title {
-        @media all and (max-width: 320px) {
-            font-size: 1.4em;
-        }
-    }
+    min-height: $logo-size * 1.2;
+    margin-bottom: $spacing-unit;
 
     /**
-    * Used in the header text to either show the long or short version of the text
-    * depending on the screen size.
-    */
-    .shortened-name {
+     * Pushes the title and site navigation to the right of the site logo.
+     */
+    padding-left: $logo-size * 1.2;
+
+    /**
+     * Social navigation inside the header is positioned absolutely in the top
+     * right corner so need to make sure the right & top co-ordinates are based
+     * on the header and not the main page.
+     */
+    position: relative;
+
+    /**
+     * Logo is being reduced, so makes sense for the the text and navigation to
+     * moved to the left to ensure a big gap doesn't arise.
+     */
+    @media all and (max-width: $mobile) {
+        padding-left: 35%;
+    }
+}
+
+
+.site-logo {
+    border-radius: 5px;
+    max-width: $logo-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include drop-shadow(2px, 3px, 4px, 0.4);
+
+    /**
+     * Reduce the size of the logo for mobile.
+     */
+    @media all and (max-width: $mobile) {
+        width: 30%;
+    }
+}
+
+.site-title {
+    /**
+     * Reduce the size of the font for mobile.
+     */
+    @media all and (max-width: $mobile) {
+        font-size: 1.4em;
+    }
+}
+
+.site-title-full {
+    /**
+     * Full site title (my name) & logo won't fit together on the small screen so
+     * the full site title is hidden and replaced by a shorter title.
+     */
+    @media all and (max-width: 380px) {
         display: none;
-
-        @media all and (max-width: 380px) {
-            display: block;
-        }
     }
+}
 
-    .full-name {
-        @media all and (max-width: 380px) {
-            display: none;
-        }
-    }
+/**
+ * Used in the header text to either show the long or short version of the text
+ * depending on the screen size.
+ */
+.site-title-short {
+    display: none;
 
-    .logo {
-        border-radius: 5px;
-        float: left;
-        max-width: 100px;
-        vertical-align: middle;
-
-        @include drop-shadow(2px, 3px, 4px, 0.4);
-
-        @media all and (max-width: 320px) {
-            width: 30%;
-        }
+    /**
+     * See .site-title-full.
+     */
+    @media all and (max-width: 380px) {
+        display: block;
     }
 }
