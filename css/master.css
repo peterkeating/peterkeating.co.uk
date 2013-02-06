@@ -548,12 +548,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .site-header, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive .post {
+.cf, .site-header, .single-post, .post-details .post-meta, .post-navigation, .post-summary, .post-summary .narrow-post, .post-summary .wide-post, .archive-post {
   zoom: 1; }
-  .cf:before, .site-header:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive .post:before, .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:before, .site-header:before, .single-post:before, .post-details .post-meta:before, .post-navigation:before, .post-summary:before, .post-summary .narrow-post:before, .post-summary .wide-post:before, .archive-post:before, .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive-post:after {
     content: " ";
     display: table; }
-  .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive .post:after {
+  .cf:after, .site-header:after, .single-post:after, .post-details .post-meta:after, .post-navigation:after, .post-summary:after, .post-summary .narrow-post:after, .post-summary .wide-post:after, .archive-post:after {
     clear: both; }
 
 /**
@@ -1052,37 +1052,36 @@ pre[class*="language-"] {
         display: none; } }
 
 /**
-* ==============================================================================
-* $ARCHIVE
-* =============================================================================
-*/
-.archive .month-year {
-  font-weight: bold;
-  margin-bottom: 0.7em;
-  margin-top: 1em; }
-.archive .post {
+ * =============================================================================
+ * $ARCHIVE
+ * =============================================================================
+ */
+.archive-month-year {
+  margin: 0.5em 0; }
+
+.archive-post {
   margin-bottom: 0.5em; }
-  .archive .post .post-title {
-    float: left;
-    font-weight: 500;
-    margin-top: 0.2em;
-    text-decoration: none;
-    width: 80%; }
-  .archive .post .day {
-    float: left;
-    margin-right: 1.3em; }
-    .archive .post .day .element {
-      background-color: #0a8ce3;
-      border-radius: 1.3em;
-      color: white;
-      display: block;
-      font-weight: bold;
-      height: 2.6em;
-      line-height: 2.6;
-      text-align: center;
-      width: 2.6em; }
-.archive .title {
-  margin-bottom: 1em; }
+
+.archive-post-date {
+  float: left;
+  margin-right: 1em; }
+
+.archive-post-date-day {
+  background-color: #0a8ce3;
+  border-radius: 1.3em;
+  color: white;
+  display: block;
+  font-weight: bold;
+  height: 2.6em;
+  line-height: 2.6;
+  text-align: center;
+  width: 2.6em; }
+
+.archive-post-title {
+  float: left;
+  line-height: 2.2;
+  text-decoration: none;
+  width: 80%; }
 
 /*
 * =============================================================================

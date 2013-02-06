@@ -1,49 +1,39 @@
-
 /**
-* ==============================================================================
-* $ARCHIVE
-* =============================================================================
-*/
+ * =============================================================================
+ * $ARCHIVE
+ * =============================================================================
+ */
 
-.archive {
-    .month-year {
-        font-weight: bold;
-        margin-bottom: 0.7em;
-        margin-top: 1em;
-    }
+.archive-month-year {
+    margin: $spacing-unit / 2 0;
+}
 
-    .post {
-        @extend .cf;
+.archive-post {
+    @extend .cf;
 
-        margin-bottom: 0.5em;
+    margin-bottom: $spacing-unit / 2;
+}
 
-        .post-title {
-            float: left;
-            font-weight: 500;
-            margin-top: 0.2em;
-            text-decoration: none;
-            width: 80%;
-        }
+.archive-post-date {
+    float: left;
+    margin-right: $spacing-unit;
+}
 
-        .day {
-            float: left;
-            margin-right: 1.3em;
+.archive-post-date-day {
+    background-color: $primary-color;
+    border-radius: 1.3em;
+    color: white;
+    display: block;
+    font-weight: bold;
+    height: 2.6em;
+    line-height: 2.6;
+    text-align: center;
+    width: 2.6em;
+}
 
-            .element {
-                background-color: $primary-color;
-                border-radius: 1.3em;
-                color: white;
-                display: block;
-                font-weight: bold;
-                height: 2.6em;
-                line-height: 2.6;
-                text-align: center;
-                width: 2.6em;
-            }
-        }
-    }
-
-    .title {
-        margin-bottom: 1em;
-    }
+.archive-post-title {
+    float: left;
+    line-height: 2.2;
+    text-decoration: none;
+    width: 80%;
 }
