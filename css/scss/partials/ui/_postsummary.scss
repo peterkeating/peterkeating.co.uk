@@ -90,7 +90,7 @@
      * Increase the font size for mobile to make things easier to read.
      */
     @media all and (max-width: 420px) {
-        font-size: 1.1em;
+        font-size: $mobile-reading-font-size;
     }
 }
 

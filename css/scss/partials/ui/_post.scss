@@ -1,81 +1,48 @@
 /**
-* ==============================================================================
-* $POST
-* ==============================================================================
-*/
+ * =============================================================================
+ * $POST
+ * =============================================================================
+ */
 
 .single-post {
     @extend .cf;
 }
 
-.post {
+.post-content {
     line-height: 1.45em;
 
     /**
-    * As the max-width is being set below, the text should stay central to avoid
-    * any huge areas of white space.
-    */
+     * As the max-width is being set below, the text should stay central to avoid
+     * any huge areas of white space.
+     */
     margin: 0 auto;
 
     /**
-    * Set a max-width because the lines felt too long and were difficult for the
-    * user to read.
-    */
+     * Set a max-width because the lines felt too long and were difficult for the
+     * user to read.
+     */
     max-width: 800px;
 
     /**
-    * Increase the font size for mobile to make things easier to read.
-    */
+     * Increase the font size for mobile to make things easier to read.
+     */
     @media all and (max-width: 420px) {
-        font-size: 1.2em;
+        font-size: $mobile-reading-font-size;
     }
 
     .quote {
-        border-left: 0.6em solid $primary-color;
+        border-left: $spacing-unit / 2 solid $primary-color;
         font-style: italic;
         padding: 0.3em;
-        padding-left: 0.7em;
+        padding-left: $spacing-unit / 2;
     }
 }
 
-.post-details {
-    div, .post-title {
-        margin-bottom: 0.4em;
-    }
+.single-post-meta {
+    @extend .cf;
 
-    .post-meta {
-        @extend .cf;
-    }
-
-    .post-title {
-        margin-bottom: 0.6em;
-
-        @media all and (max-width: 420px) {
-            font-size: 1.5em;
-        }
-    }
-
-    .publish-date, .tags {
+    .post-publish-date, .post-tags {
         float: left;
-        font-style: italic;
-        line-height: 1.8;
-        margin: 0.6em 0;
-        margin-right: 1.7em;
-        padding-left: 2.2em;
-    }
-
-    .publish-date {
-        background-size: 25px 25px;
-        font-weight: bold;
-    }
-
-    .tags {
-        background-size: 25px 25px;
-
-        a {
-            color: $text-color;
-            font-weight: normal;
-        }
     }
 }
 

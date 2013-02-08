@@ -2,21 +2,19 @@
 
 	<?php while ( have_posts() ) : the_post() ?>
 	<div class="single-post">
-		<div class="post-details">
-			<h1 class="post-title"><?php the_title(); ?></h1>
+		<h1 class="post-title"><?php the_title(); ?></h1>
 
-			<div class="post-meta">
-				<div class="publish-date date-icon">
-					<?php the_time('F j, Y') ?>
-				</div>
+		<div class="single-post-meta">
+			<div class="post-publish-date date-icon">
+				<?php the_time('F j, Y') ?>
+			</div>
 
-				<div class="tags tag-icon">
-					<?php the_tags('',', ',''); ?>
-				</div>
+			<div class="post-tags tag-icon">
+				<?php the_tags('',', ',''); ?>
 			</div>
 		</div>
 
-		<div class="post">
+		<div class="post-content">
 			<?php the_content(); ?>
 		</div>
 	</div>

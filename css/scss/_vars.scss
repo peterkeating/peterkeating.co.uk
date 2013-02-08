@@ -46,5 +46,10 @@ $logo-size: 100px;
  */
 $icon-size: 50px;
 
+/**
+ * Font size given to key content to be read by the visitor on smaller devices.
+ */
+$mobile-reading-font-size: 1.1em;
+
 $mobile: 320px;
 $tablet: 800px;
