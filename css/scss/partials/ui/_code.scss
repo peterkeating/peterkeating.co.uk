@@ -5,22 +5,22 @@
 */
 
 code {
-    color: $primary-color;
+    color: $blue;
 }
 
 .code-sample {
-    border-left: .6em solid #0a8ce3;
+    border-left: .6em solid $blue;
     font-size: 0.85em;
 }
 
 .gist {
     background-color: #f5f5f5;
-    border-left: 0.6em solid $primary-color;
+    border-left: $spacing-unit / 2 solid $blue;
     color: #373737;
-    font-family: $code-font;
+    font-family: $code-font-family;
     font-size: 0.75em;
     line-height: 1.2;
-    padding: 0.3em 1em;
+    padding: 0.3em $spacing-unit;
 
     .gist-meta {
         display: none;

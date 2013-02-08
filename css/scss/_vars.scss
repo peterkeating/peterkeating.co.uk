@@ -5,31 +5,29 @@
 * ==============================================================================
 */
 
-// Maximum width of the main content of the page.
+/**
+ * Maximum width of the main content of the page.
+ */
 $content-width: 1100px;
-
-// blue.
-$primary-color: #0a8ce3;
 
 /**
  * Background color for the page.
  */
 $site-background-color: #efefef;
 
+/**
+ * Colours used through out the site.
+ */
+$blue: #0a8ce3;
 $light-grey: #9b9a9a;
 $grey: #4c4c4c;
 
-// grey.
-$text-color: #4c4c4c;
-
-// font to use for the headings.
-$heading-font: "ff-tisa-web-pro", Arial, sans-serif;
-
-// font to use for code snippets.
-$code-font: monospace, sans-serif;
-
-// font used everywhere else in the theme.
-$default-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/**
+ * Font used for headings, code and text across the site.
+ */
+$heading-font-family: "ff-tisa-web-pro", Arial, sans-serif;
+$code-font-family: monospace, sans-serif;
+$default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /**
  * Default spacing unit to give to elements that require spacing.
@@ -51,5 +49,10 @@ $icon-size: 50px;
  */
 $mobile-reading-font-size: 1.1em;
 
-$mobile: 320px;
-$tablet: 800px;
+/**
+ * Different media breakpoints.
+ */
+$palm: 320px;
+$palm-end: 380px;
+$lap: 420px;
+$desk: 800px;

@@ -18,7 +18,7 @@
     margin-left: 240px;
 
 
-    @media all and (max-width: $tablet) {
+    @media all and (max-width: $desk) {
         margin-left: 0;
     }
 
@@ -40,29 +40,25 @@
          * Only display the meta data for the post when the screen size is small,
          * otherwise it is shown outside the-post container.
          */
-        @media all and (max-width: $tablet) {
+        @media all and (max-width: $desk) {
             display: block;
         }
     }
 }
 
 .post-link {
-    color: $primary-color;
+    color: $blue;
     display: none;
     margin-left: -0.2em;
     padding: 0.2em;
 
     &:hover {
-        background-color: $primary-color;
+        background-color: $blue;
         color: white;
         display: block;
         padding: 0.2em;
         text-decoration: none;
         @include drop-shadow(2px, 3px, 4px, 0.4);
-    }
-
-    @media all and (max-width: $tablet) {
-
     }
 }
 
@@ -89,27 +85,25 @@
     /**
      * Increase the font size for mobile to make things easier to read.
      */
-    @media all and (max-width: 420px) {
+    @media all and (max-width: $lap) {
         font-size: $mobile-reading-font-size;
     }
 }
 
 .post-tags > a {
-    color: $text-color;
+    color: $grey;
     font-weight: normal;
 }
 
 .post-title {
-    color: $primary-color;
-    font-family: $heading-font;
+    color: $blue;
     font-size: 1.8em;
-    font-weight: bold;
     margin: 0;
 
     /**
      * Large titles take up too much space on smaller screens.
      */
-    @media all and (max-width: 420px) {
+    @media all and (max-width: $lap) {
         font-size: 1.3em;
     }
 
@@ -135,7 +129,7 @@
     /**
      * Screen isn't big enough for the wide view.
      */
-    @media all and (max-width: $tablet) {
+    @media all and (max-width: $desk) {
         display: none;
     }
 }

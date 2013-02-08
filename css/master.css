@@ -519,7 +519,16 @@ table {
 * ==============================================================================
 */
 /**
+ * Maximum width of the main content of the page.
+ */
+/**
  * Background color for the page.
+ */
+/**
+ * Colours used through out the site.
+ */
+/**
+ * Font used for headings, code and text across the site.
  */
 /**
  * Default spacing unit to give to elements that require spacing.
@@ -532,6 +541,9 @@ table {
  */
 /**
  * Font size given to key content to be read by the visitor on smaller devices.
+ */
+/**
+ * Different media breakpoints.
  */
 /**
 * ==============================================================================
@@ -563,10 +575,10 @@ table {
     clear: both; }
 
 /**
-* =============================================================================
-* $IMAGES
-* =============================================================================
-*/
+ * =============================================================================
+ * $IMAGES
+ * =============================================================================
+ */
 img {
   max-width: 100%; }
 
@@ -576,10 +588,10 @@ img {
   margin-right: auto; }
 
 /**
-* =============================================================================
-* $LINKS
-* =============================================================================
-*/
+ * =============================================================================
+ * $LINKS
+ * =============================================================================
+ */
 a {
   color: #0a8ce3; }
   a:hover {
@@ -817,12 +829,12 @@ code {
   color: #0a8ce3; }
 
 .code-sample {
-  border-left: .6em solid #0a8ce3;
+  border-left: 0.6em solid #0a8ce3;
   font-size: 0.85em; }
 
 .gist {
   background-color: #f5f5f5;
-  border-left: 0.6em solid #0a8ce3;
+  border-left: 0.5em solid #0a8ce3;
   color: #373737;
   font-family: monospace, sans-serif;
   font-size: 0.75em;
@@ -1027,9 +1039,7 @@ pre[class*="language-"] {
 
 .post-title {
   color: #0a8ce3;
-  font-family: "ff-tisa-web-pro", Arial, sans-serif;
   font-size: 1.8em;
-  font-weight: bold;
   margin: 0;
   /**
    * Large titles take up too much space on smaller screens.

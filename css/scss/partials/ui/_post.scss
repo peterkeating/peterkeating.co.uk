@@ -26,12 +26,12 @@
     /**
      * Increase the font size for mobile to make things easier to read.
      */
-    @media all and (max-width: 420px) {
+    @media all and (max-width: $lap) {
         font-size: $mobile-reading-font-size;
     }
 
     .quote {
-        border-left: $spacing-unit / 2 solid $primary-color;
+        border-left: $spacing-unit / 2 solid $blue;
         font-style: italic;
         padding: 0.3em;
         padding-left: $spacing-unit / 2;
