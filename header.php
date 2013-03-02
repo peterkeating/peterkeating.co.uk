@@ -22,7 +22,7 @@
     <div class="site-page">
         <div class="site-header">
             <a href="/">
-                <img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="site-logo" />
+                <img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
             </a>
 
             <h1 class="site-title site-title-short">P Keating</h1>
