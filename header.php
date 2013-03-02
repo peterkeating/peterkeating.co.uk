@@ -37,18 +37,21 @@
             <ul class="nav social-nav">
                 <li>
                     <a href="http://twitter.com/peterkeating" title="View my Twitter profile." target="_blank">
+                        <span class="screen-reader-text">Twitter</span>
                         <div class="social-media-icon icon-twitter"></div>
                     </a>
                 </li>
 
                 <li>
                     <a href="http://github.com/peterkeating" title="View my Github profile." target="_blank">
+                        <span class="screen-reader-text">Github</span>
                         <div class="social-media-icon icon-github"></div>
                     </a>
                 </li>
 
                 <li>
                     <a href="http://www.endomondo.com/profile/5042109" title="View my Endomondo profile." target="_blank">
+                        <span class="screen-reader-text">Endomondo</span>
                         <div class="social-media-icon icon-endomondo"></div>
                     </a>
                 </li>

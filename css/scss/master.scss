@@ -13,6 +13,7 @@
 * LINKS............. Anchor tags and custom hyperlinks to other pages.
 * NAV............... Base navigation object used for all navigational elements.
 * TEXT.............. Font sizes and styling.
+* ACCESSIBILITY..... Classes that help with accessibility.
 * FOUNDATIONS....... Contains styles related to the main structural containers
 *                    of the web page.
 * ICONS............. Icons used in the theme.
@@ -77,6 +78,7 @@
 @import "partials/base/links";
 @import "partials/base/nav";
 @import "partials/base/text";
+@import "partials/base/accessibility";
 
 @import "partials/ui/foundations";
 @import "partials/ui/icons";
