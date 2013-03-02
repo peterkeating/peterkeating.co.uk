@@ -25,8 +25,7 @@
                 <img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
             </a>
 
-            <h1 class="site-title site-title-short">P Keating</h1>
-            <h1 class="site-title site-title-full">Peter Keating</h1>
+            <h1 class="site-title">Peter Keating</h1>
 
             <ul class="nav site-nav">
                 <li><a href="/">Home</a></li>

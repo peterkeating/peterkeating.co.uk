@@ -765,31 +765,9 @@ html {
   /**
    * Reduce the size of the font for mobile.
    */ }
-  @media all and (max-width: 320px) {
+  @media all and (max-width: 380px) {
     .site-title {
       font-size: 1.4em; } }
-
-.site-title-full {
-  /**
-   * Full site title (my name) & logo won't fit together on the small screen so
-   * the full site title is hidden and replaced by a shorter title.
-   */ }
-  @media all and (max-width: 380px) {
-    .site-title-full {
-      display: none; } }
-
-/**
- * Used in the header text to either show the long or short version of the text
- * depending on the screen size.
- */
-.site-title-short {
-  display: none;
-  /**
-   * See .site-title-full.
-   */ }
-  @media all and (max-width: 380px) {
-    .site-title-short {
-      display: block; } }
 
 /**
 * =============================================================================
