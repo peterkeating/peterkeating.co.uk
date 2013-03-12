@@ -17,6 +17,14 @@
 
     <target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
 
+    <!--
+        Converts any .png or .jpg images that are inside the images directory to
+        .webp images. Read more about webp from the link below.
+
+        - https://developers.google.com/speed/webp/
+    -->
+    <target name="webp" depends="-webp" />
+
      <!--
         performs linting on all the js.
     -->
@@ -295,6 +303,23 @@
             <arg value="-verbose=true" />
             <arg value="-imgExtensions=png,jpeg,jpg" />
        </java>
+    </target>
+
+    <!--
+        Converts all images in the images directory to .webp format.
+    -->
+    <target name="-webp">
+        <apply executable="${tool.cwebp}" dest="${project.dir}/${images.dir}" parallel="false">
+            <srcfile/>
+            <arg value="-o"/>
+            <targetfile/>
+            <fileset dir="${project.dir}/${images.dir}">
+                <patternset>
+                    <include name="*.png"/>
+                </patternset>
+            </fileset>
+            <mapper type="glob" from="*.png" to="*.webp"/>
+        </apply>
     </target>
 
     <!--
