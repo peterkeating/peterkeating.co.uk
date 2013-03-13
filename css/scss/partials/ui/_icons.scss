@@ -32,10 +32,17 @@
     }
 }
 
-.social-media-icon {
-    background: url('../images/icon-sprite.png') no-repeat;
+.no-webp {
+    .social-media-icon {
+        background: url('../images/icon-sprite.png') no-repeat;
+    }
 }
 
+.webp {
+    .social-media-icon {
+        background: url('../images/icon-sprite.webp') no-repeat;
+    }
+}
 /**
  * When the screen resolution allows for a better quality image to be displayed
  * (basically on iDevices) then lets serve an image that is a much better density.
@@ -43,25 +50,34 @@
 @media (-webkit-min-device-pixel-ratio: 2),
        (min-resolution: 196dpi)
 {
-    .social-media-icon {
-        background: url('../images/icon-sprite@x2.png') no-repeat;
-        background-size: 111px 102px;
+    .no-webp {
+        .social-media-icon {
+            background: url('../images/icon-sprite@x2.png') no-repeat;
+            background-size: 111px 102px;
+        }
+    }
+
+    .webp {
+        .social-media-icon {
+            background: url('../images/icon-sprite@x2.webp') no-repeat;
+            background-size: 111px 102px;
+        }
     }
 }
 
-.icon-endomondo {
+.webp .icon-endomondo, .no-webp .icon-endomondo {
     width: $icon-size;
     height: $icon-size;
     background-position: -55px -0px;
 }
 
-.icon-github {
+.webp .icon-github, .no-webp .icon-github {
     width: $icon-size;
     height: $icon-size;
     background-position: -0px -0px;
 }
 
-.icon-twitter {
+.webp .icon-twitter, .no-webp .icon-twitter {
     width: $icon-size;
     height: 41px;
     background-position: -0px -55px;
