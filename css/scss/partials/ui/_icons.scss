@@ -8,12 +8,28 @@
     background-position: center left;
 }
 
-.date-icon {
-    background: url('../images/icon-date.png') no-repeat;
+.no-webp {
+    .date-icon {
+        background: url('../images/icon-date.png') no-repeat;
+        background-size: 20px 20px;
+    }
+
+    .tag-icon {
+        background: url('../images/icon-tag.png') no-repeat;
+        background-size: 20px 20px;
+    }
 }
 
-.tag-icon {
-    background: url('../images/icon-tag.png') no-repeat;
+.webp {
+    .date-icon {
+        background: url('../images/icon-date.webp') no-repeat;
+        background-size: 20px 20px;
+    }
+
+    .tag-icon {
+        background: url('../images/icon-tag.webp') no-repeat;
+        background-size: 20px 20px;
+    }
 }
 
 .social-media-icon {
