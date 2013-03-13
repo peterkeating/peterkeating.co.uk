@@ -14,8 +14,14 @@
 
     <script src="<?php bloginfo( "template_url" ); ?>/js/libs/modernizr-2.6.2.min.js"></script>
 
+    <!--
+    13/03/2013 - Removed typekit to reduce the number of requests and no longer
+                 use a custom web font. Every little performance tweak helps, the
+                 removal of typekit will remove up to 7 HTTP requests.
+
     <script type="text/javascript" src="//use.typekit.net/men0iqb.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    -->
 </head>
 
 <body>
