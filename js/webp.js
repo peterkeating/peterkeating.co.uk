@@ -14,6 +14,8 @@ window.onload  = function () {
      * a .png image that is supported by all browsers.
      */
     for(var i = 0; i < images.length; i++) {
-        images[i].src = images[i].getAttribute('data-src') + imageType;
+        if (images[i].hasAttribute('data-src')) {
+            images[i].src = images[i].getAttribute('data-src') + imageType;
+        }
     }
 };
