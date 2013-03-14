@@ -29,6 +29,10 @@
         <div class="site-header">
             <a href="/">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php bloginfo( "template_url" ); ?>/images/header-me" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+
+                <noscript>
+                    <img src="<?php bloginfo( "template_url" ); ?>/images/header-me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+                </noscript>
             </a>
 
             <h1 class="site-title">Peter Keating</h1>

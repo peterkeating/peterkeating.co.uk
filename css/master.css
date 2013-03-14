@@ -689,10 +689,10 @@ html {
 .date-icon, .tag-icon {
   background-position: center left; }
 
-.no-webp .date-icon {
+.no-webp .date-icon, .no-js .date-icon {
   background: url("../images/icon-date.png") no-repeat;
   background-size: 20px 20px; }
-.no-webp .tag-icon {
+.no-webp .tag-icon, .no-js .tag-icon {
   background: url("../images/icon-tag.png") no-repeat;
   background-size: 20px 20px; }
 
@@ -703,7 +703,7 @@ html {
   background: url("../images/icon-tag.webp") no-repeat;
   background-size: 20px 20px; }
 
-.no-webp .social-media-icon {
+.no-webp .social-media-icon, .no-js .social-media-icon {
   background: url("../images/icon-sprite.png") no-repeat; }
 
 .webp .social-media-icon {
@@ -721,17 +721,23 @@ html {
   .webp .social-media-icon {
     background: url("../images/icon-sprite@x2.webp") no-repeat;
     background-size: 111px 102px; } }
-.webp .icon-endomondo, .no-webp .icon-endomondo {
+.webp .icon-endomondo,
+.no-webp .icon-endomondo,
+.no-js .icon-endomondo {
   width: 50px;
   height: 50px;
   background-position: -55px -0px; }
 
-.webp .icon-github, .no-webp .icon-github {
+.webp .icon-github,
+.no-webp .icon-github,
+.no-js .icon-github {
   width: 50px;
   height: 50px;
   background-position: -0px -0px; }
 
-.webp .icon-twitter, .no-webp .icon-twitter {
+.webp .icon-twitter,
+.no-webp .icon-twitter,
+.no-js .icon-twitter {
   width: 50px;
   height: 41px;
   background-position: -0px -55px; }

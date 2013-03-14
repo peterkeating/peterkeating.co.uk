@@ -8,7 +8,7 @@
     background-position: center left;
 }
 
-.no-webp {
+.no-webp, .no-js {
     .date-icon {
         background: url('../images/icon-date.png') no-repeat;
         background-size: 20px 20px;
@@ -32,7 +32,7 @@
     }
 }
 
-.no-webp {
+.no-webp, .no-js {
     .social-media-icon {
         background: url('../images/icon-sprite.png') no-repeat;
     }
@@ -65,19 +65,28 @@
     }
 }
 
-.webp .icon-endomondo, .no-webp .icon-endomondo {
+.webp .icon-endomondo,
+.no-webp .icon-endomondo,
+.no-js .icon-endomondo
+{
     width: $icon-size;
     height: $icon-size;
     background-position: -55px -0px;
 }
 
-.webp .icon-github, .no-webp .icon-github {
+.webp .icon-github,
+.no-webp .icon-github,
+.no-js .icon-github
+{
     width: $icon-size;
     height: $icon-size;
     background-position: -0px -0px;
 }
 
-.webp .icon-twitter, .no-webp .icon-twitter {
+.webp .icon-twitter,
+.no-webp .icon-twitter,
+.no-js .icon-twitter
+{
     width: $icon-size;
     height: 41px;
     background-position: -0px -55px;
