@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -29,11 +29,17 @@
     <div class="site-page">
         <div class="site-header">
             <a href="/">
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php bloginfo( "template_url" ); ?>/images/me" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+                <!--[if gt IE 8]><!-->
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php bloginfo( "template_url" ); ?>/images/me" class="modern-logo site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
 
                 <noscript>
-                    <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+                    <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="modern-logo site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
                 </noscript>
+                <!--<![endif]-->
+
+                <!--[if lt IE 9]>
+                    <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+                <![endif]-->
             </a>
 
             <h1 class="site-title">Peter Keating</h1>
