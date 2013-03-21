@@ -28,19 +28,17 @@
 <body>
     <div class="site-page">
         <div class="site-header">
-            <a href="/">
-                <!--[if gt IE 8]><!-->
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php bloginfo( "template_url" ); ?>/images/me" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+            <!--[if gt IE 8]><!-->
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="<?php bloginfo( "template_url" ); ?>/images/me" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
 
-                <noscript>
-                    <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
-                </noscript>
-                <!--<![endif]-->
+            <noscript>
+                <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+            </noscript>
+            <!--<![endif]-->
 
-                <!--[if lt IE 9]>
-                    <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
-                <![endif]-->
-            </a>
+            <!--[if lt IE 9]>
+                <img src="<?php bloginfo( "template_url" ); ?>/images/me.png" class="site-logo" alt="Photo of Peter Keating." title="Photo of Peter Keating." />
+            <![endif]-->
 
             <h1 class="site-title">Peter Keating</h1>
 
