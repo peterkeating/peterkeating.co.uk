@@ -9,9 +9,7 @@
 				<?php the_time('F j, Y') ?>
 			</div>
 
-			<div class="post-tags tag-icon">
-				<?php the_tags('',', ',''); ?>
-			</div>
+			<div class="post-tags tag-icon"><?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?></div>
 		</div>
 
 		<div class="post-content">
