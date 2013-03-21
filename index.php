@@ -7,7 +7,6 @@
 		<div class="wide-post-meta">
 			<div class="post-publish-date date-icon"><?php the_time('F j, Y') ?></div>
 			<div class="post-tags tag-icon"><?php the_tags('',', ',''); ?></div>
-			<a href="<?php the_permalink(); ?>" class="post-link">Continue Reading</a>
 		</div>
 
 		<div class="the-post">

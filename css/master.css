@@ -1016,13 +1016,11 @@ pre[class*="language-"] {
 
 .post-link {
   color: #0374e4;
-  display: none;
   margin-left: -0.2em;
   padding: 0.2em; }
   .post-link:hover {
     background-color: #0374e4;
     color: white;
-    display: block;
     padding: 0.2em;
     text-decoration: none;
     -webkit-box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
@@ -1077,8 +1075,6 @@ pre[class*="language-"] {
   /**
    * Screen isn't big enough for the wide view.
    */ }
-  .wide-post-meta .post-link {
-    display: inline-block; }
   @media all and (max-width: 800px) {
     .wide-post-meta {
       display: none; } }
