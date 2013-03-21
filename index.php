@@ -6,7 +6,7 @@
 	<div class="post-summary">
 		<div class="wide-post-meta">
 			<div class="post-publish-date date-icon"><?php the_time('F j, Y') ?></div>
-			<div class="post-tags tag-icon"><?php the_tags('',', ',''); ?></div>
+			<div class="post-tags tag-icon"><?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?></div>
 		</div>
 
 		<div class="the-post">
@@ -14,7 +14,7 @@
 
 			<div class="post-meta">
 				<div class="post-publish-date date-icon"><?php the_time('F j, Y') ?></div>
-				<div class="post-tags tag-icon"><?php the_tags('',', ',''); ?></div>
+				<div class="post-tags tag-icon"><?php the_tags('<ul><li>','</li><li>','</li></ul>'); ?></div>
 			</div>
 
 			<div class="post-snippet"><?php the_excerpt(); ?></div>

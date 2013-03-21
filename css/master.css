@@ -1048,9 +1048,20 @@ pre[class*="language-"] {
     .post-snippet {
       font-size: 1.1em; } }
 
-.post-tags > a {
+.post-tags a {
   color: #4c4c4c;
   font-weight: normal; }
+.post-tags ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .post-tags ul > li {
+    display: inline-block;
+    margin-right: 0.3em; }
+    .post-tags ul > li:after {
+      content: ","; }
+    .post-tags ul > li:last-child:after {
+      content: ""; }
 
 .post-title {
   color: #0374e4;
