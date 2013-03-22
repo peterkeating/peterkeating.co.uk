@@ -567,12 +567,12 @@ table {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf, .site-header, .single-post, .single-post-meta, .post-navigation, .post-summary, .the-post .post-meta, .wide-post-meta, .archive-post {
+.cf, .site-header, .single-post, .single-post-meta, .post-navigation, .post-summary, .post-meta, .archive-post {
   zoom: 1; }
-  .cf:before, .site-header:before, .single-post:before, .single-post-meta:before, .post-navigation:before, .post-summary:before, .the-post .post-meta:before, .wide-post-meta:before, .archive-post:before, .cf:after, .site-header:after, .single-post:after, .single-post-meta:after, .post-navigation:after, .post-summary:after, .the-post .post-meta:after, .wide-post-meta:after, .archive-post:after {
+  .cf:before, .site-header:before, .single-post:before, .single-post-meta:before, .post-navigation:before, .post-summary:before, .post-meta:before, .archive-post:before, .cf:after, .site-header:after, .single-post:after, .single-post-meta:after, .post-navigation:after, .post-summary:after, .post-meta:after, .archive-post:after {
     content: " ";
     display: table; }
-  .cf:after, .site-header:after, .single-post:after, .single-post-meta:after, .post-navigation:after, .post-summary:after, .the-post .post-meta:after, .wide-post-meta:after, .archive-post:after {
+  .cf:after, .site-header:after, .single-post:after, .single-post-meta:after, .post-navigation:after, .post-summary:after, .post-meta:after, .archive-post:after {
     clear: both; }
 
 /**
@@ -633,7 +633,7 @@ h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500; }
 
-.small-medium-text, .site-nav, .the-post .post-meta {
+.small-medium-text, .site-nav, .post-meta {
   font-size: 0.9em; }
 
 /*
@@ -987,32 +987,39 @@ pre[class*="language-"] {
  * ==============================================================================
  */
 .post-summary {
-  margin-bottom: 1em; }
-
-/**
- * Holds the post title, summary and post meta that is displayed when the screen
- * size is small.
- */
-.the-post {
-  margin-left: 240px;
+  margin-bottom: 1em;
+  margin-left: 15em;
   /**
-   * Displays the post summary when the screen size is too small for the wide
-   * view.
+   * Now that the viewport is smaller lets push the summary to make use of the
+   * full width of the screen.
    */ }
   @media all and (max-width: 800px) {
-    .the-post {
+    .post-summary {
       margin-left: 0; } }
-  .the-post .post-meta {
-    display: none;
-    /**
-     * Only display the meta data for the post when the screen size is small,
-     * otherwise it is shown outside the-post container.
-     */ }
-    .the-post .post-meta .post-publish-date, .the-post .post-meta .post-tags {
-      float: left; }
-    @media all and (max-width: 800px) {
-      .the-post .post-meta {
-        display: block; } }
+
+/**
+ * Displays the post summary when the screen size is too small for the wide
+ * view.
+ */
+.post-meta {
+  /**
+   * Forces the post meta data to the left of the title to make use of a wider
+   * view port.
+   */
+  float: left;
+  margin-left: -15em;
+  margin-top: -2.4em;
+  /**
+   * Meta data should be placed below the title instead of too the left now that
+   * the view port width is smaller.
+   */ }
+  @media all and (max-width: 800px) {
+    .post-meta {
+      float: none;
+      margin-left: 0;
+      margin-top: 0; }
+      .post-meta .post-publish-date, .post-meta .post-tags {
+        float: left; } }
 
 .post-link {
   color: #0374e4;
@@ -1031,7 +1038,18 @@ pre[class*="language-"] {
   line-height: 1.8;
   margin: 0.5em 0;
   margin-right: 1em;
-  padding-left: 2em; }
+  /**
+   * Ensures the post tags & date don't overlap the title or post excerpt.
+   */
+  max-width: 170px;
+  padding-left: 2em;
+  /**
+   * Meta data is now below the title so should make use of the full available
+   * width of the page.
+   */ }
+  @media all and (max-width: 800px) {
+    .post-publish-date, .post-tags {
+      max-width: none; } }
 
 .post-publish-date {
   font-weight: bold; }
@@ -1075,20 +1093,6 @@ pre[class*="language-"] {
       font-size: 1.3em; } }
   .post-title a {
     text-decoration: none; }
-
-/**
- * Displays the post summary meta info when the screen size is large enough to
- * fit it.
- */
-.wide-post-meta {
-  float: left;
-  max-width: 240px;
-  /**
-   * Screen isn't big enough for the wide view.
-   */ }
-  @media all and (max-width: 800px) {
-    .wide-post-meta {
-      display: none; } }
 
 /**
  * =============================================================================

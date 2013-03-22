@@ -8,40 +8,45 @@
     @extend .cf;
 
     margin-bottom: $spacing-unit;
-}
+    margin-left: 15em;
 
-/**
- * Holds the post title, summary and post meta that is displayed when the screen
- * size is small.
- */
-.the-post {
-    margin-left: 240px;
-
-
+    /**
+     * Now that the viewport is smaller lets push the summary to make use of the
+     * full width of the screen.
+     */
     @media all and (max-width: $desk) {
         margin-left: 0;
     }
+}
+
+
+/**
+ * Displays the post summary when the screen size is too small for the wide
+ * view.
+ */
+.post-meta {
+    @extend .cf;
+    @extend .small-medium-text;
 
     /**
-     * Displays the post summary when the screen size is too small for the wide
-     * view.
+     * Forces the post meta data to the left of the title to make use of a wider
+     * view port.
      */
-    .post-meta {
-        @extend .cf;
-        @extend .small-medium-text;
+    float: left;
+    margin-left: -15em;
+    margin-top: -2.4em;
 
-        display: none;
+    /**
+     * Meta data should be placed below the title instead of too the left now that
+     * the view port width is smaller.
+     */
+    @media all and (max-width: $desk) {
+        float: none;
+        margin-left: 0;
+        margin-top: 0;
 
         .post-publish-date, .post-tags {
             float: left;
-        }
-
-        /**
-         * Only display the meta data for the post when the screen size is small,
-         * otherwise it is shown outside the-post container.
-         */
-        @media all and (max-width: $desk) {
-            display: block;
         }
     }
 }
@@ -64,7 +69,21 @@
     line-height: 1.8;
     margin: $spacing-unit / 2 0;
     margin-right: $spacing-unit;
+
+    /**
+     * Ensures the post tags & date don't overlap the title or post excerpt.
+     */
+    max-width: 170px;
+
     padding-left: $spacing-unit * 2;
+
+    /**
+     * Meta data is now below the title so should make use of the full available
+     * width of the page.
+     */
+    @media all and (max-width: $desk) {
+        max-width: none;
+    }
 }
 
 .post-publish-date {
@@ -131,22 +150,3 @@
         text-decoration: none;
     }
 }
-
-/**
- * Displays the post summary meta info when the screen size is large enough to
- * fit it.
- */
-.wide-post-meta {
-    @extend .cf;
-
-    float: left;
-    max-width: 240px;
-
-    /**
-     * Screen isn't big enough for the wide view.
-     */
-    @media all and (max-width: $desk) {
-        display: none;
-    }
-}
-
