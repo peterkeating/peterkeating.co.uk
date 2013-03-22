@@ -4,6 +4,7 @@
 	<!-- scripts concatenated and minified via build script -->
 	<script src="<?php bloginfo('template_url'); ?>/js/libs/prism.js"></script>
 	<script src="<?php bloginfo('template_url'); ?>/js/webp.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/message.js"></script>
 	<!-- end scripts -->
 
 	<?php
