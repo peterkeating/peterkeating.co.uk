@@ -36,6 +36,13 @@
     margin-left: -15em;
     margin-top: -2.4em;
 
+    .post-publish-date, .post-tags {
+        /**
+         * Ensures the post tags & date don't overlap the title or post excerpt.
+         */
+        max-width: 170px;
+    }
+
     /**
      * Meta data should be placed below the title instead of too the left now that
      * the view port width is smaller.
@@ -47,6 +54,7 @@
 
         .post-publish-date, .post-tags {
             float: left;
+            max-width: none;
         }
     }
 }
@@ -69,21 +77,7 @@
     line-height: 1.8;
     margin: $spacing-unit / 2 0;
     margin-right: $spacing-unit;
-
-    /**
-     * Ensures the post tags & date don't overlap the title or post excerpt.
-     */
-    max-width: 170px;
-
     padding-left: $spacing-unit * 2;
-
-    /**
-     * Meta data is now below the title so should make use of the full available
-     * width of the page.
-     */
-    @media all and (max-width: $desk) {
-        max-width: none;
-    }
 }
 
 .post-publish-date {

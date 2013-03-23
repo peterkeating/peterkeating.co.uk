@@ -1013,13 +1013,19 @@ pre[class*="language-"] {
    * Meta data should be placed below the title instead of too the left now that
    * the view port width is smaller.
    */ }
+  .post-meta .post-publish-date, .post-meta .post-tags {
+    /**
+     * Ensures the post tags & date don't overlap the title or post excerpt.
+     */
+    max-width: 170px; }
   @media all and (max-width: 800px) {
     .post-meta {
       float: none;
       margin-left: 0;
       margin-top: 0; }
       .post-meta .post-publish-date, .post-meta .post-tags {
-        float: left; } }
+        float: left;
+        max-width: none; } }
 
 .post-link {
   color: #0374e4;
@@ -1038,18 +1044,7 @@ pre[class*="language-"] {
   line-height: 1.8;
   margin: 0.5em 0;
   margin-right: 1em;
-  /**
-   * Ensures the post tags & date don't overlap the title or post excerpt.
-   */
-  max-width: 170px;
-  padding-left: 2em;
-  /**
-   * Meta data is now below the title so should make use of the full available
-   * width of the page.
-   */ }
-  @media all and (max-width: 800px) {
-    .post-publish-date, .post-tags {
-      max-width: none; } }
+  padding-left: 2em; }
 
 .post-publish-date {
   font-weight: bold; }
