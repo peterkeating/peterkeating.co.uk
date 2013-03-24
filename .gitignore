@@ -1,2 +1,12 @@
+# directory that contains the production ready theme created by the 'build' target
+# in the Ant build script located in the build directory.
 /dist
+
+# directory created by Sass in order to speed up conversions of Sass to CSS.
+# Read more about Sass caching from the link below.
+#
+# http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#cache_stores
 .sass-cache/
+
+# ensures that the FTP settings aren't available to everyone.
+ftp.properties

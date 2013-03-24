@@ -6,6 +6,7 @@
     <property environment="ENV" />
 
     <property file="build/config/project.properties"/>
+    <property file="build/config/ftp.properties"/>
 
 
     <!-- load in Ant-Contrib to give us access to some very useful tasks! -->
@@ -15,6 +16,9 @@
         </classpath>
     </taskdef>
 
+    <!--
+        Builds a production ready version of the theme.
+    -->
     <target name="build" depends="-clean, -prepare, -copytointermediate, -css, -js, -googleanalytics, -publish, -imagespng, -imagesjpg, -imageslosslessly, -removeintermediate" />
 
     <!--
@@ -24,6 +28,11 @@
         - https://developers.google.com/speed/webp/
     -->
     <target name="webp" depends="-webp" />
+
+    <!--
+        Deploys the theme into the production environment.
+    -->
+    <target name="deploy" depends="-check-built, -ftp.clean, -ftp.deploy" />
 
      <!--
         performs linting on all the js.
@@ -338,5 +347,45 @@
         <replaceregexp match="UA-XXXXX-X" replace="${googleanalytics.code}" flags="m">
             <fileset dir="${intermediate.dir}" includes="${page-files}"/>
         </replaceregexp>
+    </target>
+
+    <!--
+        Checks to see if the 'build' target has been run. This is determined by
+        the existence of the directory containing the product ready theme.
+    -->
+    <target name="-check-built">
+        <if>
+            <available file="${deploy.dir}" type="dir" />
+            <then></then>
+            <else>
+                <fail message="You must run the 'build' target before the 'deploy' target." />
+            </else>
+        </if>
+    </target>
+
+    <!--
+        Deletes the existing live theme.
+    -->
+    <target name="-ftp.clean">
+        <ftp   action="del"
+               server="${ftp.server}"
+               userid="${ftp.userid}"
+               password="${ftp.password}"
+               remotedir="${ftp.remotedir}"
+               passive="yes" />
+    </target>
+
+    <!--
+        Uploads via FTP the distributable that was created during the 'build'
+        target.
+    -->
+    <target name="-ftp.deploy">
+        <ftp   server="${ftp.server}"
+               userid="${ftp.userid}"
+               password="${ftp.password}"
+               remotedir="${ftp.remotedir}"
+               passive="yes">
+            <fileset dir="${deploy.dir}" />
+        </ftp>
     </target>
 </project>
